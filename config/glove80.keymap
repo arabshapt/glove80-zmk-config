@@ -941,6 +941,73 @@ behaviors {
                           71 54   55 72
 
 //--------------------------------------------------------------------------
+
+#undef COMBO_HOOK
+#define COMBO_HOOK require-prior-idle-ms = <150>;
+#define ALL 0xff
+#if !defined COMBO_TERM
+    #define COMBO_TERM 70
+#endif
+#if !defined COMBO_HOOK
+    #define COMBO_HOOK
+#endif
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TIMEOUT) \
+  combo_##NAME { \
+    timeout-ms = <TIMEOUT>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+    COMBO_HOOK \
+  };
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+//   COMBO(deleteline, &kp LG(BKSP), 41 65, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(leftline, &kp LG(LEFT), 63 41, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+//   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+
+//   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_SLOWEST)
+//   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+//   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+
+  COMBO(raycast20, &kp LG(SPACE), 29 31, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast29, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 23 24, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast30, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 25 26, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast31, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 37 49, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast32, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 29 30, PRIME_LAYER, COMBO_TERM_FAST)
+//   COMBO(raycast33, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 24 25, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast35, &thumbhSlayNextRight HYPER_34 SKQ_RIGHT_RED, 41 60, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast36, &kp HYPER_01_KEY(F10), 59 42, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast21, &kp LG(SPACE), 59 61, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast22, &kp LG(SPACE),  59 60, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(context37, &kp HYPER_29_KEY(SPACE), 60 61, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast37, &kp HYPER_01_KEY(F10), 60 42, PRIME_LAYER, COMBO_TERM_FAST)
+ // COMBO(raycast40, &kp LG(SPACE), 31 32, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast70, &kp LG(SPACE), 57 56, PRIME_LAYER, COMBO_TERM_FAST)
+//   COMBO(warp70, &kp HYPER_02_KEY(HOME), 69 70, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(warp60, &kp HYPER_02_KEY(HOME), 30 31, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(raycast, &kp LG(SPACE), 41 57, PRIME_LAYER, COMBO_TERM_SLOWER)
+  COMBO(contexts, &kp HYPER_29_KEY(SPACE), 57 42, PRIME_LAYER, COMBO_TERM_SLOWER)
+//   COMBO(raycast2, &kp LG(SPACE), 70 41, PRIME_LAYER, COMBO_TERM_FAST)
+//   COMBO(contexts2, &kp HYPER_29_KEY(SPACE), 70 42, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(alfred, &kp HYPER_02_KEY(KP_N7) , 57 29, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+
+  COMBO(raycast3, &kp HYPER_29_KEY(SPACE), 74 41, SHIFT_LAYER, COMBO_TERM_TOOSLOW)
+
+  COMBO(lshift1, &skq LSHIFT , 25 38, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(rshift1, &skq RSHIFT, 41 30, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(lshift, &skq LSHIFT , 35 36, PRIME_LAYER, COMBO_TERM_FAST)
+  COMBO(rshift, &skq RSHIFT, 43 44, PRIME_LAYER, COMBO_TERM_FAST)
+//   COMBO(contexts3, &kp LG(SPACE) , 38 42, SHIFT_LAYER, COMBO_TERM_TOOSLOW)
+//   COMBO(raycast4, &kp HYPER_29_KEY(SPACE), 70 41, SHIFT_LAYER, COMBO_TERM_FAST)
+//   COMBO(contexts4, &kp LG(SPACE) , 70 42, SHIFT_LAYER, COMBO_TERM_FAST)
+
+  COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, PRIME_LAYER, COMBO_TERM_TOOSLOW)
+    };
+};
+
     thumbhm: thumb_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_MODS";
