@@ -41,7 +41,12 @@
 #define LAYER_Typing 17
 #define LAYER_CrossLeft 18
 #define LAYER_CrossRight 19
-
+#define LAYER_SKQ_LEFT_RED 20
+#define LAYER_SKQ_RIGHT_RED 21
+#define LAYER_SKQ_HOLD_LEFT_RED 22
+#define LAYER_SKQ_HOLD_RIGHT_RED 23
+#define LAYER_SHIFT_LAYER 24
+#define LAYER_FN 25
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
@@ -49,7 +54,349 @@
 
 /* Custom Device-tree */
 
+#define QUICK_TAP_MS_ARAB 175 
+#define QUICK_TAP_MS_ARAB_PRIMAL 140 //140  ONLY FOR WARM TIMES
+#define COMBO_TERM_ARAB_FAST 18
 
+
+#define HYPER_01_KEY(key) LS(LC(LA(LG(key))))   // hyper  LS,LC,LA,LG
+#define HYPER_02_KEY(key) RS(RC(RA(RG(key))))   // hyper  RS,RC,RA,RG
+#define HYPER_03_KEY(key) RS(RC(RA(LS(key))))  // hyper  RS,RC,RA,LS
+#define HYPER_04_KEY(key) RS(RC(RA(LC(key))))  // hyper  RS,RC,RA,LC
+#define HYPER_05_KEY(key) RS(RC(RA(LA(key))))   // hyper  RS,RC,RA,LA
+#define HYPER_06_KEY(key) RS(RC(RA(LG(key))))   // hyper  RS,RC,RA,LG
+#define HYPER_07_KEY(key) RS(RC(RG(LS(key))))  // hyper  RS,RC,RG,LS
+#define HYPER_08_KEY(key) RS(RC(RG(LC(key))))  // hyper  RS,RC,RG,LC
+#define HYPER_09_KEY(key) RS(RC(RG(LA(key))))   // hyper  RS,RC,RG,LA
+#define HYPER_10_KEY(key) RS(RC(RG(LG(key))))   // hyper  RS,RC,RG,LG
+#define HYPER_11_KEY(key) RS(RC(LS(LC(key))))  // hyper  RS,RC,LS,LC
+#define HYPER_12_KEY(key) RS(RC(LS(LA(key))))   // hyper  RS,RC,LS,LA
+#define HYPER_13_KEY(key) RS(RC(LS(LG(key))))   // hyper  RS,RC,LS,LG
+#define HYPER_14_KEY(key) RS(RC(LC(LA(key))))   // hyper  RS,RC,LC,LA
+#define HYPER_15_KEY(key) RS(RC(LC(LG(key))))   // hyper  RS,RC,LC,LG
+#define HYPER_16_KEY(key) RS(RC(LA(LG(key))))   // hyper  RS,RC,LA,LG
+#define HYPER_17_KEY(key) RS(RA(RG(LS(key))))  // hyper  RS,RA,RG,LS
+#define HYPER_18_KEY(key) RS(RA(RG(LC(key))))  // hyper  RS,RA,RG,LC
+#define HYPER_19_KEY(key) RS(RA(RG(LA(key))))   // hyper  RS,RA,RG,LA
+#define HYPER_20_KEY(key) RS(RA(RG(LG(key))))   // hyper  RS,RA,RG,LG
+#define HYPER_21_KEY(key) RS(RA(LS(LC(key))))  // hyper  RS,RA,LS,LC
+#define HYPER_22_KEY(key) RS(RA(LS(LA(key))))   // hyper  RS,RA,LS,LA
+#define HYPER_23_KEY(key) RS(RA(LS(LG(key))))   // hyper  RS,RA,LS,LG
+#define HYPER_24_KEY(key) RS(RA(LC(LA(key))))   // hyper  RS,RA,LC,LA
+#define HYPER_25_KEY(key) RS(RA(LC(LG(key))))   // hyper  RS,RA,LC,LG
+#define HYPER_26_KEY(key) RS(RA(LA(LG(key))))   // hyper  RS,RA,LA,LG
+#define HYPER_27_KEY(key) RS(RG(LS(LC(key))))  // hyper  RS,RG,LS,LC
+#define HYPER_28_KEY(key) RS(RG(LS(LA(key))))   // hyper  RS,RG,LS,LA
+#define HYPER_29_KEY(key) RS(RG(LS(LG(key))))   // hyper  RS,RG,LS,LG
+#define HYPER_30_KEY(key) RS(RG(LC(LA(key))))   // hyper  RS,RG,LC,LA
+#define HYPER_31_KEY(key) RS(RG(LC(LG(key))))   // hyper  RS,RG,LC,LG
+#define HYPER_32_KEY(key) RS(RG(LA(LG(key))))   // hyper  RS,RG,LA,LG
+#define HYPER_33_KEY(key) RS(LS(LC(LA(key))))   // hyper  RS,LS,LC,LA
+#define HYPER_34_KEY(key) RS(LS(LC(LG(key))))   // hyper  RS,LS,LC,LG
+#define HYPER_35_KEY(key) RS(LS(LA(LG(key))))   // hyper  RS,LS,LA,LG
+#define HYPER_36_KEY(key) RS(LC(LA(LG(key))))   // hyper  RS,LC,LA,LG
+#define HYPER_37_KEY(key) RC(RA(RG(LS(key))))  // hyper  RC,RA,RG,LS
+#define HYPER_38_KEY(key) RC(RA(RG(LC(key))))  // hyper  RC,RA,RG,LC
+#define HYPER_39_KEY(key) RC(RA(RG(LA(key))))   // hyper  RC,RA,RG,LA
+#define HYPER_40_KEY(key) RC(RA(RG(LG(key))))   // hyper  RC,RA,RG,LG
+#define HYPER_41_KEY(key) RC(RA(LS(LC(key))))  // hyper  RC,RA,LS,LC
+#define HYPER_42_KEY(key) RC(RA(LS(LA(key))))   // hyper  RC,RA,LS,LA
+#define HYPER_43_KEY(key) RC(RA(LS(LG(key))))   // hyper  RC,RA,LS,LG
+#define HYPER_44_KEY(key) RC(RA(LC(LA(key))))   // hyper  RC,RA,LC,LA
+#define HYPER_45_KEY(key) RC(RA(LC(LG(key))))   // hyper  RC,RA,LC,LG
+#define HYPER_46_KEY(key) RC(RA(LA(LG(key))))   // hyper  RC,RA,LA,LG
+#define HYPER_47_KEY(key) RC(RG(LS(LC(key))))  // hyper  RC,RG,LS,LC
+#define HYPER_48_KEY(key) RC(RG(LS(LA(key))))   // hyper  RC,RG,LS,LA
+#define HYPER_49_KEY(key) RC(RG(LS(LG(key))))   // hyper  RC,RG,LS,LG
+#define HYPER_50_KEY(key) RC(RG(LC(LA(key))))   // hyper  RC,RG,LC,LA
+#define HYPER_51_KEY(key) RC(RG(LC(LG(key))))   // hyper  RC,RG,LC,LG
+#define HYPER_52_KEY(key) RC(RG(LA(LG(key))))   // hyper  RC,RG,LA,LG
+#define HYPER_53_KEY(key) RC(LS(LC(LA(key))))   // hyper  RC,LS,LC,LA
+#define HYPER_54_KEY(key) RC(LS(LC(LG(key))))   // hyper  RC,LS,LC,LG
+#define HYPER_55_KEY(key) RC(LS(LA(LG(key))))   // hyper  RC,LS,LA,LG
+#define HYPER_56_KEY(key) RC(LC(LA(LG(key))))   // hyper  RC,LC,LA,LG
+#define HYPER_57_KEY(key) RA(RG(LS(LC(key))))  // hyper  RA,RG,LS,LC
+#define HYPER_58_KEY(key) RA(RG(LS(LA(key))))   // hyper  RA,RG,LS,LA
+#define HYPER_59_KEY(key) RA(RG(LS(LG(key))))   // hyper  RA,RG,LS,LG
+#define HYPER_60_KEY(key) RA(RG(LC(LA(key))))   // hyper  RA,RG,LC,LA
+#define HYPER_61_KEY(key) RA(RG(LC(LG(key))))   // hyper  RA,RG,LC,LG
+#define HYPER_62_KEY(key) RA(RG(LA(LG(key))))   // hyper  RA,RG,LA,LG
+#define HYPER_63_KEY(key) RA(LS(LC(LA(key))))   // hyper  RA,LS,LC,LA
+#define HYPER_64_KEY(key) RA(LS(LC(LG(key))))   // hyper  RA,LS,LC,LG
+#define HYPER_65_KEY(key) RA(LS(LA(LG(key))))   // hyper  RA,LS,LA,LG
+#define HYPER_66_KEY(key) RA(LC(LA(LG(key))))   // hyper  RA,LC,LA,LG
+#define HYPER_67_KEY(key) RG(LS(LC(LA(key))))   // hyper  RG,LS,LC,LA
+#define HYPER_68_KEY(key) RG(LS(LC(LG(key))))   // hyper  RG,LS,LC,LG
+#define HYPER_69_KEY(key) RG(LS(LA(LG(key))))   // hyper  RG,LS,LA,LG
+#define HYPER_70_KEY(key) RG(LC(LA(LG(key))))   // hyper  RG,LC,LA,LG
+
+#define HYPER_71_KEY(key)  RC(RA(RG(RS(LA(key)))))   // hyper  // RC RA RG RS LA
+#define HYPER_72_KEY(key)  RC(RA(RG(RS(LS(key)))))   // hyper  // RC RA RG RS LS
+#define HYPER_73_KEY(key)  RC(RA(RG(RS(LG(key)))))   // hyper  // RC RA RG RS LG
+#define HYPER_74_KEY(key)  RC(RA(RG(RS(LC(key)))))   // hyper  // RC RA RG RS LC
+#define HYPER_75_KEY(key)  RC(RA(RG(LA(LS(key)))))   // hyper  // RC RA RG LA LS
+#define HYPER_76_KEY(key)  RC(RA(RG(LA(LG(key)))))   // hyper  // RC RA RG LA LG
+#define HYPER_77_KEY(key)  RC(RA(RG(LA(LC(key)))))   // hyper  // RC RA RG LA LC
+#define HYPER_78_KEY(key)  RC(RA(RG(LS(LG(key)))))   // hyper  // RC RA RG LS LG
+#define HYPER_79_KEY(key)  RC(RA(RG(LS(LC(key)))))   // hyper  // RC RA RG LS LC
+#define HYPER_80_KEY(key)  RC(RA(RG(LG(LC(key)))))   // hyper  // RC RA RG LG LC
+#define HYPER_81_KEY(key)  RC(RA(RS(LA(LS(key)))))   // hyper  // RC RA RS LA LS
+#define HYPER_82_KEY(key)  RC(RA(RS(LA(LG(key)))))   // hyper  // RC RA RS LA LG
+#define HYPER_83_KEY(key)  RC(RA(RS(LA(LC(key)))))   // hyper  // RC RA RS LA LC
+#define HYPER_84_KEY(key)  RC(RA(RS(LS(LG(key)))))   // hyper  // RC RA RS LS LG
+#define HYPER_85_KEY(key)  RC(RA(RS(LS(LC(key)))))   // hyper  // RC RA RS LS LC
+#define HYPER_86_KEY(key)  RC(RA(RS(LG(LC(key)))))   // hyper  // RC RA RS LG LC
+#define HYPER_87_KEY(key)  RC(RA(LA(LS(LG(key)))))   // hyper  // RC RA LA LS LG
+#define HYPER_88_KEY(key)  RC(RA(LA(LS(LC(key)))))   // hyper  // RC RA LA LS LC
+#define HYPER_89_KEY(key)  RC(RA(LA(LG(LC(key)))))   // hyper  // RC RA LA LG LC
+#define HYPER_90_KEY(key)  RC(RA(LS(LG(LC(key)))))   // hyper  // RC RA LS LG LC
+// unused hyper keys
+#define HYPER_91_KEY(key)  RC(RG(RS(LA(LS(key)))))   // hyper  // RC RG RS LA LS
+#define HYPER_92_KEY(key)  RC(RG(RS(LA(LG(key)))))   // hyper  // RC RG RS LA LG
+#define HYPER_93_KEY(key)  RC(RG(RS(LA(LC(key)))))   // hyper  // RC RG RS LA LC
+#define HYPER_94_KEY(key)  RC(RG(RS(LS(LG(key)))))   // hyper  // RC RG RS LS LG
+
+// used for right red leader
+#define HYPER_95_KEY(key)  RC(RG(RS(LS(LC(key)))))   // hyper  // RC RG RS LS LC
+#define HYPER_96_KEY(key)  RC(RG(RS(LG(LC(key)))))   // hyper  // RC RG RS LG LC
+#define HYPER_97_KEY(key)  RC(RG(LA(LS(LG(key)))))   // hyper  // RC RG LA LS LG
+#define HYPER_98_KEY(key)  RC(RG(LA(LS(LC(key)))))   // hyper  // RC RG LA LS LC
+#define HYPER_99_KEY(key)  RC(RG(LA(LG(LC(key)))))   // hyper  // RC RG LA LG LC
+#define HYPER_100_KEY(key)  RC(RG(LS(LG(LC(key)))))   // hyper  // RC RG LS LG LC
+#define HYPER_101_KEY(key)  RC(RS(LA(LS(LG(key)))))   // hyper  // RC RS LA LS LG
+#define HYPER_102_KEY(key)  RC(RS(LA(LS(LC(key)))))   // hyper  // RC RS LA LS LC
+#define HYPER_103_KEY(key)  RC(RS(LA(LG(LC(key)))))   // hyper  // RC RS LA LG LC
+#define HYPER_104_KEY(key)  RC(RS(LS(LG(LC(key)))))   // hyper  // RC RS LS LG LC
+#define HYPER_105_KEY(key)  RC(LA(LS(LG(LC(key)))))   // hyper  // RC LA LS LG LC
+#define HYPER_106_KEY(key)  RA(RG(RS(LA(LS(key)))))   // hyper  // RA RG RS LA LS
+#define HYPER_107_KEY(key)  RA(RG(RS(LA(LG(key)))))   // hyper  // RA RG RS LA LG
+#define HYPER_108_KEY(key)  RA(RG(RS(LA(LC(key)))))   // hyper  // RA RG RS LA LC
+#define HYPER_109_KEY(key)  RA(RG(RS(LS(LG(key)))))   // hyper  // RA RG RS LS LG
+#define HYPER_110_KEY(key)  RA(RG(RS(LS(LC(key)))))   // hyper  // RA RG RS LS LC
+#define HYPER_111_KEY(key)  RA(RG(RS(LG(LC(key)))))   // hyper  // RA RG RS LG LC
+#define HYPER_112_KEY(key)  RA(RG(LA(LS(LG(key)))))   // hyper  // RA RG LA LS LG
+#define HYPER_113_KEY(key)  RA(RG(LA(LS(LC(key)))))   // hyper  // RA RG LA LS LC
+#define HYPER_114_KEY(key)  RA(RG(LA(LG(LC(key)))))   // hyper  // RA RG LA LG LC
+#define HYPER_115_KEY(key)  RA(RG(LS(LG(LC(key)))))   // hyper  // RA RG LS LG LC
+#define HYPER_116_KEY(key)  RA(RS(LA(LS(LG(key)))))   // hyper  // RA RS LA LS LG
+#define HYPER_117_KEY(key)  RA(RS(LA(LS(LC(key)))))   // hyper  // RA RS LA LS LC
+#define HYPER_118_KEY(key)  RA(RS(LA(LG(LC(key)))))   // hyper  // RA RS LA LG LC
+#define HYPER_119_KEY(key)  RA(RS(LS(LG(LC(key)))))   // hyper  // RA RS LS LG LC
+#define HYPER_120_KEY(key)  RA(LA(LS(LG(LC(key)))))   // hyper  // RA LA LS LG LC
+#define HYPER_121_KEY(key)  RG(RS(LA(LS(LG(key)))))   // hyper  // RG RS LA LS LG
+#define HYPER_122_KEY(key)  RG(RS(LA(LS(LC(key)))))   // hyper  // RG RS LA LS LC
+#define HYPER_123_KEY(key)  RG(RS(LA(LG(LC(key)))))   // hyper  // RG RS LA LG LC
+#define HYPER_124_KEY(key)  RG(RS(LS(LG(LC(key)))))   // hyper  // RG RS LS LG LC
+
+// keys for one time activation(not holding)
+#define HYPER_125_KEY(key)  RG(LA(LS(LG(LC(key)))))   // hyper  // RG LA LS LG LC
+#define HYPER_126_KEY(key)  RS(LA(LS(LG(LC(key)))))   // hyper  // RS LA LS LG LC
+#define HYPER_127_KEY(key)  RC(RA(RG(RS(LA(LS(key))))))   // hyper  // RC RA RG RS LA LS
+#define HYPER_128_KEY(key)  RC(RA(RG(RS(LA(LG(key))))))   // hyper  // RC RA RG RS LA LG
+#define HYPER_129_KEY(key)  RC(RA(RG(RS(LA(LC(key))))))   // hyper  // RC RA RG RS LA LC
+#define HYPER_130_KEY(key)  RC(RA(RG(RS(LS(LG(key))))))   // hyper  // RC RA RG RS LS LG
+#define HYPER_131_KEY(key)  RC(RA(RG(RS(LS(LC(key))))))   // hyper  // RC RA RG RS LS LC
+#define HYPER_132_KEY(key)  RC(RA(RG(RS(LG(LC(key))))))   // hyper  // RC RA RG RS LG LC
+#define HYPER_133_KEY(key)  RC(RA(RG(LA(LS(LG(key))))))   // hyper  // RC RA RG LA LS LG
+#define HYPER_134_KEY(key)  RC(RA(RG(LA(LS(LC(key))))))   // hyper  // RC RA RG LA LS LC
+#define HYPER_135_KEY(key)  RC(RA(RG(LA(LG(LC(key))))))   // hyper  // RC RA RG LA LG LC
+#define HYPER_136_KEY(key)  RC(RA(RG(LS(LG(LC(key))))))   // hyper  // RC RA RG LS LG LC
+#define HYPER_137_KEY(key)  RC(RA(RS(LA(LS(LG(key))))))   // hyper  // RC RA RS LA LS LG
+#define HYPER_138_KEY(key)  RC(RA(RS(LA(LS(LC(key))))))   // hyper  // RC RA RS LA LS LC
+#define HYPER_139_KEY(key)  RC(RA(RS(LA(LG(LC(key))))))   // hyper  // RC RA RS LA LG LC
+#define HYPER_140_KEY(key)  RC(RA(RS(LS(LG(LC(key))))))   // hyper  // RC RA RS LS LG LC
+#define HYPER_141_KEY(key)  RC(RA(LA(LS(LG(LC(key))))))   // hyper  // RC RA LA LS LG LC
+#define HYPER_142_KEY(key)  RC(RG(RS(LA(LS(LG(key))))))   // hyper  // RC RG RS LA LS LG
+#define HYPER_143_KEY(key)  RC(RG(RS(LA(LS(LC(key))))))   // hyper  // RC RG RS LA LS LC
+#define HYPER_144_KEY(key)  RC(RG(RS(LA(LG(LC(key))))))   // hyper  // RC RG RS LA LG LC
+#define HYPER_145_KEY(key)  RC(RG(RS(LS(LG(LC(key))))))   // hyper  // RC RG RS LS LG LC
+#define HYPER_146_KEY(key)  RC(RG(LA(LS(LG(LC(key))))))   // hyper  // RC RG LA LS LG LC
+#define HYPER_147_KEY(key)  RC(RS(LA(LS(LG(LC(key))))))   // hyper  // RC RS LA LS LG LC
+#define HYPER_148_KEY(key)  RA(RG(RS(LA(LS(LG(key))))))   // hyper  // RA RG RS LA LS LG
+#define HYPER_149_KEY(key)  RA(RG(RS(LA(LS(LC(key))))))   // hyper  // RA RG RS LA LS LC
+#define HYPER_150_KEY(key)  RA(RG(RS(LA(LG(LC(key))))))   // hyper  // RA RG RS LA LG LC
+#define HYPER_151_KEY(key)  RA(RG(RS(LS(LG(LC(key))))))   // hyper  // RA RG RS LS LG LC
+#define HYPER_152_KEY(key)  RA(RG(LA(LS(LG(LC(key))))))   // hyper  // RA RG LA LS LG LC
+#define HYPER_153_KEY(key)  RA(RS(LA(LS(LG(LC(key))))))   // hyper  // RA RS LA LS LG LC
+#define HYPER_154_KEY(key)  RG(RS(LA(LS(LG(LC(key))))))   // hyper  // RG RS LA LS LG LC
+
+#define SUPER_HYPER_01 LS(LC(LA(LG(CAPS))))   // hyper  LS,LC,LA,LG
+#define HYPER_01 LS(LC(LA(LGUI)))   // hyper  LS,LC,LA,LG
+#define HYPER_02 RS(RC(RA(RGUI)))   // hyper  RS,RC,RA,RG
+#define HYPER_03 RS(RC(RA(LSHFT)))  // hyper  RS,RC,RA,LS
+#define HYPER_04 RS(RC(RA(LCTRL)))  // hyper  RS,RC,RA,LC
+#define HYPER_05 RS(RC(RA(LALT)))   // hyper  RS,RC,RA,LA
+#define HYPER_06 RS(RC(RA(LGUI)))   // hyper  RS,RC,RA,LG
+#define HYPER_07 RS(RC(RG(LSHFT)))  // hyper  RS,RC,RG,LS
+#define HYPER_08 RS(RC(RG(LCTRL)))  // hyper  RS,RC,RG,LC
+#define HYPER_09 RS(RC(RG(LALT)))   // hyper  RS,RC,RG,LA
+#define HYPER_10 RS(RC(RG(LGUI)))   // hyper  RS,RC,RG,LG
+#define HYPER_11 RS(RC(LS(LCTRL)))  // hyper  RS,RC,LS,LC
+#define HYPER_12 RS(RC(LS(LALT)))   // hyper  RS,RC,LS,LA
+#define HYPER_13 RS(RC(LS(LGUI)))   // hyper  RS,RC,LS,LG
+#define HYPER_14 RS(RC(LC(LALT)))   // hyper  RS,RC,LC,LA
+#define HYPER_15 RS(RC(LC(LGUI)))   // hyper  RS,RC,LC,LG
+#define HYPER_16 RS(RC(LA(LGUI)))   // hyper  RS,RC,LA,LG
+#define HYPER_17 RS(RA(RG(LSHFT)))  // hyper  RS,RA,RG,LS
+#define HYPER_18 RS(RA(RG(LCTRL)))  // hyper  RS,RA,RG,LC
+#define HYPER_19 RS(RA(RG(LALT)))   // hyper  RS,RA,RG,LA
+#define HYPER_20 RS(RA(RG(LGUI)))   // hyper  RS,RA,RG,LG
+#define HYPER_21 RS(RA(LS(LCTRL)))  // hyper  RS,RA,LS,LC
+#define HYPER_22 RS(RA(LS(LALT)))   // hyper  RS,RA,LS,LA
+#define HYPER_23 RS(RA(LS(LGUI)))   // hyper  RS,RA,LS,LG
+#define HYPER_24 RS(RA(LC(LALT)))   // hyper  RS,RA,LC,LA
+#define HYPER_25 RS(RA(LC(LGUI)))   // hyper  RS,RA,LC,LG
+#define HYPER_26 RS(RA(LA(LGUI)))   // hyper  RS,RA,LA,LG
+#define HYPER_27 RS(RG(LS(LCTRL)))  // hyper  RS,RG,LS,LC
+#define HYPER_28 RS(RG(LS(LALT)))   // hyper  RS,RG,LS,LA
+#define HYPER_29 RS(RG(LS(LGUI)))   // hyper  RS,RG,LS,LG
+#define HYPER_30 RS(RG(LC(LALT)))   // hyper  RS,RG,LC,LA
+#define HYPER_31 RS(RG(LC(LGUI)))   // hyper  RS,RG,LC,LG
+#define HYPER_32 RS(RG(LA(LGUI)))   // hyper  RS,RG,LA,LG
+#define HYPER_33 RS(LS(LC(LALT)))   // hyper  RS,LS,LC,LA
+#define HYPER_34 RS(LS(LC(LGUI)))   // hyper  RS,LS,LC,LG
+#define HYPER_35 RS(LS(LA(LGUI)))   // hyper  RS,LS,LA,LG
+#define HYPER_36 RS(LC(LA(LGUI)))   // hyper  RS,LC,LA,LG
+#define HYPER_37 RC(RA(RG(LSHFT)))  // hyper  RC,RA,RG,LS
+#define HYPER_38 RC(RA(RG(LCTRL)))  // hyper  RC,RA,RG,LC
+#define HYPER_39 RC(RA(RG(LALT)))   // hyper  RC,RA,RG,LA
+#define HYPER_40 RC(RA(RG(LGUI)))   // hyper  RC,RA,RG,LG
+#define HYPER_41 RC(RA(LS(LCTRL)))  // hyper  RC,RA,LS,LC
+#define HYPER_42 RC(RA(LS(LALT)))   // hyper  RC,RA,LS,LA
+#define HYPER_43 RC(RA(LS(LGUI)))   // hyper  RC,RA,LS,LG
+#define HYPER_44 RC(RA(LC(LALT)))   // hyper  RC,RA,LC,LA
+#define HYPER_45 RC(RA(LC(LGUI)))   // hyper  RC,RA,LC,LG
+#define HYPER_46 RC(RA(LA(LGUI)))   // hyper  RC,RA,LA,LG
+#define HYPER_47 RC(RG(LS(LCTRL)))  // hyper  RC,RG,LS,LC
+#define HYPER_48 RC(RG(LS(LALT)))   // hyper  RC,RG,LS,LA
+#define HYPER_49 RC(RG(LS(LGUI)))   // hyper  RC,RG,LS,LG
+#define HYPER_50 RC(RG(LC(LALT)))   // hyper  RC,RG,LC,LA
+#define HYPER_51 RC(RG(LC(LGUI)))   // hyper  RC,RG,LC,LG
+#define HYPER_52 RC(RG(LA(LGUI)))   // hyper  RC,RG,LA,LG
+#define HYPER_53 RC(LS(LC(LALT)))   // hyper  RC,LS,LC,LA
+#define HYPER_54 RC(LS(LC(LGUI)))   // hyper  RC,LS,LC,LG
+#define HYPER_55 RC(LS(LA(LGUI)))   // hyper  RC,LS,LA,LG
+#define HYPER_56 RC(LC(LA(LGUI)))   // hyper  RC,LC,LA,LG
+#define HYPER_57 RA(RG(LS(LCTRL)))  // hyper  RA,RG,LS,LC
+#define HYPER_58 RA(RG(LS(LALT)))   // hyper  RA,RG,LS,LA
+#define HYPER_59 RA(RG(LS(LGUI)))   // hyper  RA,RG,LS,LG
+#define HYPER_60 RA(RG(LC(LALT)))   // hyper  RA,RG,LC,LA
+#define HYPER_61 RA(RG(LC(LGUI)))   // hyper  RA,RG,LC,LG
+#define HYPER_62 RA(RG(LA(LGUI)))   // hyper  RA,RG,LA,LG
+#define HYPER_63 RA(LS(LC(LALT)))   // hyper  RA,LS,LC,LA
+#define HYPER_64 RA(LS(LC(LGUI)))   // hyper  RA,LS,LC,LG
+
+// SKQ_LEFT_SHIFT
+#define HYPER_65 RA(LS(LA(LGUI)))   // hyper  RA,LS,LA,LG
+#define HYPER_66 RA(LC(LA(LGUI)))   // hyper  RA,LC,LA,LG
+#define HYPER_67 RG(LS(LC(LALT)))   // hyper  RG,LS,LC,LA
+#define HYPER_68 RG(LS(LC(LGUI)))   // hyper  RG,LS,LC,LG
+#define HYPER_69 RG(LS(LA(LGUI)))   // hyper  RG,LS,LA,LG
+#define HYPER_70 RG(LC(LA(LGUI)))   // hyper  RG,LC,LA,LG
+#define HYPER_71 RC(RA(RG(RS(LALT))))   // hyper  // RC RA RG RS LA
+#define HYPER_72 RC(RA(RG(RS(LSHFT))))   // hyper  // RC RA RG RS LS
+#define HYPER_73 RC(RA(RG(RS(LGUI))))   // hyper  // RC RA RG RS LG
+#define HYPER_74 RC(RA(RG(RS(LCTRL))))   // hyper  // RC RA RG RS LC
+#define HYPER_75 RC(RA(RG(LA(LSHFT))))   // hyper  // RC RA RG LA LS
+#define HYPER_76 RC(RA(RG(LA(LGUI))))   // hyper  // RC RA RG LA LG
+#define HYPER_77 RC(RA(RG(LA(LCTRL))))   // hyper  // RC RA RG LA LC
+#define HYPER_78 RC(RA(RG(LS(LGUI))))   // hyper  // RC RA RG LS LG
+#define HYPER_79 RC(RA(RG(LS(LCTRL))))   // hyper  // RC RA RG LS LC
+#define HYPER_80 RC(RA(RG(LG(LCTRL))))   // hyper  // RC RA RG LG LC
+#define HYPER_81 RC(RA(RS(LA(LSHFT))))   // hyper  // RC RA RS LA LS
+#define HYPER_82 RC(RA(RS(LA(LGUI))))   // hyper  // RC RA RS LA LG
+#define HYPER_83 RC(RA(RS(LA(LCTRL))))   // hyper  // RC RA RS LA LC
+#define HYPER_84 RC(RA(RS(LS(LGUI))))   // hyper  // RC RA RS LS LG
+#define HYPER_85 RC(RA(RS(LS(LCTRL))))   // hyper  // RC RA RS LS LC
+#define HYPER_86 RC(RA(RS(LG(LCTRL))))   // hyper  // RC RA RS LG LC
+#define HYPER_87 RC(RA(LA(LS(LGUI))))   // hyper  // RC RA LA LS LG
+#define HYPER_88 RC(RA(LA(LS(LCTRL))))   // hyper  // RC RA LA LS LC
+#define HYPER_89 RC(RA(LA(LG(LCTRL))))   // hyper  // RC RA LA LG LC
+#define HYPER_90 RC(RA(LS(LG(LCTRL))))   // hyper  // RC RA LS LG LC
+#define HYPER_91 RC(RG(RS(LA(LSHFT))))   // hyper  // RC RG RS LA LS
+#define HYPER_92 RC(RG(RS(LA(LGUI))))   // hyper  // RC RG RS LA LG
+#define HYPER_93 RC(RG(RS(LA(LCTRL))))   // hyper  // RC RG RS LA LC
+#define HYPER_94 RC(RG(RS(LS(LGUI))))   // hyper  // RC RG RS LS LG
+
+// keys for sticky modifiers(not holding) left red key
+#define HYPER_LEFT_RED_126_SEMI(key) RS(LA(LS(LG(LCTRL))))   // hyper  // RS LA LS LG LC
+#define HYPER_LEFT_RED_127_COMMA(key) RC(RA(RG(RS(LA(LSHFT)))))   // hyper  // RC RA RG RS LA LS
+#define HYPER_LEFT_RED_128_DOT(key) RC(RA(RG(RS(LA(LGUI)))))   // hyper  // RC RA RG RS LA LG
+#define HYPER_LEFT_RED_129_P(key) RC(RA(RG(RS(LA(LCTRL)))))   // hyper  // RC RA RG RS LA LC
+#define HYPER_LEFT_RED_130_Y(key) RC(RA(RG(RS(LS(LGUI)))))   // hyper  // RC RA RG RS LS LG
+#define HYPER_LEFT_RED_131_F(key) RC(RA(RG(RS(LS(LCTRL)))))   // hyper  // RC RA RG RS LS LC
+#define HYPER_LEFT_RED_132_G(key) RC(RA(RG(RS(LG(LCTRL)))))   // hyper  // RC RA RG RS LG LC
+#define HYPER_LEFT_RED_133_R(key) RC(RA(RG(LA(LS(LGUI)))))   // hyper  // RC RA RG LA LS LG
+#define HYPER_LEFT_RED_134_C(key) RC(RA(RG(LA(LS(LCTRL)))))   // hyper  // RC RA RG LA LS LC
+#define HYPER_LEFT_RED_135_L(key) RC(RA(RG(LA(LG(LCTRL)))))   // hyper  // RC RA RG LA LG LC
+#define HYPER_LEFT_RED_136_A(key) RC(RA(RG(LS(LG(LCTRL)))))   // hyper  // RC RA RG LS LG LC
+#define HYPER_LEFT_RED_137_O(key) RC(RA(RS(LA(LS(LGUI)))))   // hyper  // RC RA RS LA LS LG
+#define HYPER_LEFT_RED_138_E(key) RC(RA(RS(LA(LS(LCTRL)))))   // hyper  // RC RA RS LA LS LC
+#define HYPER_LEFT_RED_139_U(key) RC(RA(RS(LA(LG(LCTRL)))))   // hyper  // RC RA RS LA LG LC
+#define HYPER_LEFT_RED_140_I(key) RC(RA(RS(LS(LG(LCTRL)))))   // hyper  // RC RA RS LS LG LC
+#define HYPER_LEFT_RED_141_D(key) RC(RA(LA(LS(LG(LCTRL)))))   // hyper  // RC RA LA LS LG LC
+#define HYPER_LEFT_RED_142_H(key) RC(RG(RS(LA(LS(LGUI)))))   // hyper  // RC RG RS LA LS LG
+#define HYPER_LEFT_RED_143_T(key) RC(RG(RS(LA(LS(LCTRL)))))   // hyper  // RC RG RS LA LS LC
+#define HYPER_LEFT_RED_144_N(key) RC(RG(RS(LA(LG(LCTRL)))))   // hyper  // RC RG RS LA LG LC
+#define HYPER_LEFT_RED_145_S(key) RC(RG(RS(LS(LG(LCTRL)))))   // hyper  // RC RG RS LS LG LC
+#define HYPER_LEFT_RED_146_APOS(key) RC(RG(LA(LS(LG(LCTRL)))))   // hyper  // RC RG LA LS LG LC
+#define HYPER_LEFT_RED_147_Q(key) RC(RS(LA(LS(LG(LCTRL)))))   // hyper  // RC RS LA LS LG LC
+#define HYPER_LEFT_RED_148_J(key) RA(RG(RS(LA(LS(LGUI)))))   // hyper  // RA RG RS LA LS LG
+#define HYPER_LEFT_RED_149_K(key) RA(RG(RS(LA(LS(LCTRL)))))   // hyper  // RA RG RS LA LS LC
+#define HYPER_LEFT_RED_150_X(key) RA(RG(RS(LA(LG(LCTRL)))))   // hyper  // RA RG RS LA LG LC
+#define HYPER_LEFT_RED_151_B(key) RA(RG(RS(LS(LG(LCTRL)))))   // hyper  // RA RG RS LS LG LC
+#define HYPER_LEFT_RED_152_M(key) RA(RG(LA(LS(LG(LCTRL)))))   // hyper  // RA RG LA LS LG LC
+#define HYPER_LEFT_RED_153_W(key) RA(RS(LA(LS(LG(LCTRL)))))   // hyper  // RA RS LA LS LG LC
+#define HYPER_LEFT_RED_154_V(key) RG(RS(LA(LS(LG(LCTRL)))))   // hyper  // RG RS LA LS LG LC
+#define HYPER_LEFT_RED_125_Z(key)  RG(LA(LS(LG(LCTRL))))   // hyper  // RG LA LS LG LC
+
+// keys for sticky modifiers(not holding) right red key
+#define HYPER_RIGHT_RED_95_SEMI(key)   RC(RG(RS(LS(LCTRL))))   // hyper  // RC RG RS LS LC
+#define HYPER_RIGHT_RED_96_COMMA(key)   RC(RG(RS(LG(LCTRL))))   // hyper  // RC RG RS LG LC
+#define HYPER_RIGHT_RED_97_DOT(key)   RC(RG(LA(LS(LGUI))))   // hyper  // RC RG LA LS LG
+#define HYPER_RIGHT_RED_98_P(key)   RC(RG(LA(LS(LCTRL))))   // hyper  // RC RG LA LS LC
+#define HYPER_RIGHT_RED_99_Y(key)   RC(RG(LA(LG(LCTRL))))   // hyper  // RC RG LA LG LC
+#define HYPER_RIGHT_RED_100_F(key)  RC(RG(LS(LG(LCTRL))))   // hyper  // RC RG LS LG LC
+#define HYPER_RIGHT_RED_101_G(key)  RC(RS(LA(LS(LGUI))))   // hyper  // RC RS LA LS LG
+#define HYPER_RIGHT_RED_102_R(key)  RC(RS(LA(LS(LCTRL))))   // hyper  // RC RS LA LS LC
+#define HYPER_RIGHT_RED_103_C(key)  RC(RS(LA(LG(LCTRL))))   // hyper  // RC RS LA LG LC
+#define HYPER_RIGHT_RED_104_L(key)  RC(RS(LS(LG(LCTRL))))   // hyper  // RC RS LS LG LC
+#define HYPER_RIGHT_RED_105_A(key)  RC(LA(LS(LG(LCTRL))))   // hyper  // RC LA LS LG LC
+#define HYPER_RIGHT_RED_106_O(key)  RA(RG(RS(LA(LSHFT))))   // hyper  // RA RG RS LA LS
+#define HYPER_RIGHT_RED_107_E(key)  RA(RG(RS(LA(LGUI))))   // hyper  // RA RG RS LA LG
+#define HYPER_RIGHT_RED_108_U(key)  RA(RG(RS(LA(LCTRL))))   // hyper  // RA RG RS LA LC
+#define HYPER_RIGHT_RED_109_I(key)  RA(RG(RS(LS(LGUI))))   // hyper  // RA RG RS LS LG
+#define HYPER_RIGHT_RED_110_D(key)  RA(RG(RS(LS(LCTRL))))   // hyper  // RA RG RS LS LC
+#define HYPER_RIGHT_RED_111_H(key)  RA(RG(RS(LG(LCTRL))))   // hyper  // RA RG RS LG LC
+#define HYPER_RIGHT_RED_112_T(key)  RA(RG(LA(LS(LGUI))))   // hyper  // RA RG LA LS LG
+#define HYPER_RIGHT_RED_113_N(key)  RA(RG(LA(LS(LCTRL))))   // hyper  // RA RG LA LS LC
+#define HYPER_RIGHT_RED_114_S(key)  RA(RG(LA(LG(LCTRL))))   // hyper  // RA RG LA LG LC
+#define HYPER_RIGHT_RED_115_APOS(key)  RA(RG(LS(LG(LCTRL))))   // hyper  // RA RG LS LG LC
+#define HYPER_RIGHT_RED_116_Q(key)  RA(RS(LA(LS(LGUI))))   // hyper  // RA RS LA LS LG
+#define HYPER_RIGHT_RED_117_J(key)  RA(RS(LA(LS(LCTRL))))   // hyper  // RA RS LA LS LC
+#define HYPER_RIGHT_RED_118_K(key)  RA(RS(LA(LG(LCTRL))))   // hyper  // RA RS LA LG LC
+#define HYPER_RIGHT_RED_119_X(key)  RA(RS(LS(LG(LCTRL))))   // hyper  // RA RS LS LG LC
+#define HYPER_RIGHT_RED_120_B(key)  RA(LA(LS(LG(LCTRL))))   // hyper  // RA LA LS LG LC
+#define HYPER_RIGHT_RED_121_M(key)  RG(RS(LA(LS(LGUI))))   // hyper  // RG RS LA LS LG
+#define HYPER_RIGHT_RED_122_W(key)  RG(RS(LA(LS(LCTRL))))   // hyper  // RG RS LA LS LC
+#define HYPER_RIGHT_RED_123_V(key)  RG(RS(LA(LG(LCTRL))))   // hyper  // RG RS LA LG LC
+#define HYPER_RIGHT_RED_124_Z(key)  RG(RS(LS(LG(LCTRL))))   // hyper  // RG RS LS LG LC
+
+
+  &mt {
+    tapping-term-ms = <210>;
+    flavor = "hold-preferred";//"tap-preferred";
+    quick_tap_ms = <210>;
+  };
+
+&lt {
+    flavor = "hold-preferred";//"balanced"; // tp - testing phase
+    tapping-term-ms = <200>; //tp
+    quick_tap_ms = <210>;
+};
+&sl {
+    release-after-ms = <1000>;
+};
 
 /* Glove80 system behavior & macros */
 / {
@@ -300,8 +647,8 @@
 // - https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts
 //
 #ifndef OPERATING_SYSTEM
-#define OPERATING_SYSTEM 1 // linux
-//#define OPERATING_SYSTEM 2 // macos
+// #define OPERATING_SYSTEM 1 // linux
+#define OPERATING_SYSTEM 2 // macos
 //#define OPERATING_SYSTEM 3 // windows
 #endif
 #if OPERATING_SYSTEM == 2
@@ -377,7 +724,7 @@ behaviors {
     // Alt, and Ctrl respectively in the Miryoku system) on home row keys.
     //
     #ifndef HOMEY_HOLDING_TYPE
-    #define HOMEY_HOLDING_TYPE "tap-preferred"
+    #define HOMEY_HOLDING_TYPE "balanced"//"tap-preferred"
     #endif
 
     //
@@ -386,7 +733,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 185//270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -395,7 +742,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 230
+    #define HOMEY_STREAK_DECAY 145//230
     #endif
 
     //
@@ -403,7 +750,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #define HOMEY_REPEAT_DECAY 210//300 // "tap then hold" for key auto-repeat
     #endif
 
     //
@@ -578,6 +925,127 @@ behaviors {
                         69 52       57 74                \
                          70 53     56 73                 \
                           71 54   55 72
+
+//--------------------------------------------------------------------------
+    thumbhm: thumb_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        bindings = <&kp>, <&kp>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+    thumbhlayEscape: thumb_homerow_layEscape {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_LAYEscape";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "hold-preferred";
+        require-prior-idle-ms = <50>;         // requires PR #1387
+        bindings = <&mo>, <&kp>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+        modthumbhm: modthumb_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOD_THUMB_HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "hold-preferred";
+        require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
+        bindings = <&kp>, <&kp>;
+        // hold-trigger-key-positions = < KEYS_L THUMBS>;
+        // hold-trigger-on-release;             // delay positional check until key-release
+    };
+thumbhlay: thumb_homerow_lay {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_LAY";
+        #binding-cells = <2>;
+        tapping-term-ms = <185>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        require-prior-idle-ms = <130>;         // requires PR #1387
+        bindings = <&mo>, <&kp>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+
+       thumbhlayShiftLayerLeader: thumb_homerow_layShiftLayerLeader {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_LAYShiftLayerLeader";
+        #binding-cells = <2>;
+        tapping-term-ms = <165>; //185 old version
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "hold-preferred";
+        require-prior-idle-ms = <50>;         // requires PR #1387
+        bindings = <&mo>, <&kp >;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+    thumbhSlayNextLeft: thumb_homerow_SlayNextLeft {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_SLAYNextLeft";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        bindings = <&lm_left>, <&sl>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+  
+       stickymodthumbhm: modthumb_homerow_modssticky {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOD_THUMB_HOMEROW_MODSsticky";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";//"hold-preferred";
+        require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
+        bindings = <&kp>, <&skq1>;
+        // hold-trigger-key-positions = < KEYS_L THUMBS>;
+        // hold-trigger-on-release;             // delay positional check until key-release
+    };
+            thumbhSlayNextRight: thumb_homerow_SlayNextRight {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_SLAYNextRight";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        bindings = <&lm_right>, <&sl>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+          skq: sticky_key_quick_release {
+        compatible = "zmk,behavior-sticky-key";
+        label = "STICKY_KEY_QUICK_RELEASE";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        ignore-modifiers;
+      };
+        skq1: sticky_key_quick_release1 {
+        compatible = "zmk,behavior-sticky-key";
+        label = "STICKY_KEY_QUICK_RELEASE1";
+        #binding-cells = <1>;
+        bindings = <&kp>;
+        release-after-ms = <800>;
+        quick-release;
+        ignore-modifiers;
+      };
+//--------------------------------------------------------------------------
+
+
 
     //
     // Home row mod-tap keys for all except index fingers
@@ -975,7 +1443,38 @@ behaviors {
 };
 
 macros {
-
+  lm_left: lm_left{
+            label = "LAYER_MOD_left";
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &mo LAYER_SKQ_HOLD_LEFT_RED>
+                , <&macro_param_1to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_param_1to1>
+                , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_release &mo LAYER_SKQ_HOLD_LEFT_RED>
+                ;
+        };
+        lm_right: lm_right{
+            label = "LAYER_MOD_right";
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &mo LAYER_SKQ_HOLD_RIGHT_RED>
+                , <&macro_param_1to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_param_1to1>
+                , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_release &mo LAYER_SKQ_HOLD_RIGHT_RED>
+                ;
+        };
     //
     // Linux Magic System Request Key - hold this down and type REISUB
     // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
@@ -3259,10 +3758,10 @@ macros {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
             &kp EQUAL              &kp N1                  &kp N2               &kp N3                  &kp N4                 &kp N5                                                                                                                                                   &kp N6                            &kp N7                &kp N8               &kp N9               &kp N0              &kp BSLH
-            &kp GRAVE             &kp SQT  &homey_left RALT COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &homey_left RALT R                &kp L             &kp SLASH
-    &cappy CAPSLOCK 0  &homey_left LGUI A      &homey_left LALT O  &homey_left LCTRL E     &shift_left LSHFT U  &plain LAYER_Typing I                                                                                                                                    &plain LAYER_Typing D              &shift_right LSHFT H  &homey_right LCTRL T  &homey_right LALT N  &homey_right LGUI S             &kp MINUS
-            &kp LSHFT            &kp SEMI                   &kp Q                &kp J                   &kp K                  &kp X      &thumb LAYER_Function ESC                      &kp UP  &kp DOWN  &kp LEFT               &kp RIGHT  &thumb LAYER_System ENTER                  &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
- &magic LAYER_Magic 0            &kp HOME               &kp PG_UP            &kp PG_DN  &thumb LAYER_Emoji END                         &thumb LAYER_Cursor BACKSPACE  &thumb LAYER_Number DELETE    &lower    &lower  &thumb LAYER_Mouse TAB  &space LAYER_Symbol SPACE                         &thumb_parang_left LAYER_World 0              &kp LBKT             &kp RBKT        &parang_right  &magic LAYER_Magic 0
+            &kp GRAVE             &kp SEMI  &homey_left RALT COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C  &homey_right RALT R                &kp L             &kp SLASH
+    &cappy CAPSLOCK 0  &homey_left LGUI A      &homey_left LALT O  &homey_left LCTRL E     &homey_left LSHFT U  &plain LAYER_Typing I                                                                                                                                    &plain LAYER_Typing D              &homey_right LSHFT H  &homey_right LCTRL T  &homey_right LALT N  &homey_right LGUI S             &kp MINUS
+            &kp LSHFT            &lt LAYER_FN APOS                   &kp Q                &kp J                   &kp K                  &kp X      &thumbhSlayNextLeft HYPER_29 LAYER_SKQ_LEFT_RED &stickymodthumbhm  HYPER_30 /*HYPER_31*/RS(RG(LC(LGUI)))  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))                &stickymodthumbhm HYPER_32 /*HYPER_33*/RS(LS(LC(LALT)))   &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED                  &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
+ &magic LAYER_Magic 0            &kp HOME               &kp PG_UP            &kp PG_DN  &thumb LAYER_Emoji END                          &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  BSPC  &thumb LAYER_Number ESC    &lower    &lower  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                         &thumb_parang_left LAYER_World 0              &kp LBKT             &kp RBKT        &parang_right  &magic LAYER_Magic 0
             >;
         };
 
@@ -3392,7 +3891,7 @@ macros {
      &none      &none      &none      &none     &none                                                                                            &none        &none      &none     &none   &none
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                      &none      &none        &none      &none     &none   &none
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &trans  &kp LSHFT    &kp LCTRL   &kp LALT  &kp LGUI   &none
-  &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                                     &trans   &kp BSPC      &kp TAB  &kp SPACE   &kp RET   &none
+  &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
  &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
     &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
@@ -3475,5 +3974,71 @@ macros {
             >;
         };
 
+
+
+            layer_SKQ_LEFT_RED {
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &trans  &trans      &trans        &trans     &trans   &trans                                                                                                                                                                                                                               &trans    &trans     &trans    &trans    &trans    &trans
+        &trans  &skq RS(LA(LS(LG(LCTRL)))) &skq RC(RA(RG(RS(LA(LSHFT)))))  &skq RC(RA(RG(RS(LA(LGUI))))) &skq RC(RA(RG(RS(LA(LCTRL))))) &skq RC(RA(RG(RS(LS(LGUI)))))                                                                                                                                                                                                                             &skq RC(RA(RG(RS(LS(LCTRL)))))  &skq RC(RA(RG(RS(LG(LCTRL)))))   &skq RC(RA(RG(LA(LS(LGUI)))))  &skq RC(RA(RG(LA(LS(LCTRL)))))  &skq RC(RA(RG(LA(LG(LCTRL)))))  &trans
+        &trans  &skq RC(RA(RG(LS(LG(LCTRL)))))    &skq RC(RA(RS(LA(LS(LGUI)))))      &skq RC(RA(RS(LA(LS(LCTRL)))))   &skq RC(RA(RS(LA(LG(LCTRL))))) &skq RC(RA(RS(LS(LG(LCTRL)))))                                                         &skq RC(RA(LA(LS(LG(LCTRL)))))  &skq RC(RG(RS(LA(LS(LGUI)))))   &skq RC(RG(RS(LA(LS(LCTRL)))))  &skq RC(RG(RS(LA(LG(LCTRL)))))  &skq RC(RG(RS(LS(LG(LCTRL)))))  &trans
+        &trans  &skq RC(RG(LA(LS(LG(LCTRL))))) &skq RC(RS(LA(LS(LG(LCTRL)))))      &skq RA(RG(RS(LA(LS(LGUI)))))   &skq RA(RG(RS(LA(LS(LCTRL))))) &skq RA(RG(RS(LA(LG(LCTRL)))))                               &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N2)))) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)                                           &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)          &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)    &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N3))))                                                                 &skq RA(RG(RS(LS(LG(LCTRL)))))  &skq RA(RG(LA(LS(LG(LCTRL)))))   &skq RA(RS(LA(LS(LG(LCTRL)))))  &skq RG(RS(LA(LS(LG(LCTRL)))))  &skq RG(LA(LS(LG(LCTRL))))  &trans
+        &trans  &trans      &trans        &trans     &trans                     &thumbhm HYPER_58 BKSP &thumbhlay SYMBOLS_LAYER ESC             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+        >;
+       };
+
+
+        layer_SKQ_RIGHT_RED {
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &skq LS(LC(LA(LG(CAPS)))) &skq LS(LC(LA(LGUI)))      &trans        &trans     &trans   &trans                                                                                                                                                                                                                               &trans    &trans     &trans    &trans    &trans    &trans
+        &trans  &skq RC(RG(RS(LS(LCTRL)))) &skq RC(RG(RS(LG(LCTRL))))  &skq RC(RG(LA(LS(LGUI)))) &skq RC(RG(LA(LS(LCTRL)))) &skq RC(RG(LA(LG(LCTRL))))                                                                                                                                                                                                                             &skq RC(RG(LS(LG(LCTRL))))  &skq RC(RS(LA(LS(LGUI))))   &skq RC(RS(LA(LS(LCTRL))))  &skq RC(RS(LA(LG(LCTRL))))  &skq RC(RS(LS(LG(LCTRL))))  &trans
+        &trans  &skq RC(LA(LS(LG(LCTRL))))    &skq RA(RG(RS(LA(LSHFT))))      &skq RA(RG(RS(LA(LGUI))))   &skq RA(RG(RS(LA(LCTRL)))) &skq RA(RG(RS(LS(LGUI))))                                                       &skq RA(RG(RS(LS(LCTRL))))  &skq RA(RG(RS(LG(LCTRL))))   &skq RA(RG(LA(LS(LGUI))))  &skq RA(RG(LA(LS(LCTRL))))  &skq RA(RG(LA(LG(LCTRL))))  &trans
+        &trans  &skq RA(RG(LS(LG(LCTRL)))) &skq RA(RS(LA(LS(LGUI))))      &skq RA(RS(LA(LS(LCTRL))))   &skq RA(RS(LA(LG(LCTRL)))) &skq RA(RS(LS(LG(LCTRL))))                                   &kp /*HYPER_42*/ HYPER_29_KEY(SPACE) &modthumbhm HYPER_38 HYPER_72_KEY(KP_N2)                                       &modthumbhm HYPER_66 HYPER_127_KEY(KP_N0) &modthumbhm  HYPER_69 HYPER_128_KEY(KP_N0)              &modthumbhm HYPER_39 HYPER_73_KEY(KP_N3)  &kp /*HYPER_42*/ RC(RA(LS(LA(KP_N4))))                                                              &skq RA(LA(LS(LG(LCTRL))))  &skq RG(RS(LA(LS(LGUI))))   &skq RG(RS(LA(LS(LCTRL))))  &skq RG(RS(LA(LG(LCTRL))))  &skq RG(RS(LS(LG(LCTRL))))  &trans
+        &trans  &trans      &trans        &trans     &trans                     &thumbhlay HYPER_58  HYPER_02_KEY(KP_N7) /* &thumbhm HYPER_58 BKSP */ &thumbhlay SYMBOLS_LAYER LG(SPACE)             &modthumbhm  HYPER_59 HYPER_77_KEY(PG_UP) &modthumbhm  HYPER_61 HYPER_78_KEY(PG_DN)  &thumbhm HYPER_63  ENTER                 &thumbhm HYPER_64 SPACE                    &trans     &trans    &trans    &trans    &trans
+        >;
+       };
+
+        layer_SKQ_HOLD_LEFT_RED {//HYPER_37
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5                                                                                                                                                                                        &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
+        &kp  TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y                                                                                                                                                                                        &kp F    &kp G       &kp C       &kp R       &kp L      &kp BKSP
+        &kp /*&thumbhlay SYMBOLS_LAYER*/ TAB     &kp A             &kp O      &kp E      &kp U      &kp I                                                     &kp D    &kp H       &kp T       &kp  N      &kp S      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                &kp KP_N1 &kp KP_N2               &kp KP_N0                      &kp  KP_N5     &kp KP_N3  &kp KP_N4                                                                                            &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT
+        &mo SYMBOLS_LAYER &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo SYMBOLS_LAYER
+       >;
+       };
+
+
+        layer_SKQ_HOLD_RIGHT_RED {//HYPER_40
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5                                                                                                                                                                                        &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
+        &kp  TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y                                                                                                                                                                                        &kp F    &kp G       &kp C       &kp R       &kp L      &kp BKSP
+        &kp /*&thumbhlay SYMBOLS_LAYER*/ TAB     &kp A             &kp O      &kp E      &kp U      &kp I                                                      &kp D    &kp H       &kp T       &kp  N      &kp S      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
+        &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                &kp KP_N1 &kp KP_N2               &kp KP_N0                      &kp  KP_N5  &kp KP_N3  &kp KP_N4                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT
+        &mo SYMBOLS_LAYER &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo SYMBOLS_LAYER
+             >;
+       };
+
+              layer_SHIFT_LAYER {
+            bindings = <
+        &kp  LS(GRAVE)     &kp LS(N1)      &kp LS(N2)        &kp LS(N3)     &kp LS(N4)    &kp LS(N5)  &td_mt_kp_07_08                                                                                                                                                                                   &td_mt_kp_09_10   &kp LS(N6) &kp LS(N7)  &kp LS(N8)   &kp LS(N9)           &kp LS(N0)               &modthumbhm HYPER_16 LS(EQUAL)
+        &kp  LS(TAB)       &kp LS(SEMI)          &kp LS(COMMA)  &kp LS(DOT)    &kp LS(P)      &kp LS(Y)   &td_mt_kp_23_24                                                                                                                                                                                  &td_mt_kp_25_26   &kp LS(F)    &kp LS(G)       &kp LS(C)       &kp LS(R)       &kp LS(L)      &kp BKSP
+        &kp /*&thumbhlay SYMBOLS_LAYER*/ LS(TAB)     &kp LS(A)             &kp LS(O)      &kp LS(E)      &kp LS(U)      &kp LS(I)   &td_mt_kp_35_36                     &kp KP_N1 &kp KP_N2 &kp KP_N3  &kp KP_N4                          &mt LALT CSG   &kp LS(D)    &kp LS(H)       &kp LS(T)       &kp  LS(N)      &kp LS(S)      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
+        &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                               &kp KP_N0                      &kp  KP_N5                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp BKSP
+        &mo SYMBOLS_LAYER &kp LS(GRAVE)           &kp LS(FSLH)    &kp LS(LEFT)   &kp LS(RIGHT)                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape SYMBOLS_LAYER ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   LS(ENTER)              &kp LS(SPACE) /* &modthumbhmFAST LA(BSPC) BSPC *//*&kp  LA(BSPC)*/                         &kp LS(DOWN)    &kp LS(UP)      &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET)    &mo SYMBOLS_LAYER
+       >;
     };
+        layer_FN {
+            bindings = <
+       &kp F1           &kp F2         &kp F3         &kp F4          &kp F5  &kp F6            &tog LAYER_KEYPAD                                            &to LAYER_MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+       &trans           &trans         &trans         &trans          &trans  &trans             &trans                                                      &trans  &kp ENTER  &kp N7     &kp N8      &kp N9     &kp  N0   &trans
+       &trans           &kp LCTL       &kp LALT       &kp LSHFT       &kp LGUI  &trans             &trans  &trans  &trans                   &trans   &trans    &trans  &kp DOT    &kp N4    &kp N5     &kp N6     &kp  BSPC   &trans
+       &trans           &trans         &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOLUME_UP   &kp C_MUTE                   &kp LG(LS((Z)))                     &trans                  &kp COMMA  &kp N1    &kp N2     &kp N3     &kp PLUS    &trans
+       &trans           &trans         &trans         &trans          &trans  &kp LG(V)            &kp LG(C)  &kp LG(Z)  &trans  &kp LA(BSPC)  &trans                                          &kp PRCNT  &kp EQUAL  &kp FSLH   &kp ASTRK   &trans
+            >;
+        };
+  };
 };
