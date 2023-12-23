@@ -742,7 +742,6 @@
   };
 
 
-/ {
     combos {
         compatible = "zmk,combos";
 //   COMBO(deleteline, &kp LG(BKSP), 41 65, PRIME_LAYER, COMBO_TERM_SLOWEST)
@@ -787,7 +786,6 @@
 
   COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, LAYER_Dvorak, COMBO_TERM_TOOSLOW)
     };
-};
 
 
 behaviors {
