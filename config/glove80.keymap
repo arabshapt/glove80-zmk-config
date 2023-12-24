@@ -20,6 +20,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define AH(keycode) &as RS(RC(RA(RG(keycode)))) keycode      // AutoHyper Macro HYPER_85_KEY
+
 /* Automatically generated layer name #define */
 #define LAYER_Dvorak 0
 #define LAYER_Engrammer 1
@@ -1142,6 +1144,15 @@ thumbhlay: thumb_homerow_lay {
         quick-release;
         ignore-modifiers;
       };
+                      as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 //--------------------------------------------------------------------------
 
 
