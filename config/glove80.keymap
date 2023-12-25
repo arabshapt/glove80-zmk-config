@@ -631,6 +631,16 @@
 #endif
 };
 
+/{
+conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <LAYER_World LAYER_Mouse>;
+        then-layer = <LAYER_Cursor>;
+    };
+};
+};
+
 / {
     behaviors {
         magic: magic {
@@ -808,15 +818,6 @@
 #define STAR  LS(N8)
 #define TILDE LS(GRAVE)
 #define UNDER LS(MINUS)
-
-
-conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <LAYER_World LAYER_Mouse>;
-        then-layer = <LAYER_Cursor>;
-    };
-};
 
 behaviors {
 
