@@ -814,7 +814,7 @@ conditional_layers {
     compatible = "zmk,conditional-layers";
     tri_layer {
         if-layers = <LAYER_World LAYER_Mouse>;
-        then-layer = <layer_Cursor>;
+        then-layer = <LAYER_Cursor>;
     };
 };
 
