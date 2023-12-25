@@ -809,6 +809,15 @@
 #define TILDE LS(GRAVE)
 #define UNDER LS(MINUS)
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LAYER_World LAYER_Mouse>;
+            then-layer = <layer_Cursor>;
+        };
+    };
+};
 
 behaviors {
 
