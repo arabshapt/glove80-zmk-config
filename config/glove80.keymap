@@ -4009,7 +4009,7 @@ macros {
   &none   &none  &msc SCRL_LEFT    &mmv MOVE_UP  &msc SCRL_RIGHT   &none                                                                   &none      &none      &none     &none     &none   &none
   &none   &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &none                                                                   &none      &kp LGUI   &kp LSHFT &kp LALT  &kp LCTRL   &none
   &none   &none           &none  &msc SCRL_DOWN     &msc SCRL_UP   &none  &mkp MCLK      &none   &none             &none   &none   &none   &none      &none      &none     &none     &none   &none
-  &none   &none           &none           &none            &none          &mkp LCLK  &mkp RCLK   &none  &tog LAYER_Mouse   &none   &none              &none      &none     &none     &none   &none
+  &none   &none           &none           &none            &none          &mkp LCLK  &mkp RCLK   &none  &tog LAYER_Mouse   &none   &none              &mo LAYER_World      &none     &none     &none   &none
             >;
         };
 
@@ -4031,7 +4031,7 @@ macros {
           &none         &world_degree_sign          &world_y_base         &world_o_base              &world_u_base  &world_quotes_base                                                                       &none      &none   &kp LALT   &kp RALT      &none   &none
  &world_n_tilde           &world_c_cedilla          &world_i_base         &world_e_base              &world_a_base               &none                                                                       &none  &kp LSHFT  &kp LCTRL  &kp RCTRL  &kp RSHFT   &none
           &none  &world_quotes_angle_lower    &world_exclaim_left  &world_question_left  &world_quotes_angle_upper               &none   &none   &none             &none             &none   &none   &none   &none      &none      &none      &none      &none   &none
-          &none        &world_section_sign  &world_paragraph_sign      &world_o_ordinal           &world_a_ordinal                       &none   &none  &tog LAYER_World  &tog LAYER_World   &none   &none              &none      &none      &none      &none   &none
+          &none        &world_section_sign  &world_paragraph_sign      &world_o_ordinal           &world_a_ordinal                       &none   &none  &tog LAYER_World  &tog LAYER_World   &none   &none              &none      &mo LAYER_Mouse      &none      &none   &none
             >;
         };
 
