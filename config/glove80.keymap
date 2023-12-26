@@ -631,15 +631,15 @@
 #endif
 };
 
-/{
-conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <LAYER_World LAYER_Mouse>;
-        then-layer = <LAYER_FN>;
-    };
-};
-};
+// /{
+// conditional_layers {
+//     compatible = "zmk,conditional-layers";
+//     tri_layer {
+//         if-layers = <LAYER_World LAYER_Mouse>;
+//         then-layer = <LAYER_FN>;
+//     };
+// };
+// };
 
 / {
     behaviors {
