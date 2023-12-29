@@ -1365,14 +1365,13 @@ thumbhlay: thumb_homerow_lay {
         #binding-cells = <2>;
         bindings = <&mo>, <&parang_left>;
     };
-    space: thumb_layer_access_spacebar {
+    space: thumb_layer_access_spacebar_arab {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_SPACEBAR";
-        flavor = SPACE_HOLDING_TYPE;
-        tapping-term-ms = <SPACE_HOLDING_TIME>;
-        #ifdef ENABLE_KEY_REPEAT
-        quick-tap-ms = <SPACE_REPEAT_DECAY>; // enable repeat
-        #endif
+        label = "THUMB_LAYER_ACCESS_SPACEBAR-arab";
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        require-prior-idle-ms = <175>;         // requires PR #1387
+        quick-tap-ms = <210>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
