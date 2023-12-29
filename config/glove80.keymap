@@ -3847,7 +3847,7 @@ macros {
 #endif
 
 /*HACK*/};
-// #ifdef ENABLE_MOUSE_KEYS
+#ifdef ENABLE_MOUSE_KEYS
     // ==== MOUSE-KEY <section begins> ====
     #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
     #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
@@ -3863,32 +3863,32 @@ macros {
       time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
     };
     // ==== MOUSE-KEY <section ends> =====
-// #else
-//     #define mkp none
-//     #define mmv none
-//     #define msc none
-//     #define LCLK
-//     #define MCLK
-//     #define RCLK
-//     #define MB1
-//     #define MB2
-//     #define MB3
-//     #define MB4
-//     #define MB5
-//     #define MB6
-//     #define MB7
-//     #define MB8
-//     #define MOVE_UP
-//     #define MOVE_DOWN
-//     #define MOVE_LEFT
-//     #define MOVE_RIGHT
-//     #define SCRL_UP
-//     #define SCRL_DOWN
-//     #define SCRL_LEFT
-//     #define SCRL_RIGHT
-// #endif
-// /*HACK*//{
-// };
+#else
+    #define mkp none
+    #define mmv none
+    #define msc none
+    #define LCLK
+    #define MCLK
+    #define RCLK
+    #define MB1
+    #define MB2
+    #define MB3
+    #define MB4
+    #define MB5
+    #define MB6
+    #define MB7
+    #define MB8
+    #define MOVE_UP
+    #define MOVE_DOWN
+    #define MOVE_LEFT
+    #define MOVE_RIGHT
+    #define SCRL_UP
+    #define SCRL_DOWN
+    #define SCRL_LEFT
+    #define SCRL_RIGHT
+#endif
+/*HACK*//{
+};
 
     /* Automatically generated keymap */
 / {
