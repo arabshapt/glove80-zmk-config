@@ -3776,7 +3776,7 @@ macros {
 // mouse keys are deactivated (they're transformed into no-ops) by default.
 // To use this feature, uncomment the following line (remove leading "//").
 //
-//#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
+#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
 
 //
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
