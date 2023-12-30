@@ -11,8 +11,10 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v3
         with:
-          repository: moergo-sc/zmk
-          ref: v23.12
+          # repository: moergo-sc/zmk
+          repository: bryanforbes/zmk
+          ref: mouse-3.2-moergo
+          # ref: main
           path: src
       - uses: cachix/install-nix-action@v20
         with:
