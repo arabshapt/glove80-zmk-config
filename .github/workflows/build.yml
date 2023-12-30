@@ -13,7 +13,7 @@ jobs:
         with:
           repository: moergo-sc/zmk
           # repository: bryanforbes/zmk
-          ref: v23.12
+          ref: main
           path: src
       - uses: cachix/install-nix-action@v20
         with:
