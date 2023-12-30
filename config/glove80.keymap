@@ -3945,7 +3945,7 @@ macros {
         layer_Magic {
             bindings = <
   &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &to 0            &to 1            &to 2            &to 3            &to 4            &to 5                                                         &none   &none   &none   &none   &none           &none
+       &to 0            &to LAYER_Gaming            &to 2            &to 3            &to 4            &to 5                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
@@ -4048,7 +4048,7 @@ macros {
  &kp MINUS  &kp GRAVE   &kp B   &kp N   &kp M  &kp SQT                                                                             &kp B   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
      &kp T    &kp TAB   &kp Q   &kp W   &kp E    &kp R                                                                             &kp T   &kp Y   &kp U      &kp I    &kp O     &kp P
      &kp G  &kp LSHFT   &kp A   &kp S   &kp D    &kp F    &kp RET   &kp LALT  &kp PAUSE_BREAK           &kp BSPC  &kp DEL  &trans   &kp G   &kp H   &kp J      &kp K    &kp L  &kp SEMI
-     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &thumbhlayEscape LAYER_Gaming_2 ESC         &kp LGUI  &tog LAYER_Gaming   &trans  &trans          &trans  &trans     &trans   &trans    &trans
+     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &thumbhlayEscape LAYER_Gaming_2 ESC         &kp LGUI  &tog LAYER_Gaming   &trans  &trans          &trans  &trans     &trans   &trans    &magic LAYER_Magic 0
             >;
         };
                 layer_Gaming_2 {
@@ -4058,7 +4058,7 @@ macros {
  &kp MINUS  &kp GRAVE   &kp B   &kp N   &kp M  &kp SQT                                                                             &kp B   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
      &kp T    &kp TAB   &kp Q   &kp W   &kp E    &kp R                                                                             &kp T   &kp Y   &kp U      &kp I    &kp O     &kp P
      &kp G  &kp LSHFT   &kp A   &kp S   &kp D    &kp F    &kp RET   &kp LALT  &kp PAUSE_BREAK           &kp BSPC  &kp DEL  &trans   &kp G   &kp H   &kp J      &kp K    &kp L  &kp SEMI
-     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &none         &kp LGUI  &none   &trans  &trans          &trans  &trans     &trans   &trans    &trans
+     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &none         &kp LGUI  &none   &trans  &trans          &trans  &trans     &trans   &trans    &magic LAYER_Magic 0
             >;
         };
 
