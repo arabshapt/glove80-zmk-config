@@ -851,7 +851,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 185//270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 270//185//270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -860,7 +860,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 175//145//230
+    #define HOMEY_STREAK_DECAY 230//175//145//230
     #endif
 
     //
@@ -868,7 +868,7 @@ behaviors {
     // after tapping a key to hold it again in order to make it auto-repeat.
     //
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 210//300 // "tap then hold" for key auto-repeat
+    #define HOMEY_REPEAT_DECAY 300//210//300 // "tap then hold" for key auto-repeat
     #endif
 
     //
