@@ -490,7 +490,7 @@
 //   COMBO(contexts2, &kp HYPER_29_KEY(SPACE), 70 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(alfred, &kp HYPER_02_KEY(KP_N7) , 57 29, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 
-  COMBO(raycast3, &kp HYPER_29_KEY(SPACE), 74 41, LAYER_SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
+  // COMBO(raycast3, &kp HYPER_29_KEY(SPACE), 74 41, LAYER_SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
 
   COMBO(lshift1, &skq LSHIFT , 25 38, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(rshift1, &skq RSHIFT, 41 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
@@ -3898,7 +3898,7 @@ macros {
         layer_Dvorak {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
-            &kp EQUAL             AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)                                                                                                                                                     AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)              &kp BSLH
+            &kp CAPSLOCK /*EQUAL*/             AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)                                                                                                                                                     AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)              &kp BSLH
             &kp GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &kp SLASH
          &kp LA(BSPC)  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &kp MINUS
             &kp LSHFT            &lt LAYER_FN APOS                   &kp Q                &kp J                   &kp K                  &kp X      &thumbhSlayNextLeftLayer LAYER_Function/*HYPER_29*/ LAYER_SKQ_LEFT_RED &stickymodthumbhm  HYPER_30 /*HYPER_31*/RS(RG(LC(LGUI)))  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))                &stickymodthumbhm HYPER_32 /*HYPER_33*/RS(LS(LC(LALT)))   &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED                  &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
