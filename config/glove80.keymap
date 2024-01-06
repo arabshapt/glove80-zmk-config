@@ -851,7 +851,7 @@ behaviors {
     // (i.e. "register" them) for mod-click mouse usage (e.g. Ctrl-Click).
     //
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 270//185//270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 230//185//270 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
 
     //
@@ -860,7 +860,7 @@ behaviors {
     // unintended activation of home row mods when you're actively typing.
     //
     #ifndef HOMEY_STREAK_DECAY
-    #define HOMEY_STREAK_DECAY 230//175//145//230
+    #define HOMEY_STREAK_DECAY 200//175//145//230
     #endif
 
     //
@@ -1369,8 +1369,8 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_SPACEBAR-arab";
         flavor = "balanced";
-        tapping-term-ms = <270>;
-        require-prior-idle-ms = <230>;         // requires PR #1387
+        tapping-term-ms = <220>;
+        require-prior-idle-ms = <200>;         // requires PR #1387
         quick-tap-ms = <270>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
