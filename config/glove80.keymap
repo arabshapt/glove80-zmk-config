@@ -35,20 +35,21 @@
 #define LAYER_Function 5
 #define LAYER_Emoji 6
 #define LAYER_Symbol 7
-#define LAYER_Mouse 8
-#define LAYER_System 9
-#define LAYER_World 10
-#define LAYER_Gaming 11
-#define LAYER_Gaming_2 12
-#define LAYER_Typing 13
-#define LAYER_CrossLeft 14
-#define LAYER_CrossRight 15
-#define LAYER_SKQ_LEFT_RED 16
-#define LAYER_SKQ_RIGHT_RED 17
-#define LAYER_SKQ_HOLD_LEFT_RED 18
-#define LAYER_SKQ_HOLD_RIGHT_RED 19
-#define LAYER_SHIFT_LAYER 20
-#define LAYER_FN 21
+#define LAYER_Symbol_mirrored 8
+#define LAYER_Mouse 9
+#define LAYER_System 10
+#define LAYER_World 11
+#define LAYER_Gaming 12
+#define LAYER_Gaming_2 13
+#define LAYER_Typing 14
+#define LAYER_CrossLeft 15
+#define LAYER_CrossRight 16
+#define LAYER_SKQ_LEFT_RED 17
+#define LAYER_SKQ_RIGHT_RED 18
+#define LAYER_SKQ_HOLD_LEFT_RED 19
+#define LAYER_SKQ_HOLD_RIGHT_RED 20
+#define LAYER_SHIFT_LAYER 21
+#define LAYER_FN 22
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
@@ -1152,7 +1153,7 @@ thumbhlay: thumb_homerow_lay {
         tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        require-prior-idle-ms = <200>;         // requires PR #1387
         bindings = <&lm_right>, <&sl>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -3901,8 +3902,8 @@ macros {
             &kp CAPSLOCK /*EQUAL*/             AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)                                                                                                                                                     AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)              &kp BSLH
             &kp GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &kp SLASH
          &kp LA(BSPC)  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
-            &kp LSHFT            &lt LAYER_FN APOS                   &kp Q                &kp J                   &kp K                  &kp X      &thumbhSlayNextLeftLayer LAYER_Function/*HYPER_29*/ LAYER_SKQ_LEFT_RED &stickymodthumbhm  HYPER_30 /*HYPER_31*/RS(RG(LC(LGUI)))  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))                &stickymodthumbhm HYPER_32 /*HYPER_33*/RS(LS(LC(LALT)))   &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED                  &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
- &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  BSPC  &thumb LAYER_Cursor ESC    &lower    &lower  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
+            &kp LSHFT            &lt LAYER_FN APOS                   &kp Q                &kp J                   &kp K                  &kp X      &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ LAYER_SKQ_LEFT_RED /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumb LAYER_Function ESC  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED                  &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
+ &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  BSPC  &thumbhlayEscape LAYER_Symbol_mirrored ESC    &lower    &lower  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
@@ -4007,7 +4008,16 @@ macros {
     &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
-
+      layer_Symbol_mirrored {
+            bindings = <
+     &none      &none      &none      &none     &none                                                                                            &none        &none      &none     &none   &none
+     &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                       &kp AT &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA
+  &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK
+  &none   &homey_right RCTL RET     &homey_right RALT SPACE  &homey_right RSHFT TAB    &homey_right RGUI BSPC       &none         &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT UNDER     &homey_left LGUI DLLR &kp STAR
+               &none   &none   &none  &kp LS(TAB) &kp DEL &trans            &none     &none   &none    &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR
+      &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none  &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI
+            >;
+        };
         layer_Mouse {
             bindings = <
   &none   &none           &none           &none            &none                                                                                      &none      &none     &none     &none   &none
@@ -4149,7 +4159,7 @@ macros {
         &kp  LS(GRAVE)     &kp LS(N1)      &kp LS(N2)        &kp LS(N3)     &kp LS(N4)    &kp LS(N5)                                                                                                                                                                                        &kp LS(N6) &kp LS(N7)  &kp LS(N8)   &kp LS(N9)           &kp LS(N0)               &modthumbhm HYPER_16 LS(EQUAL)
         &kp  LS(TAB)       &kp LS(SEMI)          &kp LS(COMMA)  &kp LS(DOT)    &kp LS(P)      &kp LS(Y)                                                                                                                                                                                     &kp LS(F)    &kp LS(G)       &kp LS(C)       &kp LS(R)       &kp LS(L)      &kp BKSP
         &kp /*&thumbhlay LAYER_Symbol*/ LS(TAB)     &kp LS(A)             &kp LS(O)      &kp LS(E)      &kp LS(U)      &kp LS(I)                                                    &kp LS(D)    &kp LS(H)       &kp LS(T)       &kp  LS(N)      &kp LS(S)      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
-        &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                   &kp KP_N1 &kp KP_N2            &kp KP_N0                      &kp  KP_N5   &kp KP_N3  &kp KP_N4                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp BKSP
+        &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                   &kp KP_N1 &kp KP_N2            &kp KP_N0                      &kp  KP_N5   &kp LS(TAB)  &kp KP_N4                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp BKSP
         &mo LAYER_Symbol &kp LS(LEFT) &kp LS(DOWN)               &kp LS(UP)            &kp LS(RIGHT)                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   LS(ENTER)              &kp LS(SPACE) /* &modthumbhmFAST LA(BSPC) BSPC *//*&kp  LA(BSPC)*/                         &kp LT    &kp LS(LBKT)      &kp LS(RBKT) &kp GT   &mo LAYER_Symbol
        >;
     };
