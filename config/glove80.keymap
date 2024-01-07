@@ -4014,8 +4014,8 @@ macros {
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                       &kp AT &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK
   &none   &homey_right RCTL RET     &homey_right RALT SPACE  &homey_right RSHFT TAB    &homey_right RGUI BSPC       &none         &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT UNDER     &homey_left LGUI DLLR &kp STAR
-               &none   &none   &none  &kp LS(TAB) &kp DEL &trans            &none     &none   &none    &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR
-      &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none  &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI
+               &none   &none   &none  &kp LS(TAB) &kp DEL &trans            &none     &none   &none     &kp STAR &kp DOT &kp BSLH  &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   
+      &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none   &kp SEMI  &kp COLON  &kp PRCNT  &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             
             >;
         };
         layer_Mouse {
