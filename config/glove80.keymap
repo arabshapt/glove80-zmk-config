@@ -639,6 +639,15 @@
 #endif
 };
 
+/{
+conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <LAYER_SHIFT_LAYER LAYER_Symbol;
+        then-layer = <LAYER_Emoji>;
+    };
+};
+};
 
 / {
     behaviors {
@@ -3884,15 +3893,6 @@ macros {
 
     /* Automatically generated keymap */
 / {
-
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <LAYER_SHIFT_LAYER LAYER_Symbol;
-        then-layer = <LAYER_Emoji>;
-    };
-};
-
     keymap {
         compatible = "zmk,keymap";
 
