@@ -3992,7 +3992,7 @@ macros {
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
   &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT UNDER     &homey_left LGUI DLLR &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
  &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
-    &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &kp PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
+    &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
       layer_Symbol_mirrored {
@@ -4147,7 +4147,7 @@ macros {
         &kp  LS(TAB)       &kp LS(SEMI)          &kp LS(COMMA)  &kp LS(DOT)    &kp LS(P)      &kp LS(Y)                                                                                                                                                                                     &kp LS(F)    &kp LS(G)       &kp LS(C)       &kp LS(R)       &kp LS(L)      &kp BKSP
         &kp /*&thumbhlay LAYER_Symbol*/ LS(TAB)     &kp LS(A)             &kp LS(O)      &kp LS(E)      &kp LS(U)      &kp LS(I)                                                    &kp LS(D)    &kp LS(H)       &kp LS(T)       &kp  LS(N)      &kp LS(S)      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
         &kp LSHFT         &lt LAYER_FN LS(APOS) &kp LS(Q)      &kp LS(J)      &kp LS(K)      &kp LS(X)                                                   &kp KP_N1 &kp KP_N2            &kp KP_N0                      &kp  KP_N5   &kp LS(TAB)  &kp KP_N4                                                                                                 &kp LS(B)    &kp LS(M)       &kp LS(W)       &kp LS(V)       &kp LS(Z)      &kp BKSP
-        &mo LAYER_Symbol &kp LS(LEFT) &kp LS(DOWN)               &kp LS(UP)            &kp LS(RIGHT)                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   LS(ENTER)              &kp LS(SPACE) /* &modthumbhmFAST LA(BSPC) BSPC *//*&kp  LA(BSPC)*/                         &kp LT    &kp LS(LBKT)      &kp LS(RBKT) &kp GT   &mo LAYER_Symbol
+        &mo LAYER_Symbol &kp LS(LEFT) &kp LS(DOWN)               &kp LS(UP)            &kp LS(RIGHT)                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   LS(ENTER)              &space LAYER_Symbol LS(SPACE) /* &modthumbhmFAST LA(BSPC) BSPC *//*&kp  LA(BSPC)*/                         &kp LT    &kp LS(LBKT)      &kp LS(RBKT) &kp GT   &mo LAYER_Symbol
        >;
     };
         layer_FN {
