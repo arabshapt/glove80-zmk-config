@@ -33,23 +33,23 @@
 #define LAYER_Cursor 3
 #define LAYER_Number 4
 #define LAYER_Function 5
-#define LAYER_Emoji 6
-#define LAYER_Symbol 7
-#define LAYER_Symbol_mirrored 8
-#define LAYER_Mouse 9
-#define LAYER_System 10
-#define LAYER_World 11
-#define LAYER_Gaming 12
-#define LAYER_Gaming_2 13
-#define LAYER_Typing 14
-#define LAYER_CrossLeft 15
-#define LAYER_CrossRight 16
-#define LAYER_SKQ_LEFT_RED 17
-#define LAYER_SKQ_RIGHT_RED 18
-#define LAYER_SKQ_HOLD_LEFT_RED 19
-#define LAYER_SKQ_HOLD_RIGHT_RED 20
-#define LAYER_SHIFT_LAYER 21
-#define LAYER_FN 22
+#define LAYER_Symbol 6
+#define LAYER_Symbol_mirrored 7
+#define LAYER_Mouse 8
+#define LAYER_System 9
+#define LAYER_World 10
+#define LAYER_Gaming 11
+#define LAYER_Gaming_2 12
+#define LAYER_Typing 13
+#define LAYER_CrossLeft 14
+#define LAYER_CrossRight 15
+#define LAYER_SKQ_LEFT_RED 16
+#define LAYER_SKQ_RIGHT_RED 17
+#define LAYER_SKQ_HOLD_LEFT_RED 18
+#define LAYER_SKQ_HOLD_RIGHT_RED 19
+#define LAYER_SHIFT_LAYER 20
+#define LAYER_FN 21
+#define LAYER_Emoji 22
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
@@ -639,15 +639,6 @@
 #endif
 };
 
-// /{
-// conditional_layers {
-//     compatible = "zmk,conditional-layers";
-//     tri_layer {
-//         if-layers = <LAYER_World LAYER_Mouse>;
-//         then-layer = <LAYER_FN>;
-//     };
-// };
-// };
 
 / {
     behaviors {
@@ -3893,6 +3884,15 @@ macros {
 
     /* Automatically generated keymap */
 / {
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+        if-layers = <LAYER_SHIFT_LAYER LAYER_Symbol;
+        then-layer = <LAYER_Emoji>;
+    };
+};
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -3987,20 +3987,9 @@ macros {
             >;
         };
 
-        layer_Emoji {
-            bindings = <
-              &none                    &none                          &none                      &none                         &none                                                                                                                                                          &emoji_new_moon  &emoji_waxing_crescent_moon   &emoji_first_quarter_moon  &emoji_waxing_gibbous_moon         &emoji_full_moon
-              &none   &emoji_light_skin_tone  &emoji_medium_light_skin_tone    &emoji_medium_skin_tone  &emoji_medium_dark_skin_tone  &emoji_dark_skin_tone                                                                                                           &emoji_tada                &emoji_heart                  &emoji_fire               &emoji_muscle      &emoji_person_climbing            &emoji_rocket
-  &emoji_left_arrow              &emoji_bald                &emoji_red_hair          &emoji_curly_hair             &emoji_white_hair     &emoji_right_arrow                                                                                                     &emoji_sunglasses          &emoji_star_struck                   &emoji_joy           &emoji_cold_sweat               &emoji_scream    &emoji_exploding_head
- &emoji_female_sign  &emoji_skin_tone_preset                     &emoji_zwj  &emoji_gender_sign_preset      &emoji_hair_style_preset       &emoji_male_sign                                                                                                   &emoji_snap_fingers              &emoji_ok_hand                  &emoji_pray          &emoji_sweat_smile         &emoji_disappointed          &emoji_thinking
-   &emoji_old_woman             &emoji_woman                    &emoji_girl                 &emoji_boy                    &emoji_man         &emoji_old_man   &none   &none             &none     &emoji_astronaut      &emoji_nerd   &emoji_sparkles  &emoji_person_tipping_hand  &emoji_person_gesturing_ok         &emoji_person_bowing  &emoji_person_raising_hand  &emoji_person_gesturing_no  &emoji_person_shrugging
-              &none                    &none                    &emoji_baby         &emoji_baby_bottle                         &none                          &none   &none  &tog LAYER_Emoji  &emoji_raised_hands  &emoji_point_up  &emoji_thumbs_up                                         &emoji_checkoff                   &emoji_100              &emoji_warning                    &emoji_x          &emoji_question
-            >;
-        };
-
         layer_Symbol {
             bindings = <
-     &none      &none      &none      &none     &none                                                                                            &none        &none      &none     &none   &none
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                      &none      &none        &none      &none     &none   &none
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
   &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT UNDER     &homey_left LGUI DLLR &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
@@ -4010,7 +3999,7 @@ macros {
         };
       layer_Symbol_mirrored {
             bindings = <
-     &none      &none      &none      &none     &none                                                                                            &none        &none      &none     &none   &none
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                       &kp AT &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &kp QMARK   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC   &kp EXCL 
   &none   &homey_right RCTL RET     &homey_right RALT SPACE  &homey_right RSHFT TAB    &homey_right RGUI BSPC       &none         &kp STAR  &homey_left LGUI  CARET      &homey_left LSHFT  EQUAL  &homey_left LALT  UNDER     &homey_left LCTRL DLLR &kp HASH 
@@ -4020,7 +4009,7 @@ macros {
         };
         layer_Mouse {
             bindings = <
-  &none   &none           &none           &none            &none                                                                                      &none      &none     &none     &none   &none
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
   &none   &none           &none           &none            &none   &none                                                                   &none      &none      &none     &none     &none   &none
   &none   &none  &msc SCRL_LEFT    &mmv MOVE_UP  &msc SCRL_RIGHT   &none                                                                   &none      &none      &none     &none     &none   &none
   &none   &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &none                                                                   &none      &kp LGUI   &kp LSHFT &kp LALT  &kp LCTRL   &none
@@ -4031,7 +4020,7 @@ macros {
 
         layer_System {
             bindings = <
-           &none            &none            &none            &none            &none                                                                                                             &none      &none     &none     &none   &none
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
            &none            &none            &none            &none            &none   &none                                                                                          &none      &none      &none     &none     &none   &none
            &none            &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI            &none   &none                                                                                          &none      &none      &none     &none     &none   &none
  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &none                                                                                          &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
@@ -4042,7 +4031,7 @@ macros {
 
         layer_World {
             bindings = <
-          &none                      &none                  &none                 &none                      &none                                                                                                      &none      &none      &none      &none   &none
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
           &none                      &none                  &none                 &none                      &none               &none                                                                       &none      &none      &none      &none      &none   &none
           &none         &world_degree_sign          &world_y_base         &world_o_base              &world_u_base  &world_quotes_base                                                                       &none      &none   &kp LALT   &kp RALT      &none   &none
  &world_n_tilde           &world_c_cedilla          &world_i_base         &world_e_base              &world_a_base               &none                                                                       &none  &kp LSHFT  &kp LCTRL  &kp RCTRL  &kp RSHFT   &none
@@ -4155,7 +4144,7 @@ macros {
 
               layer_SHIFT_LAYER {
             bindings = <
-             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+               &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
         &kp  LS(GRAVE)     &kp LS(N1)      &kp LS(N2)        &kp LS(N3)     &kp LS(N4)    &kp LS(N5)                                                                                                                                                                                        &kp LS(N6) &kp LS(N7)  &kp LS(N8)   &kp LS(N9)           &kp LS(N0)               &modthumbhm HYPER_16 LS(EQUAL)
         &kp  LS(TAB)       &kp LS(SEMI)          &kp LS(COMMA)  &kp LS(DOT)    &kp LS(P)      &kp LS(Y)                                                                                                                                                                                     &kp LS(F)    &kp LS(G)       &kp LS(C)       &kp LS(R)       &kp LS(L)      &kp BKSP
         &kp /*&thumbhlay LAYER_Symbol*/ LS(TAB)     &kp LS(A)             &kp LS(O)      &kp LS(E)      &kp LS(U)      &kp LS(I)                                                    &kp LS(D)    &kp LS(H)       &kp LS(T)       &kp  LS(N)      &kp LS(S)      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
@@ -4171,6 +4160,17 @@ macros {
        &trans           &kp LCTL       &kp LALT       &kp LSHFT       &kp LGUI  &trans                                        &kp DOT    &kp N4    &kp N5     &kp N6     &kp  BSPC   &trans
        &trans           &trans         &kp C_VOLUME_DOWN &kp C_PLAY_PAUSE &kp C_VOLUME_UP   &kp C_MUTE       &trans  &trans            &kp LG(LS((Z)))                     &trans        &trans   &trans          &kp COMMA  &kp N1    &kp N2     &kp N3     &kp PLUS    &trans
        &trans           &trans         &trans         &trans          &trans  &kp LG(V)            &kp LG(C)  &kp LG(Z)  &trans  &kp LA(BSPC)  &trans                                          &kp PRCNT  &kp EQUAL  &kp FSLH   &kp ASTRK   &trans
+            >;
+        };
+
+        layer_Emoji {
+            bindings = <
+              &none                    &none                          &none                      &none                         &none                                                                                                                                                          &emoji_new_moon  &emoji_waxing_crescent_moon   &emoji_first_quarter_moon  &emoji_waxing_gibbous_moon         &emoji_full_moon
+              &none   &emoji_light_skin_tone  &emoji_medium_light_skin_tone    &emoji_medium_skin_tone  &emoji_medium_dark_skin_tone  &emoji_dark_skin_tone                                                                                                           &emoji_tada                &emoji_heart                  &emoji_fire               &emoji_muscle      &emoji_person_climbing            &emoji_rocket
+  &emoji_left_arrow              &emoji_bald                &emoji_red_hair          &emoji_curly_hair             &emoji_white_hair     &emoji_right_arrow                                                                                                     &emoji_sunglasses          &emoji_star_struck                   &emoji_joy           &emoji_cold_sweat               &emoji_scream    &emoji_exploding_head
+ &emoji_female_sign  &emoji_skin_tone_preset                     &emoji_zwj  &emoji_gender_sign_preset      &emoji_hair_style_preset       &emoji_male_sign                                                                                                   &emoji_snap_fingers              &emoji_ok_hand                  &emoji_pray          &emoji_sweat_smile         &emoji_disappointed          &emoji_thinking
+   &emoji_old_woman             &emoji_woman                    &emoji_girl                 &emoji_boy                    &emoji_man         &emoji_old_man   &none   &none             &none     &emoji_astronaut      &emoji_nerd   &emoji_sparkles  &emoji_person_tipping_hand  &emoji_person_gesturing_ok         &emoji_person_bowing  &emoji_person_raising_hand  &emoji_person_gesturing_no  &emoji_person_shrugging
+              &none                    &none                    &emoji_baby         &emoji_baby_bottle                         &none                          &none   &none  &tog LAYER_Emoji  &emoji_raised_hands  &emoji_point_up  &emoji_thumbs_up                                         &emoji_checkoff                   &emoji_100              &emoji_warning                    &emoji_x          &emoji_question
             >;
         };
 
