@@ -638,17 +638,15 @@
     };
 #endif
 };
-
 / {
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-        if-layers = <LAYER_SHIFT_LAYER LAYER_Symbol;
-        then-layer = <LAYER_Emoji>;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LAYER_SHIFT_LAYER LAYER_Symbol>;
+            then-layer = <LAYER_Emoji>;
+        };
     };
-  };
 };
-
 / {
     behaviors {
         magic: magic {
