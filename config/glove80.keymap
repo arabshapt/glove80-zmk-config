@@ -1590,9 +1590,7 @@ macros {
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &sl layer_SKQ_RIGHT_RED>
-                ;
+            bindings = <&macro_tap &sl LAYER_SKQ_RIGHT_RED>;
         };
   lm_left: lm_left{
             label = "LAYER_MOD_left";
