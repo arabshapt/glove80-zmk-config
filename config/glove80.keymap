@@ -1604,7 +1604,7 @@ thumbhlay: thumb_homerow_lay {
 };
 leader_sequences {
     compatible = "zmk,leader-sequences";
-    LEADER(switchmode, 41 42 , &kp LC(LS(A)) , LAYER_Dvorak)
+    LEADER(switchmode, 41, &kp LC(LS(A)), 0)
 };
 
 };
@@ -3926,6 +3926,9 @@ macros {
 
     /* Automatically generated keymap */
 / {
+    #include "leader.dtsi"
+
+
     keymap {
         compatible = "zmk,keymap";
 
