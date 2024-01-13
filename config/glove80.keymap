@@ -482,6 +482,8 @@
   COMBO(raycast22, &kp LG(SPACE),  59 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(context37, &kp HYPER_29_KEY(SPACE), 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast37, &kp HYPER_01_KEY(F10), 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast38, &kp HYPER_01_KEY(F10), 60 76, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast39, &kp HYPER_01_KEY(F10), 60 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
  // COMBO(raycast40, &kp LG(SPACE), 31 32, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   //COMBO(raycast70, &kp LG(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(warp70, &kp HYPER_02_KEY(HOME), 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
@@ -1149,10 +1151,10 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_SLAYNextRight";
         #binding-cells = <2>;
-        tapping-term-ms = <220>;
+        tapping-term-ms = <200>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <270>;         // requires PR #1387
+        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
         bindings = <&lm_right>, <&macrotap_right_red>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
