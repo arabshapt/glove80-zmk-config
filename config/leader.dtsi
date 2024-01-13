@@ -1,0 +1,123 @@
+/*                                 ADVANTAGE 360 KEY MATRIX / LAYOUT MAPPING
+ ╭────────────────────────────┬────────────────────────────╮
+ │  0   1   2   3   4   5   6 │  7   8   9  10  11  12  13 │
+ │ 14  15  16  17  18  19  20 │ 21  22  23  24  25  26  27 │
+ │ 28  29  30  31  32  33  34 │ 35  36  37  38  39  40  41 │
+ │ 42  43  44  45  46  47 ╭───┴───╮ 48  49  50  51  52  53 │
+ │ 54  55  56  57  58╭────╯       ╰────╮59  60  61  62  63 │
+ ╰───────────────────┼────────┬────────┼───────────────────╯
+                 ╭───╯ 64  65 │ 66  67 ╰───╮                
+                 │ 68  69  70 │ 71  72  73 │                
+                 ╰───────╮ 74 │ 75 ╭───────╯                
+                         ╰────┴────╯                         */
+
+// leader_sequences {
+//     compatible = "zmk,leader-sequences";
+//     leader_main_leader {
+//         immediate-trigger;
+//         key-positions = <29>;
+//         bindings = <&kp LC(LS(A))>; 
+//         layers = <5>; 
+//     };
+// };
+//immediate-trigger;
+
+//#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+//    leader_##NAME { \
+//        key-positions = <KEYS>; \
+//        bindings = <BINDINGS>; \
+//        layers = <LAYERS>; \
+//    };
+//#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+//    leader_##NAME { \
+//        key-positions = <KEYS>; \
+//        bindings = <BINDINGS>; \
+//        layers = <LAYERS>; \
+//    };
+//#define LEADER_IM(NAME, KEYS, BINDINGS, LAYERS) \
+//    leader_##NAME { \
+//        key-positions = <KEYS>; \
+//        bindings = <BINDINGS>; \
+//        layers = <LAYERS>; \
+//        immediate-trigger; \
+//    };
+// leader_sequences {
+//     compatible = "zmk,leader-sequences";
+//     LEADER(alpha_SEMI, 15, &kp H, PRIME_LAYER)
+//     LEADER(alpha_COMMA, 16, &kp HYPER_121_KEY(COMMA), PRIME_LAYER)
+// 
+//     LEADER(alpha_SEMI_SEMI, 15 15, &kp HYPER_91_KEY(SEMI), PRIME_LAYER)
+//     LEADER(alpha_SEMI_COMMA, 15 16, &kp HYPER_91_KEY(COMMA), PRIME_LAYER)
+//     LEADER(alpha_SEMI_DOT, 15 17, &kp HYPER_91_KEY(DOT), PRIME_LAYER)
+//     LEADER(alpha_SEMI_P, 15 18, &kp HYPER_91_KEY(P), PRIME_LAYER)
+//     LEADER(alpha_SEMI_Y, 15 19, &kp T, PRIME_LAYER)
+// 
+//     LEADER(alpha_COMMA_SEMI, 16 15, &kp HYPER_92_KEY(SEMI), PRIME_LAYER)
+//     LEADER(alpha_COMMA_COMMA, 16 16, &kp HYPER_92_KEY(COMMA), PRIME_LAYER)
+//     LEADER(alpha_COMMA_DOT, 16 17, &kp HYPER_92_KEY(DOT), PRIME_LAYER)
+//     LEADER(alpha_COMMA_P, 16 18, &kp HYPER_92_KEY(P), PRIME_LAYER)
+//     LEADER(alpha_COMMA_Y, 16 19, &kp HYPER_92_KEY(Y), PRIME_LAYER)
+// };
+
+ #include "leader.dtsi"
+leader_sequences {
+    compatible = "zmk,leader-sequences";
+    // leader_main_leader {
+    //     immediate-trigger;
+    //     key-positions = <29 30>;
+    //     bindings = <&kp LC(LS(A))>; 
+    //     layers = <PRIME_LAYER>; 
+    // };
+    // leader_main_leader1 {
+    //     immediate-trigger;
+    //     key-positions = <29 31>;
+    //     bindings = <&kp LC(LS(C))>; 
+    //     layers = <PRIME_LAYER>; 
+    // };
+    // leader_main_leader2 {
+    //     //immediate-trigger;
+    //     key-positions = <29>;
+    //     bindings = <&kp LC(LS(B))>; 
+    //     layers = <PRIME_LAYER>; 
+    // };
+    // leader_main_leader3 {
+    //     immediate-trigger;
+    //     key-positions = <29 29>;
+    //     bindings = <&kp LC(LS(D))>; 
+    //     layers = <PRIME_LAYER>; 
+    // };
+//         LEADER(l_SEMI, 15, &kp HYPER_121_KEY(SEMI), PRIME_LAYER)
+//         LEADER(l_COMMA, 16, &kp HYPER_121_KEY(COMMA), PRIME_LAYER)
+//    
+//         LEADER(l_a, 29, &kp HYPER_121_KEY(A), PRIME_LAYER)
+//         LEADER(l_o, 30, &kp HYPER_121_KEY(O), PRIME_LAYER)
+//         LEADER(l_e, 31, &kp HYPER_121_KEY(E), PRIME_LAYER)
+//         LEADER(l_u, 32, &kp HYPER_121_KEY(U), PRIME_LAYER)
+//
+//         LEADER(l_h, 37, &kp HYPER_121_KEY(H), PRIME_LAYER)
+//         LEADER(l_t, 38, &kp HYPER_121_KEY(T), PRIME_LAYER)
+//         LEADER(l_n, 39, &kp HYPER_121_KEY(N), PRIME_LAYER)
+//         LEADER(l_s, 40, &kp HYPER_121_KEY(S), PRIME_LAYER)
+//
+//         LEADER_IM(l_aa, 29 29, &kp HYPER_101_KEY(A), PRIME_LAYER)
+//         LEADER_IM(l_ao, 29 30, &kp HYPER_101_KEY(O), PRIME_LAYER)
+//         LEADER_IM(l_ae, 29 31, &kp HYPER_101_KEY(E), PRIME_LAYER)
+//         LEADER_IM(l_au, 29 32, &kp HYPER_101_KEY(U), PRIME_LAYER)
+//
+//         LEADER_IM(l_ah, 29 37, &kp HYPER_101_KEY(H), PRIME_LAYER)
+//         LEADER_IM(l_at, 29 38, &kp HYPER_101_KEY(T), PRIME_LAYER)
+//         LEADER_IM(l_an, 29 39, &kp HYPER_101_KEY(N), PRIME_LAYER)
+//         LEADER_IM(l_as, 29 40, &kp HYPER_101_KEY(S), PRIME_LAYER)
+//
+//         LEADER_IM(l_SEMI_SEMI, 15 15, &kp HYPER_91_KEY(SEMI), PRIME_LAYER)
+//         LEADER_IM(l_SEMI_COMMA, 15 16, &kp HYPER_91_KEY(COMMA), PRIME_LAYER)
+//         LEADER_IM(l_SEMI_DOT, 15 17, &kp HYPER_91_KEY(DOT), PRIME_LAYER)
+//         LEADER_IM(l_SEMI_P, 15 18, &kp HYPER_91_KEY(P), PRIME_LAYER)
+//         LEADER_IM(l_SEMI_Y, 15 19, &kp HYPER_91_KEY(Y), PRIME_LAYER)
+//    
+//         LEADER_IM(l_COMMA_SEMI, 16 15, &kp HYPER_92_KEY(SEMI), PRIME_LAYER)
+//         LEADER_IM(l_COMMA_COMMA, 16 16, &kp HYPER_92_KEY(COMMA), PRIME_LAYER)
+//         LEADER_IM(l_COMMA_DOT, 16 17, &kp HYPER_92_KEY(DOT), PRIME_LAYER)
+//         LEADER_IM(l_COMMA_P, 16 18, &kp HYPER_92_KEY(P), PRIME_LAYER)
+//         LEADER_IM(l_COMMA_Y, 16 19, &kp HYPER_92_KEY(Y), PRIME_LAYER)
+//};

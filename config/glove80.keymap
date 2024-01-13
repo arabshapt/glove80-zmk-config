@@ -55,6 +55,14 @@
 #define LAYER_Lower 0
 #endif
 
+
+#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+    leader_##NAME { \
+        key-positions = <KEYS>; \
+        bindings = <BINDINGS>; \
+        layers = <LAYERS>; \
+    };
+
 /* Custom Device-tree */
 
 #define AH(keycode) &as RS(RC(RA(RG(keycode)))) keycode      // AutoHyper Macro HYPER_85_KEY
@@ -418,7 +426,10 @@
     release-after-ms = <1000>;
     quick-release;
 };
-
+&leader {
+    timeout-ms = <500>;
+    // timerless;
+};
 
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
@@ -1582,6 +1593,19 @@ thumbhlay: thumb_homerow_lay {
             N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
         >;
     };
+
+
+  leaders: leaders {
+    compatible = "zmk,behavior-tap-dance";
+    label = "leaders";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&leader>;
+};
+leader_sequences {
+    compatible = "zmk,leader-sequences";
+    LEADER(switchmode, 41 42 , &kp LC(LS(A)) , LAYER_Dvorak)
+};
 
 };
 
@@ -3912,7 +3936,7 @@ macros {
             &kp GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &kp SLASH
          &kp LA(BSPC)  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ BKSP
             &kp LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &kp K                  &kp X      &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ LAYER_SKQ_LEFT_RED /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumb LAYER_Function ESC  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &kp M                 &kp W                &kp V                &kp Z             &kp RSHFT
- &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  BSPC  &thumbhlayEscape LAYER_Symbol_mirrored ESC    &lower    &lower  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
+ /*&magic LAYER_Magic 0*/&leaders           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */  BSPC  &thumbhlayEscape LAYER_Symbol_mirrored ESC    &lower    &lower  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
