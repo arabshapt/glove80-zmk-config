@@ -3926,9 +3926,6 @@ macros {
 
     /* Automatically generated keymap */
 / {
-    #include "leader.dtsi"
-
-
     keymap {
         compatible = "zmk,keymap";
 
