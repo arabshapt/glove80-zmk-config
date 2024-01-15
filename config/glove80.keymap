@@ -657,7 +657,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <LAYER_Symbol LAYER_SHIFT_LAYER>;
-            then-layer = <LAYER_Emoji>;
+            then-layer = <LAYER_Function>;
         };
     };
 };
