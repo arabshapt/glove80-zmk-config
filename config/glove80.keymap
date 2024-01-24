@@ -475,6 +475,7 @@
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
+  COMBO(deleteWordLayerMod, &comboHT LAYER_Function LA(BSPC), 69 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_1, &kp LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_2, &kp LG(SPACE), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_3, &kp LG(SPACE), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -1059,7 +1060,18 @@ behaviors {
 
 //--------------------------------------------------------------------------
 
-
+    comboHT: comboHT_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "COMBOHT_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <280>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        require-prior-idle-ms = <250>;         // requires PR #1387
+        bindings = <&mo>, <&kp>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
     thumbhm: thumb_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_MODS";
@@ -1188,14 +1200,14 @@ thumbhlay: thumb_homerow_lay {
         quick-release;
         ignore-modifiers;
       };
-                      as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        as: auto_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "AUTO_SHIFT";
+        #binding-cells = <2>;
+        tapping_term_ms = <200>;
+        quick_tap_ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
         };
 //--------------------------------------------------------------------------
 
