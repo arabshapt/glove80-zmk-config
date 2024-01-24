@@ -1067,7 +1067,7 @@ behaviors {
         tapping-term-ms = <280>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <250>;         // requires PR #1387
+        // require-prior-idle-ms = <250>;         // requires PR #1387
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
