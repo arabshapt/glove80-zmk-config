@@ -479,6 +479,7 @@
   COMBO(deleteWordLayerMod1, &skq RA(RG(RS(LA(LSHFT)))), 74 41 42, LAYER_Dvorak, 50)
   COMBO(deleteWordLayerMod2, &kp LG(TAB), 74 41 43, LAYER_Dvorak, 50)
   COMBO(deleteWordLayerMod3, &kp LG(SPACE), 74 42 43, LAYER_Dvorak, 50)
+  COMBO(deleteWordLayerMod4, &kp HYPER_01_KEY(F10), 74 59 43, LAYER_Dvorak, 50)
   COMBO(thumbcombos_1, &kp LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_2, &kp LG(SPACE), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_3, &kp LG(SPACE), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -492,7 +493,7 @@
   COMBO(raycast32, &kp LA(BSPC), 29 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(raycast33, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast35, &kp LG(TAB), 41 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(raycast36, &kp HYPER_01_KEY(F10), 59 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast36, &kp HYPER_01_KEY(F10), 59 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) // dictionary raycast
   COMBO(raycast21, &mo LAYER_Cursor, 59 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast22, &kp LG(SPACE),  59 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(context37, &kp HYPER_29_KEY(SPACE), 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
