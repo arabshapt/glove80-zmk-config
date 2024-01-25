@@ -477,7 +477,7 @@
 
   COMBO(deleteWordLayerMod, &comboHT 0  RA(RG(RS(LA(LSHFT)))), 69 74, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod1, &skq RA(RG(RS(LA(LSHFT)))), 74 41 42, LAYER_Dvorak, 70)
-  COMBO(deleteWordLayerMod2, &kp LG(TAB), 74 41 43, LAYER_Dvorak, 70)
+  COMBO(deleteWordLayerMod2, &comboCmdTabHT LAYER_Symbol LG(TAB), 74 41 43, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod3, &kp LG(SPACE), 74 42 43, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod4, &kp HYPER_01_KEY(F10), 74 59 43, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod5, &kp HYPER_01_KEY(F10), 69 59 43, LAYER_Dvorak, 100)
@@ -1077,6 +1077,18 @@ behaviors {
         flavor = "balanced";
         // require-prior-idle-ms = <250>;         // requires PR #1387
         bindings = <&layer_function_macro>, <&skq>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
+    comboCmdTabHT: comboHT_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "COMBOHT_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <220>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "balanced";
+        // require-prior-idle-ms = <250>;         // requires PR #1387
+        bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
