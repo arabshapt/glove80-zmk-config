@@ -475,7 +475,7 @@
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
-  COMBO(deleteWordLayerMod, &comboHT 0 LA(BSPC), 69 74, LAYER_Dvorak, 70)
+  COMBO(deleteWordLayerMod, &comboHT 0  &skq RC(RA(RS(LA(LS(LGUI))))), 69 74, LAYER_Dvorak, 70)
   COMBO(thumbcombos_1, &kp LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_2, &kp LG(SPACE), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_3, &kp LG(SPACE), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
