@@ -1080,9 +1080,9 @@ behaviors {
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
-    comboCmdTabHT: comboHT_mods {
+    comboCmdTabHT: comboCmdTabHT_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "COMBOHT_MODS";
+        label = "COMBOCMDTABHTT_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <220>;
         quick-tap-ms = <210>;                // repeat on tap-into-hold
