@@ -1278,7 +1278,7 @@ thumbhlay: thumb_homerow_lay {
         // #endif
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&comboCmdTabHT 0>, <&kp>;
+        bindings = <&kp>, <&kp>;
     };
 
     homey_right_skq: home_row_mods_right_hand_skq {
@@ -1293,7 +1293,7 @@ thumbhlay: thumb_homerow_lay {
         // #endif
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&comboCmdTabHT 0>, <&kp>;
+        bindings = <&kp>, <&kp>;
     };
     homey_left_cross_tap: home_row_mods_left_cross_tap {
         compatible = "zmk,behavior-hold-tap";
