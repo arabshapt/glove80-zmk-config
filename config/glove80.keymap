@@ -1203,7 +1203,7 @@ thumbhlay: thumb_homerow_lay {
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
-        skqi: sticky_key_quick_release {
+        skqi: sticky_key_quick_release_no_mods {
           compatible = "zmk,behavior-sticky-key";
           #binding-cells = <1>;
           bindings = <&kp>;
