@@ -4138,8 +4138,8 @@ ZMK_MACRO(layer_function_macro,
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                      &none      &none        &none      &none     &none   &none
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
-  &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT UNDER     &homey_left LGUI DLLR &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
- &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
+  &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left LGUI DLLR &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
+ &kp TILDE     &kp LT   &kp PIPE  &kp  UNDER   &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
     &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&kp  PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
@@ -4148,8 +4148,8 @@ ZMK_MACRO(layer_function_macro,
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
      &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                       &kp AT &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA
   &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &kp QMARK   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC   &kp EXCL 
-  &none   &homey_right RCTL RET     &homey_right RALT SPACE  &homey_right RSHFT TAB    &homey_right RGUI BSPC       &none         &kp STAR  &homey_left LGUI  CARET      &homey_left LSHFT  EQUAL  &homey_left LALT  UNDER     &homey_left LCTRL DLLR &kp HASH 
-               &none   &none   &none  &kp LS(TAB) &kp DEL &trans            &none     &none   &none     &kp STAR &kp BSLH  &kp BSPC   &kp FSLH   &kp LT   &kp PIPE  &kp MINUS    &kp GT &kp TILDE     
+  &none   &homey_right RCTL RET     &homey_right RALT SPACE  &homey_right RSHFT TAB    &homey_right RGUI BSPC       &none         &kp STAR  &homey_left LGUI  CARET      &homey_left LSHFT  EQUAL  &homey_left LALT MINUS      &homey_left LCTRL DLLR &kp HASH 
+               &none   &none   &none  &kp LS(TAB) &kp DEL &trans            &none     &none   &none     &kp STAR &kp BSLH  &kp BSPC   &kp FSLH   &kp LT   &kp PIPE  &kp UNDER    &kp GT &kp TILDE     
       &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none   &kp PRCNT  &kp COLON  &kp SPACE   &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             
             >;
         };
