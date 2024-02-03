@@ -1251,7 +1251,7 @@ thumbhlay: thumb_homerow_lay {
             release-after-ms = <400>;
             bindings = <&mo>;
             quick-release;
-          /delete-property/ ignore-modifiers;
+          ignore-modifiers;
         };
 //--------------------------------------------------------------------------
 
