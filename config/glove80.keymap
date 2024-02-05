@@ -1426,7 +1426,6 @@ thumbhlay: thumb_homerow_lay {
         #binding-cells = <2>;
         bindings = <&mo>, <&select_word>;
     };
-    &select_word
     plain_engram_comma: plain_typing_layer_engram_comma {
         compatible = "zmk,behavior-hold-tap";
         label = "PLAIN_TYPING_LAYER_ENGRAM_COMMA";
