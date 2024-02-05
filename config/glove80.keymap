@@ -475,7 +475,7 @@
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
-  COMBO(deleteWordLayerMod, &comboHT 0  RA(RG(RS(LA(LSHFT)))), 69 74, LAYER_Dvorak, 70)
+  COMBO(deleteWordLayerMod, &comboHT 0  RA(RG(RS(LA(LSHFT)))), 69 74, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod1, &skq RA(RG(RS(LA(LSHFT)))), 74 41 42, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod2, &comboCmdTabHT LAYER_Symbol LG(TAB), 74 41 43, LAYER_Dvorak, 70)
   COMBO(deleteWordLayerMod3, &kp LG(SPACE), 74 42 43, LAYER_Dvorak, 70)
@@ -1803,9 +1803,9 @@ macros {
 
 ZMK_MACRO(layer_function_macro,
         bindings
-            = <&macro_press &mo LAYER_Symbol &mo LAYER_Cursor>
+            = <&macro_press &mo LAYER_Cursor &mo LAYER_Symbol>
             , <&macro_pause_for_release>
-            , <&macro_release &mo LAYER_Symbol &mo LAYER_Cursor>
+            , <&macro_release &mo LAYER_Cursor &mo LAYER_Symbol>
             ;
     )
 
