@@ -666,7 +666,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LAYER_Symbol LAYER_Symbol_mirrored>;
+            if-layers = <LAYER_Cursor LAYER_Symbol_mirrored>;
             then-layer = <LAYER_Function>;
         };
     };
