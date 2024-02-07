@@ -1487,7 +1487,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_SPACEBAR-arab";
         flavor = "balanced";
-        tapping-term-ms = <200>;
+        tapping-term-ms = <210>;
         // require-prior-idle-ms = <200>;         // requires PR #1387
         quick-tap-ms = <270>; // enable repeat
         #binding-cells = <2>;
