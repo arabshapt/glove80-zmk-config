@@ -1271,7 +1271,7 @@ thumbhlay: thumb_homerow_lay {
         // #endif
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
+        bindings = <&kp>, <&fastmacrotap>;
     };
 
     homey_right: home_row_mods_right_hand {
@@ -1286,7 +1286,7 @@ thumbhlay: thumb_homerow_lay {
         // #endif
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
+        bindings = <&kp>, <&fastmacrotap>;
     };
     homey_left_skq: home_row_mods_left_hand_skq {
         compatible = "zmk,behavior-hold-tap";
@@ -1772,6 +1772,18 @@ macros {
                 , <&macro_param_1to1>
                 , <&macro_release &kp MACRO_PLACEHOLDER>
                 , <&macro_release &mo LAYER_SKQ_HOLD_RIGHT_RED>
+                ;
+        };
+        fastmacrotap: fastmacrotap{
+            label = "LAYER_MOD_FASTMACROTAP";
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_1to1>
                 ;
         };
     //
@@ -4124,7 +4136,7 @@ ZMK_MACRO(layer_function_macro,
         layer_Cursor {
             bindings = <
      &none           &none         &none         &none           &none                                                                                                           &none           &none           &none      &none        &none
-     &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &none           &none      &none        &none
+     &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LA(LEFT)            &kp LA(RIGHT)      &none        &none
  &kp _C(K)       &sk LSHFT     &kp _REDO     &kp _UNDO        &kp BSPC    &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
  &kp _C(L)        &kp LCTRL      &kp LALT     &kp LSHFT       &kp LGUI    &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
  &kp _C(J)       &kp _FIND  &select_word  &select_line       &kp _C(A)  &kp _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
@@ -4147,11 +4159,11 @@ ZMK_MACRO(layer_function_macro,
         layer_Symbol {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
-     &none  &kp GRAVE   &kp LPAR   &kp RPAR  &kp SEMI  &kp COMMA                                                                      &none      &none        &none      &none     &none   &none
-  &kp EXCL   &kp LBRC    &kp SQT    &kp DQT  &kp RBRC  &kp QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
-  &kp HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left LGUI DLLR &kp STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
- &kp TILDE     &kp LT   &kp PIPE  &kp  UNDER   &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
-    &kp AT   &kp AMPS   &kp LBKT   &kp RBKT  &kp PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscape LAYER_Cursor  PRCNT  &kp COLON  &kp SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
+     &none  &fastmacrotap GRAVE   &fastmacrotap LPAR   &fastmacrotap RPAR  &fastmacrotap SEMI  &fastmacrotap COMMA                                                                      &none      &none        &none      &none     &none   &none
+  &fastmacrotap EXCL   &fastmacrotap LBRC    &fastmacrotap SQT    &fastmacrotap DQT  &fastmacrotap RBRC  &fastmacrotap QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
+  &fastmacrotap HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left LGUI DLLR &fastmacrotap STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
+ &fastmacrotap TILDE     &fastmacrotap LT   &fastmacrotap PIPE  &fastmacrotap  UNDER   &fastmacrotap GT   &fastmacrotap FSLH   &fastmacrotap BSLH    &fastmacrotap DOT  &fastmacrotap STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
+    &fastmacrotap AT   &fastmacrotap AMPS   &fastmacrotap LBKT   &fastmacrotap RBKT  &fastmacrotap PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscape LAYER_Cursor  PRCNT  &fastmacrotap COLON  &fastmacrotap SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
       layer_Symbol_mirrored {
