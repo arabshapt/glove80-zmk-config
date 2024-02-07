@@ -1265,6 +1265,15 @@ thumbhlay: thumb_homerow_lay {
     //
     // Home row mod-tap keys for all except index fingers
     //
+    fastmacrotaphold: home_row_mods_fastmacrotaphold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_fastmacrotaphold";
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <250>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&fastmacrotap>;
+    };
     homey_left: home_row_mods_left_hand {
         compatible = "zmk,behavior-hold-tap";
         label = "HOME_ROW_MODS_LEFT_HAND_DVORAK";
@@ -4168,11 +4177,11 @@ ZMK_MACRO(layer_function_macro,
         layer_Symbol {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
-     &none  &fastmacrotapdance GRAVE   &fastmacrotapdance LPAR   &fastmacrotapdance RPAR  &fastmacrotapdance SEMI  &fastmacrotapdance COMMA                                                                      &none      &none        &none      &none     &none   &none
-  &fastmacrotapdance EXCL   &fastmacrotapdance LBRC    &fastmacrotapdance SQT    &fastmacrotapdance DQT  &fastmacrotapdance RBRC  &fastmacrotapdance QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
-  &fastmacrotapdance HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left LGUI DLLR &fastmacrotapdance STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
- &fastmacrotapdance TILDE     &fastmacrotapdance LT   &fastmacrotapdance PIPE  &fastmacrotapdance  UNDER   &fastmacrotapdance GT   &fastmacrotapdance FSLH   &fastmacrotapdance BSLH    &fastmacrotapdance DOT  &fastmacrotapdance STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
-    &fastmacrotapdance AT   &fastmacrotapdance AMPS   &fastmacrotapdance LBKT   &fastmacrotapdance RBKT  &fastmacrotapdance PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscape LAYER_Cursor  PRCNT  &fastmacrotapdance COLON  &fastmacrotapdance SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
+     &none  &fastmacrotap GRAVE   &fastmacrotap LPAR   &fastmacrotap RPAR  &fastmacrotap SEMI  &fastmacrotap COMMA                                                                      &none      &none        &none      &none     &none   &none
+  &fastmacrotap EXCL   &fastmacrotap LBRC    &fastmacrotap SQT    &fastmacrotap DQT  &fastmacrotap RBRC  &fastmacrotaphold QMARK QMARK                                                                    &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
+  &fastmacrotap HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left LGUI DLLR &fastmacrotap STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
+ &fastmacrotap TILDE     &fastmacrotap LT   &fastmacrotap PIPE  &fastmacrotap  UNDER   &fastmacrotap GT   &fastmacrotap FSLH   &fastmacrotap BSLH    &fastmacrotap DOT  &fastmacrotap STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
+    &fastmacrotap AT   &fastmacrotap AMPS   &fastmacrotap LBKT   &fastmacrotap RBKT  &fastmacrotap PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscape LAYER_Cursor  PRCNT  &fastmacrotap COLON  &fastmacrotap SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
       layer_Symbol_mirrored {
