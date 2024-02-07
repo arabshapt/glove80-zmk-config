@@ -1123,6 +1123,19 @@ behaviors {
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
+
+    thumbhlayEscapeSymbol: thumb_homerow_layEscapeSymbol {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_HOMEROW_LAYEscapeSymbol";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        flavor = "hold-preferred";
+        require-prior-idle-ms = <50>;         // requires PR #1387
+        bindings = <&mo>, <&fastmacrotap>;
+        //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+        //hold-trigger-on-release;             // delay positional check until key-release
+    };
         modthumbhm: modthumb_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "MOD_THUMB_HOMEROW_MODS";
@@ -1273,20 +1286,6 @@ thumbhlay: thumb_homerow_lay {
         quick-tap-ms = <250>;
         #binding-cells = <2>;
         bindings = <&kp>, <&fastmacrotap>;
-    };
-    homey_left1: home_row_mods_left_hand1 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS_LEFT_HAND_DVORAK1";
-        flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        // #if ENABLE_KEY_REPEAT
-        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-        // #endif
-        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&kp>, <&fastmacrotaphold 0>;
     };
     homey_left: home_row_mods_left_hand {
         compatible = "zmk,behavior-hold-tap";
@@ -4191,11 +4190,11 @@ ZMK_MACRO(layer_function_macro,
         layer_Symbol {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
-     &none  &fastmacrotap GRAVE   &fastmacrotap LPAR   &fastmacrotap RPAR  &fastmacrotap SEMI  &fastmacrotap COMMA                                                                      &none      &none        &none      &none     &none   &none
-  &fastmacrotap EXCL   &fastmacrotap LBRC    &fastmacrotap SQT    &fastmacrotap DQT  &fastmacrotap RBRC  &fastmacrotaphold QMARK QMARK                                                                    &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
-  &fastmacrotap HASH  &homey_left LCTRL CARET      &homey_left LALT EQUAL  &homey_left  LSHFT MINUS     &homey_left1 LGUI DLLR &fastmacrotap STAR                                                                     &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
- &fastmacrotap TILDE     &fastmacrotap LT   &fastmacrotap PIPE  &fastmacrotap  UNDER   &fastmacrotap GT   &fastmacrotap FSLH   &fastmacrotap BSLH    &fastmacrotap DOT  &fastmacrotap STAR              &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
-    &fastmacrotap AT   &fastmacrotap AMPS   &fastmacrotap LBKT   &fastmacrotap RBKT  &fastmacrotap PLUS             /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscape LAYER_Cursor  PRCNT  &fastmacrotap COLON  &fastmacrotap SEMI  &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
+     &none  &fastmacrotaphold GRAVE GRAVE   &fastmacrotaphold LPAR LPAR   &fastmacrotaphold RPAR RPAR &fastmacrotaphold SEMI SEMI &fastmacrotaphold COMMA COMMA                                                                     &none      &none        &none      &none     &none   &none
+  &fastmacrotaphold EXCL EXCL   &fastmacrotaphold LBRC LBRC    &fastmacrotaphold SQT SQT     &fastmacrotaphold DQT DQT   &fastmacrotaphold RBRC RBRC   &fastmacrotaphold QMARK QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
+  &fastmacrotaphold HASH HASH   &fastmacrotaphold CARET CARET       &fastmacrotaphold EQUAL EQUAL   &fastmacrotaphold MINUS MINUS      &fastmacrotaphold DLLR DLLR  &fastmacrotaphold STAR STAR                                                                      &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
+ &fastmacrotaphold TILDE TILDE      &fastmacrotaphold LT LT    &fastmacrotaphold PIPE PIPE   &fastmacrotaphold  UNDER UNDER    &fastmacrotaphold GT GT    &fastmacrotaphold FSLH FSLH    &fastmacrotaphold BSLH BSLH     &fastmacrotaphold DOT DOT   &fastmacrotaphold STAR STAR               &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
+    &fastmacrotaphold AT AT    &fastmacrotaphold AMPS AMPS    &fastmacrotaphold LBKT LBKT    &fastmacrotaphold RBKT RBKT   &fastmacrotaphold PLUS PLUS              /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscapeSymbol LAYER_Cursor  PRCNT  &fastmacrotaphold COLON COLON   &fastmacrotaphold SEMI SEMI   &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
       layer_Symbol_mirrored {
