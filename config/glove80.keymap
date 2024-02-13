@@ -543,11 +543,17 @@
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
         };
-        fastmacrotapdance: fastmacrotapdance {
+        fastmacrotapdanceCARET: fastmacrotapdanceCARET {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&fastmacrotap>, <&kp>;
+            bindings = <&fastmacrotap CARET>, <&kp CARET>;
+        };
+        fastmacrotapdanceDLLR: fastmacrotapdanceDLLR {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&fastmacrotap DLLR>, <&kp DLLR>;
         };
     };
 };
@@ -1286,6 +1292,34 @@ thumbhlay: thumb_homerow_lay {
         quick-tap-ms = <250>;
         #binding-cells = <2>;
         bindings = <&kp>, <&fastmacrotap>;
+    };
+    homey_leftsymbolCARET: home_row_mods_left_hand_symbolCARET {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_HAND_DVORAKCARET";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        // #if ENABLE_KEY_REPEAT
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        // #endif
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&fastmacrotapdanceCARET>;
+    };
+    homey_leftsymbolDLLR: home_row_mods_left_hand_symbolCARETDLLR {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOME_ROW_MODS_LEFT_HAND_DVORAKDLLR";
+        flavor = HOMEY_HOLDING_TYPE;
+        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+        // #if ENABLE_KEY_REPEAT
+        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+        // #endif
+        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&fastmacrotapdanceDLLR>;
     };
     homey_left: home_row_mods_left_hand {
         compatible = "zmk,behavior-hold-tap";
@@ -4192,7 +4226,7 @@ ZMK_MACRO(layer_function_macro,
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
      &none  &fastmacrotaphold GRAVE GRAVE   &fastmacrotaphold LPAR LPAR   &fastmacrotaphold RPAR RPAR &fastmacrotaphold SEMI SEMI &fastmacrotaphold COMMA COMMA                                                                     &none      &none        &none      &none     &none   &none
   &fastmacrotaphold EXCL EXCL   &fastmacrotaphold LBRC LBRC    &fastmacrotaphold SQT SQT     &fastmacrotaphold DQT DQT   &fastmacrotaphold RBRC RBRC   &fastmacrotaphold QMARK QMARK                                                                     &trans      &kp LGUI  &kp LSHFT &kp LALT &kp LCTRL &none
-  &fastmacrotaphold HASH HASH   &fastmacrotaphold CARET CARET       &fastmacrotaphold EQUAL EQUAL   &fastmacrotaphold MINUS MINUS      &fastmacrotaphold DLLR DLLR  &fastmacrotaphold STAR STAR                                                                      &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
+  &fastmacrotaphold HASH HASH   &homey_leftsymbolCARET LCTRL 0       &homey_left LALT EQUAL   &homey_left  LSHFT MINUS      &homey_leftsymbolDLLR LGUI 0  &fastmacrotaphold STAR STAR                                                                      &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
  &fastmacrotaphold TILDE TILDE      &fastmacrotaphold LT LT    &fastmacrotaphold PIPE PIPE   &fastmacrotaphold  UNDER UNDER    &fastmacrotaphold GT GT    &fastmacrotaphold FSLH FSLH    &fastmacrotaphold BSLH BSLH     &fastmacrotaphold DOT DOT   &fastmacrotaphold STAR STAR               &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
     &fastmacrotaphold AT AT    &fastmacrotaphold AMPS AMPS    &fastmacrotaphold LBKT LBKT    &fastmacrotaphold RBKT RBKT   &fastmacrotaphold PLUS PLUS              /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&thumbhlayEscapeSymbol LAYER_Cursor  PRCNT  &fastmacrotaphold COLON COLON   &fastmacrotaphold SEMI SEMI   &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
