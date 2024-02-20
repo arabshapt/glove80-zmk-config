@@ -472,12 +472,13 @@
 //   COMBO(leftline, &kp LG(LEFT), 63 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
+  COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
-  COMBO(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
+  COMBO(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
   COMBO(deleteWordLayerMod, &comboHT 0  RA(RG(RS(LA(LSHFT)))), 69 74, LAYER_Dvorak, 100)
   // COMBO(deleteWordLayerMod1, &skq RA(RG(RS(LA(LSHFT)))), 74 41 42, LAYER_Dvorak, 70)
   // COMBO(deleteWordLayerMod2, &comboCmdTabHT LAYER_Symbol LG(TAB), 74 41 43, LAYER_Dvorak, 70)
