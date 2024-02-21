@@ -473,6 +473,8 @@
 //   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
   COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+
+  COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
@@ -784,7 +786,7 @@
 
     /* Custom Defined Behaviors */
 / {
-    // #define ENABLE_MOUSE_KEYS // requires PR23 beta firmware (see below)
+    #define ENABLE_MOUSE_KEYS // requires PR23 beta firmware (see below)
 //////////////////////////////////////////////////////////////////////
 // NOTE: Use the `#define` settings below to customize this keymap! //
 // You can override them here instead of modifying them down there. //
@@ -4025,7 +4027,7 @@ ZMK_MACRO(layer_function_macro,
 // mouse keys are deactivated (they're transformed into no-ops) by default.
 // To use this feature, uncomment the following line (remove leading "//").
 //
-// #define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
+#define ENABLE_MOUSE_KEYS // requires PR23 beta firmware: see note above
 
 //
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
