@@ -4098,7 +4098,7 @@ ZMK_MACRO(layer_function_macro,
 #endif
 
 /*HACK*/};
-#ifdef ENABLE_MOUSE_KEYS
+#if __has_include(<zmk/events/mouse_tick.h>)
     // ==== MOUSE-KEY <section begins> ====
     #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
     #define ZMK_MOUSE_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
