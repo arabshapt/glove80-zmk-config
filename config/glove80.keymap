@@ -494,7 +494,7 @@
   COMBO(deleteWordLayerMod7, &kp LG(TAB), 69 41 43, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod9, &comboCmdTabHT LAYER_Symbol_mirrored LG(TAB), 69 37 38, LAYER_Dvorak, 70)
-  COMBO(thumbcombos_1, &kp LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO(thumbcombos_1, &spacecombo LAYER_Symbol_mirrored LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_2, &fastmacrotap LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_3, &kp LG(SPACE), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_4, &kp HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -1150,6 +1150,16 @@ behaviors {
         bindings = <&mo>, <&fastmacrotap>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
+    };
+    spacecombo: thumb_layer_access_spacebar_combo_arab {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_LAYER_ACCESS_SPACEBARcombo-arab";
+        flavor = "balanced";
+        tapping-term-ms = <210>;
+        // require-prior-idle-ms = <200>;         // requires PR #1387
+        quick-tap-ms = <210>; // enable repeat
+        #binding-cells = <2>;
+        bindings = <&mo>, <&fastmacrotap>;
     };
         modthumbhm: modthumb_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
