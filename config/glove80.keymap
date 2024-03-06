@@ -4132,7 +4132,7 @@ ZMK_MACRO(layer_function_macro,
 /*HACK*/};
 #if __has_include(<zmk/events/mouse_tick.h>)
 
-    #include <behaviors/mouse_keys.dtsi>
+    // #include <behaviors/mouse_keys.dtsi>
     #include <dt-bindings/zmk/mouse.h>
     // ==== MOUSE-KEY <section begins> ====
     #define ZMK_MOUSE_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
