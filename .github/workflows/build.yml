@@ -15,7 +15,7 @@ jobs:
           repository: bryanforbes/zmk
           # repository: arabshapt/zmk
           # ref: gloveleader
-          ref: 2fad527cc5abed5bb59b4d4a4b0ee511d0e514e9
+          ref: mouse-3.2-moergo
           # ref: main
           path: src
       - uses: cachix/install-nix-action@v20
