@@ -1184,14 +1184,10 @@ behaviors {
      spacecombomo: thumb_layer_access_spacebar_combomo_arab {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_SPACEBARcombomo-arab";
-        flavor = HOMEY_HOLDING_TYPE;
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        hold-trigger-on-release; // wait for other home row mods
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        // #if ENABLE_KEY_REPEAT
-        quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-        // #endif
-        require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+        flavor = "balanced";
+        tapping-term-ms = <210>;
+        // require-prior-idle-ms = <200>;         // requires PR #1387
+        quick-tap-ms = <210>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&fastmacrotapdanceCOLON>;
     };
