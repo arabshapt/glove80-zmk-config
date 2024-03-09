@@ -1168,6 +1168,7 @@ behaviors {
         flavor = "balanced";
         tapping-term-ms = <210>;
         // require-prior-idle-ms = <200>;         // requires PR #1387
+        require-prior-idle-ms = <50>;         // requires PR #1387
         quick-tap-ms = <210>; // enable repeat
         #binding-cells = <2>;
         bindings = <&mo>, <&fastmacrotap>;
