@@ -1842,7 +1842,7 @@ thumbhlay: thumb_homerow_lay {
 
 macros {
   macrotap_right_red: macrotap_right_red{
-            label = "LAYER_MOD_macrotap";
+            label = "LAYER_MOD_macrotapright";
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -1851,7 +1851,7 @@ macros {
         };
 
   macrotap_left_red: macrotap_left_red{
-            label = "LAYER_MOD_macrotap";
+            label = "LAYER_MOD_macrotapleft";
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
