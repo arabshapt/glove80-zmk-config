@@ -1144,7 +1144,8 @@ behaviors {
         bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
-    }
+    };
+
     thumbhlayEscapefunc: thumb_homerow_layEscapefunc {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAYEscapefunc";
