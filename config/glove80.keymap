@@ -1264,7 +1264,7 @@ thumbhlay: thumb_homerow_lay {
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
         require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
-        bindings = <&lm_left>, <&sl>;
+        bindings = <&lm_left>, <&macrotap_left_red>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
@@ -1849,6 +1849,16 @@ macros {
             #binding-cells = <0>;
             bindings = <&macro_tap &sl LAYER_SKQ_RIGHT_RED>;
         };
+
+  macrotap_left_red: macrotap_left_red{
+            label = "LAYER_MOD_macrotap";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&macro_tap &sl LAYER_SKQ_LEFT_RED>;
+        };
+
         macrotap_shift_layer: macrotap_shift_layer{
             label = "LAYER_MOD_macrotap_shift_layer";
             compatible = "zmk,behavior-macro";
@@ -4220,7 +4230,7 @@ ZMK_MACRO(layer_function_macro,
             &kp CAPSLOCK /*EQUAL*/             AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)                                                                                                                                                     AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)              &kp BSLH
             &kp GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &fastmacrotap HYPER_01_KEY(KP_N0)
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP)
-            &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ LAYER_SKQ_LEFT_RED /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT
+            &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &thumbhSlayNextLeft HYPER_27 0 /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ LAYER_SKQ_LEFT_RED */ /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT
  &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc 0 ESC    &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0     &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
