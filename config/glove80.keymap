@@ -1197,7 +1197,7 @@ behaviors {
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick-tap-ms = <270>;                // repeat on tap-into-hold
-        flavor = "hold-preferred";
+        flavor = "balanced";
         require-prior-idle-ms = <50>;    // reduce this     // requires PR #1387
         bindings = <&kp>, <&kp>;
         // hold-trigger-key-positions = < KEYS_L THUMBS>;
