@@ -500,7 +500,7 @@
   COMBO(thumbcombos_3, &kp LG(SPACE), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_4, &kp HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_5, &fastmacrotap HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO(thumbcombos_6, &kp LG(SPACE), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast30, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 25 26, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
