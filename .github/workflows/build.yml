@@ -16,7 +16,7 @@ jobs:
           # repository: arabshapt/zmk
           # ref: gloveleader
           # ref: mouse-3.2-moergo
-          ref: mouse-3.2-moergo-v24.01
+          ref: main
           # ref: main
           path: src
       - uses: cachix/install-nix-action@v25
