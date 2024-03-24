@@ -74,6 +74,7 @@
 #define COMBO_TERM_ARAB_FAST 18
 #define COMBO_TERM_ARAB_NORMAL 30
 #define COMBO_TERM_ARAB_SLOW 50
+#define COMBO_TERM_ARAB_VERY_SLOW 100
 
 #define HYPERKEY(key) LS(LC(LA(LG(key)))) // hyper
 #define RIGHT_CMD_HYPERKEY(key) LS(LC(LA(RG(key)))) // hyper
@@ -474,8 +475,8 @@
 //   COMBO(leftline, &kp LG(LEFT), 63 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
-  COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO(thumbcombos_2_hyper, &fastmacrotap HYPER_01_KEY(KP_N3), 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(thumbcombos_2_hyper, &fastmacrotap HYPER_01_KEY(KP_N3), 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
 
   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
@@ -495,9 +496,9 @@
   COMBO(deleteWordLayerMod7, &kp LG(TAB), 69 41 43, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
   // COMBO(deleteWordLayerMod9, &comboCmdTabHT LAYER_Symbol_mirrored LG(TAB), 69 37 38, LAYER_Dvorak, 70)
-  COMBO(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO(thumbcombos_2, &fastmacrotap LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(thumbcombos_2, &fastmacrotap LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO(thumbcombos_4, &kp HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_5, &fastmacrotap HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
