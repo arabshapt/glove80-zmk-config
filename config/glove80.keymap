@@ -4293,11 +4293,11 @@ ZMK_MACRO(layer_function_macro,
         layer_Number {
             bindings = <
       &none     &none     &none      &none      &none                                                                                          &none     &none      &none      &none      &none
-      &none     &none     &none      &none      &none   &none                                                                    &kp CARET  &kp HASH  &kp DLLR  &kp TILDE   &kp EXCL   &kp PIPE
-      &none     &none     &none      &none      &none   &none                                                                    &kp PRCNT    &kp N7    &kp N8     &kp N9  &kp COLON      &kp K
- &kp KP_NUM  &kp LCTRL  &kp LALT  &kp  LSHFT  &kp  LGUI   &none                                                                     &kp PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
-      &none     &none     &none      &none      &none   &none   &none   &none              &none     &kp LT   &kp GT  &kp EQUAL   &kp STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &kp LS(G)
-      &none     &none     &none      &none      &none           &none   &none  &tog LAYER_Number  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &kp AT
+      &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                    &kp CARET  &kp HASH  &kp DLLR  &kp AT   &kp EXCL   &kp PIPE
+      &none           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp A                                                                   &kp PRCNT    &kp N7    &kp N8     &kp N9  &kp COLON      &kp K
+ &kp KP_NUM  &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC   &kp B                 &kp PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
+      &none  &kp _C(A) &select_line   &select_word     &kp UNDER    &kp C   &kp D   &kp E              &kp F     &kp LT   &kp GT  &kp EQUAL   &kp STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &kp LS(G)
+      &none     &none   &extend_line &extend_word  &kp X     &none   &none  &tog LAYER_Number  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &kp TILDE
             >;
         };
 
