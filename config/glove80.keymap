@@ -1154,7 +1154,8 @@ behaviors {
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
         require-prior-idle-ms = <50>;         // requires PR #1387
-        bindings = <&layer_function_macro>, <&kp>;
+        // bindings = <&layer_function_macro>, <&kp>;
+        bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
