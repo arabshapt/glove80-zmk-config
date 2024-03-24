@@ -4306,7 +4306,7 @@ ZMK_MACRO(layer_function_macro,
       &none     &none     &none      &none      &none                                                                                          &none     &none      &none      &none      &none
       &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                    &fastmacrotaphold CARET CARET  &fastmacrotaphold HASH HASH  &fastmacrotaphold DLLR DLLR &fastmacrotaphold AT AT  &fastmacrotaphold EXCL EXCL  &fastmacrotaphold PIPE PIPE
       &none           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp A                                                                   &fastmacrotaphold PRCNT PRCNT    &kp N7    &kp N8     &kp N9  &fastmacrotaphold COLON COLON    &kp K
- &kp KP_NUM  &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC   &kp B                 &fastmacrotaphold PLUS PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
+ &kp BSPC  &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC   &kp B                 &fastmacrotaphold PLUS PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
       &none  &kp _C(A) &select_line   &select_word     &fastmacrotaphold  UNDER UNDER    &kp C   &kp D   &kp E        &kp F     &fastmacrotaphold LT LT   &fastmacrotaphold GT GT  &kp EQUAL   &fastmacrotaphold STAR STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &fastmacrotaphold LS(G) LS(G)
       &none     &none   &extend_line &extend_word  &kp X     &none   &none  &tog LAYER_Number  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &fastmacrotaphold TILDE TILDE
             >;
