@@ -1571,6 +1571,17 @@ thumbhlay: thumb_homerow_lay {
     //
     // Thumb cluster hold-tap keys for Miryoku layers
     //
+    thumbfastmacrotaphold: thumb_layer_accessfastmacrotaphold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_LAYER_ACCESSfastmacrotaphold";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        #ifdef ENABLE_KEY_REPEAT
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #endif
+        #binding-cells = <2>;
+        bindings = <&mo>, <&fastmacrotap>;
+    };
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS";
@@ -1582,7 +1593,6 @@ thumbhlay: thumb_homerow_lay {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-
     thumbfunctri: thumbfunctri_layer_access {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_FUNCTRI";
@@ -1656,7 +1666,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
-        bindings = <&kp LPAR>, <&kp LT>;
+        bindings = <&fastmacrotap LPAR>, <&fastmacrotap LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -1667,7 +1677,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-mod-morph";
         label = "RIGHT_PARENTHESIS_AND_GREATER_THAN";
         #binding-cells = <0>;
-        bindings = <&kp RPAR>, <&kp GT>;
+        bindings = <&fastmacrotap RPAR>, <&fastmacrotap GT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -4229,7 +4239,7 @@ ZMK_MACRO(layer_function_macro,
             &kp GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &fastmacrotap HYPER_01_KEY(KP_N0)
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP)
             &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &thumbhSlayNextLeft HYPER_27 0 /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT
- &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0     &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumb LAYER_Mouse LBKT             &kp RBKT &parang_right       &magic LAYER_Magic 0
+ &magic LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0     &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotaphold LAYER_Mouse LBKT             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
@@ -4294,11 +4304,11 @@ ZMK_MACRO(layer_function_macro,
         layer_Number {
             bindings = <
       &none     &none     &none      &none      &none                                                                                          &none     &none      &none      &none      &none
-      &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                    &kp CARET  &kp HASH  &kp DLLR  &kp AT   &kp EXCL   &kp PIPE
-      &none           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp A                                                                   &kp PRCNT    &kp N7    &kp N8     &kp N9  &kp COLON      &kp K
- &kp KP_NUM  &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC   &kp B                 &kp PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
-      &none  &kp _C(A) &select_line   &select_word     &kp UNDER    &kp C   &kp D   &kp E              &kp F     &kp LT   &kp GT  &kp EQUAL   &kp STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &kp LS(G)
-      &none     &none   &extend_line &extend_word  &kp X     &none   &none  &tog LAYER_Number  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &kp TILDE
+      &kp ESC             &kp RET           &kp SPACE             &kp TAB             &kp DEL  &kp INS                                                                    &fastmacrotaphold CARET CARET  &fastmacrotaphold HASH HASH  &fastmacrotaphold DLLR DLLR &fastmacrotaphold AT AT  &fastmacrotaphold EXCL EXCL  &fastmacrotaphold PIPE PIPE
+      &none           &sk LSHFT           &kp _REDO           &kp _UNDO            &kp BSPC    &kp A                                                                   &fastmacrotaphold PRCNT PRCNT    &kp N7    &kp N8     &kp N9  &kp COLON      &kp K
+ &kp KP_NUM  &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC   &kp B                 &fastmacrotaphold PLUS PLUS    &kp N4    &kp N5     &kp N6  &kp MINUS      &kp J
+      &none  &kp _C(A) &select_line   &select_word     &kp UNDER    &kp C   &kp D   &kp E              &kp F     &fastmacrotaphold LT LT   &fastmacrotaphold GT GT  &kp EQUAL   &fastmacrotaphold STAR STAR    &kp N1    &kp N2     &kp N3   &kp FSLH  &fastmacrotaphold LS(G) LS(G)
+      &none     &none   &extend_line &extend_word  &kp X     &none   &none  &tog LAYER_Number  &kp COMMA  &kp DOT     &kp N0               &trans    &trans     &trans     &trans     &fastmacrotaphold TILDE TILDE
             >;
         };
 
