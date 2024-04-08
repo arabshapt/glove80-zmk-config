@@ -1221,11 +1221,11 @@ thumbhlay: thumb_homerow_lay {
        thumbhlayShiftLayerLeader: thumb_homerow_layShiftLayerLeader {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAYShiftLayerLeader";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>; //185 old version
-        quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <150>;         // requires PR #1387
+        tapping-term-ms = <210>; //185 old version
+        // require-prior-idle-ms = <150>;         // requires PR #1387
+        quick-tap-ms = <270>;                // repeat on tap-into-hold
+        #binding-cells = <2>;
         bindings = <&mo>, <&macrotap_shift_layer>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
