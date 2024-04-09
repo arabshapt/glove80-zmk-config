@@ -1258,10 +1258,10 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_SLAYNextLeft";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        tapping-term-ms = <210>;
+        quick-tap-ms = <270>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        // require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
         bindings = <&lm_left>, <&macrotap_left_red>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
@@ -1282,10 +1282,10 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_SLAYNextRight";
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        tapping-term-ms = <210>;
+        quick-tap-ms = <270>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
+        // require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
         bindings = <&lm_right>, <&macrotap_right_red>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
