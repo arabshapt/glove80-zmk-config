@@ -2110,12 +2110,14 @@ ZMK_MACRO(layer_function_macro,
     ZMK_MACRO(extend_line_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(DOWN) &kp LS(END)>;
+        // bindings = <&kp LS(DOWN) &kp LS(END)>;
+        bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
     )
     ZMK_MACRO(extend_line_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp LS(UP) &kp LS(HOME)>;
+        // bindings = <&kp LS(UP) &kp LS(HOME)>;
+        bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
     )
 
     //////////////////////////////////////////////////////////////////////////
