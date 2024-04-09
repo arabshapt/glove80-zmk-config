@@ -4301,7 +4301,7 @@ ZMK_MACRO(layer_function_macro,
 
         layer_Cursor {
             bindings = <
-     &none           &none         &none         &none           &none                                                                                                           &none           &none           &none      &none        &none
+     &none           &none         &none         &none           &none                                                                                                           &none           &kp LG(BSPC)           &kp LG(DEL)      &none        &none
      &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LA(LEFT)            &kp LA(RIGHT)      &none        &none
  &kp _C(K)       &sk LSHFT     &kp _REDO     &kp _UNDO        &kp BSPC    &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
  &kp _C(L) &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC     &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
