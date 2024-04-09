@@ -2041,12 +2041,14 @@ ZMK_MACRO(layer_function_macro,
     ZMK_MACRO(select_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(RIGHT) &kp _C(LEFT) &kp _C(LS(RIGHT))>;
+        // bindings = <&kp _C(RIGHT) &kp _C(LEFT) &kp _C(LS(RIGHT))>;
+        bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(RIGHT))>;
     )
     ZMK_MACRO(select_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LEFT) &kp _C(RIGHT) &kp _C(LS(LEFT))>;
+        // bindings = <&kp _C(LEFT) &kp _C(RIGHT) &kp _C(LS(LEFT))>;
+        bindings = <&kp LA(LEFT) &kp LA(RIGHT) &kp LA(LS(LEFT))>;
     )
 
     //
@@ -2062,12 +2064,14 @@ ZMK_MACRO(layer_function_macro,
     ZMK_MACRO(extend_word_right,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LS(RIGHT))>;
+        bindings = <&kp LA(LS(RIGHT))>;
+        // bindings = <&kp _C(LS(RIGHT))>;
     )
     ZMK_MACRO(extend_word_left,
         wait-ms = <SELECT_WORD_DELAY>;
         tap-ms = <SELECT_WORD_DELAY>;
-        bindings = <&kp _C(LS(LEFT))>;
+        // bindings = <&kp _C(LS(LEFT))>;
+        bindings = <&kp LA(LS(LEFT))>;
     )
 
     //
