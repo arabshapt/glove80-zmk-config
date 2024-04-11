@@ -477,7 +477,8 @@
 
   COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO(thumbcombos_2_hyper, &fastmacrotap HYPER_01_KEY(KP_N3), 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
+  COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  // COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
 
   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
@@ -500,7 +501,7 @@
   COMBO(thumbcombos_2, &fastmacrotap LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO(thumbcombos_4, &kp HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO(thumbcombos_5, &fastmacrotap HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO(thumbcombos_5, &spacecombo HYPER_31 HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
@@ -1234,11 +1235,12 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAYShiftLayerLeadersuper";
         #binding-cells = <2>;
-        tapping-term-ms = <200>; //185 old version
+        tapping-term-ms = <210>; //185 old version
         quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
-        require-prior-idle-ms = <150>;         // requires PR #1387
-        bindings = <&mo>, <&macrotap_shift_super_layer>;
+        // require-prior-idle-ms = <150>;         // requires PR #1387
+        // bindings = <&mo>, <&macrotap_shift_super_layer>;
+        bindings = <&skq>, <&macrotap_shift_super_layer>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
