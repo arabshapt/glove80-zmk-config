@@ -483,8 +483,8 @@
 
 // make these combos without require idle
    
-  COMBO_FAST(middlefinger_1_left, &fastmacrotaphold LPAR LPAR, 25 37, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(middlefinger_1_right, &fastmacrotaphold RPAR RPAR, 30 42, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_left, &kp/* &fastmacrotaphold LPAR  */LPAR, 25 37, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_right, &kp/* &fastmacrotaphold RPAR */ RPAR, 30 42, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
