@@ -476,8 +476,10 @@
 //   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
   COMBO(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO(thumbcombos_2_hyper, &fastmacrotap HYPER_01_KEY(KP_N3), 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(thumbcombos_2_hyper, &spacecombo HYPER_25 HYPER_01_KEY(KP_N3), 70 71, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(thumbcombos_2_hyper, &spacecombo HYPER_24 LG(LS(V))/* HYPER_01_KEY(KP_N5) */, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  // combo for clipboard
   // COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
 
   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
