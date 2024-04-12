@@ -483,7 +483,8 @@
 
 // make these combos without require idle
    
-  COMBO_FAST(searchOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 38 50, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(middlefinger_1_left, &kp/* &fastmacrotaphold LPAR  */LPAR, 25 37, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(middlefinger_1_right, &kp/* &fastmacrotaphold RPAR */ RPAR, 30 42, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
