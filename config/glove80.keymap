@@ -482,11 +482,11 @@
 //   COMBO(rightline, &kp LG(RIGHT), 64 41, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 
 // make these combos without require idle
-   
+   // make ctrl and option combo shift
   COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 26 38, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(middlefinger_1_left, &kp/* &fastmacrotaphold LPAR  */LPAR, 25 37, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(middlefinger_1_right, &kp/* &fastmacrotaphold RPAR */ RPAR, 30 42, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 25 37, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(middlefinger_1_right, &spacecombo HYPER_23 HYPER_01_KEY(KP_N6), 30 42, LAYER_Symbol, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
@@ -507,7 +507,9 @@
   COMBO_FAST(thumbcombos_4, &spacecombo HYPER_26 HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_5, &spacecombo HYPER_31 HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
-
+  COMBO_FAST(raycast37, &spacecombomo LAYER_Mouse ENTER, 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  // COMBO(raycast38, &kp HYPER_01_KEY(F10), 60 76, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(raycast31, &spacecombomo LAYER_Number ESC, 37 49, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
 //------------------------------------------------
 
 
@@ -529,7 +531,6 @@
   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast30, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 25 26, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(raycast31, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 37 49, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast32, &kp LA(BSPC), 29 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(raycast33, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast35, &kp LG(TAB), 41 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
@@ -537,8 +538,6 @@
   COMBO(raycast21, &mo LAYER_Cursor, 59 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast22, &kp LG(SPACE),  59 60, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(context37, &kp HYPER_29_KEY(SPACE), 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(raycast37, &kp HYPER_01_KEY(F10), 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(raycast38, &kp HYPER_01_KEY(F10), 60 76, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast39, &kp HYPER_01_KEY(F10), 60 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
  // COMBO(raycast40, &kp LG(SPACE), 31 32, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   //COMBO(raycast70, &kp LG(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
@@ -560,7 +559,7 @@
 //   COMBO(raycast4, &kp HYPER_29_KEY(SPACE), 70 41, SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(contexts4, &kp LG(SPACE) , 70 42, SHIFT_LAYER, COMBO_TERM_ARAB_FAST)
 
-  COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  // COMBO(appswitcher, &skq RC(RA(RS(LA(LS(LGUI))))) , 35 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
     };
 
 
@@ -1210,6 +1209,16 @@ behaviors {
      spacecombomo: thumb_layer_access_spacebar_combomo_arab {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_SPACEBARcombomo-arab";
+        flavor = "balanced";
+        tapping-term-ms = <210>;
+        // require-prior-idle-ms = <200>;         // requires PR #1387
+        quick-tap-ms = <210>; // enable repeat
+        #binding-cells = <2>;
+        bindings = <&mo>, <&fastmacrotap>;
+    };
+     spacecombocolon: thumb_layer_access_spacebar_combomocolon_arab {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_LAYER_ACCESS_SPACEBARcombomocolon-arab";
         flavor = "balanced";
         tapping-term-ms = <210>;
         // require-prior-idle-ms = <200>;         // requires PR #1387
@@ -4354,7 +4363,7 @@ ZMK_MACRO(layer_function_macro,
   &fastmacrotaphold EXCL EXCL   &fastmacrotaphold LBRC LBRC    &fastmacrotaphold SQT SQT     &fastmacrotaphold DQT DQT   &fastmacrotaphold RBRC RBRC   &fastmacrotaphold QMARK QMARK                                                                     &trans     &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
   &fastmacrotaphold HASH HASH   &homey_leftsymbolCARET LCTRL 0       &homey_left LALT EQUAL   &homey_left  LSHFT MINUS      &homey_leftsymbolDLLR LGUI 0  &fastmacrotaphold STAR STAR                                                                      &trans   &homey_right RGUI BSPC  &homey_right RSHFT TAB     &homey_right RALT  SPACE    &homey_right RCTL RET   &none
  &fastmacrotaphold TILDE TILDE      &fastmacrotaphold LT LT    &fastmacrotaphold PIPE PIPE   &fastmacrotaphold  UNDER UNDER    &fastmacrotaphold GT GT    &fastmacrotaphold FSLH FSLH    &fastmacrotaphold BSLH BSLH     &fastmacrotaphold DOT DOT   &fastmacrotaphold STAR STAR               &none   &none   &none  &trans    &kp DEL  &kp LS(TAB)      &none     &none   &none
-    &fastmacrotaphold AT AT    &fastmacrotaphold AMPS AMPS    &fastmacrotaphold LBKT LBKT    &fastmacrotaphold RBKT RBKT   &fastmacrotaphold PLUS PLUS              /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&spacecombomo LAYER_Cursor  COLON  &fastmacrotaphold PRCNT PRCNT   &fastmacrotaphold SEMI SEMI   &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
+    &fastmacrotaphold AT AT    &fastmacrotaphold AMPS AMPS    &fastmacrotaphold LBKT LBKT    &fastmacrotaphold RBKT RBKT   &fastmacrotaphold PLUS PLUS              /*&thumbhlayShiftLayerLeader LAYER_SHIFT_LAYER   /* SKQ_LEFT_SHIFT */&spacecombocolon LAYER_Cursor  COLON  &fastmacrotaphold PRCNT PRCNT   &fastmacrotaphold SEMI SEMI   &tog LAYER_Symbol   &none   &none             &trans       &trans     &trans    &trans   &none
             >;
         };
       layer_Symbol_mirrored {
