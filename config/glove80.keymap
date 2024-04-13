@@ -528,7 +528,7 @@
   COMBO(deleteWordLayerMod5, &kp HYPER_01_KEY(F10), 69 59 43, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod6, &skq RA(RG(RS(LA(LSHFT)))), 69 41 42, LAYER_Dvorak, 100)
   COMBO(deleteWordLayerMod7, &kp LG(TAB), 69 41 43, LAYER_Dvorak, 100)
-  COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
+  // COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
   // COMBO(deleteWordLayerMod9, &comboCmdTabHT LAYER_Symbol_mirrored LG(TAB), 69 37 38, LAYER_Dvorak, 70)
   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
