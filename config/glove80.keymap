@@ -491,21 +491,21 @@
   COMBO_FAST(shift_combo_right, &homey_right_combo RS(RGUI) RSHFT, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO_FAST(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(forefinger_1_left, &kp BSPC, 26 38, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(forefinger_1_right, &kp LA(BSPC), 29 41, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(backspaceOnNumberL, &kp BSPC, 29 41, LAYER_Number, COMBO_TERM_ARAB_SLOW)
 
-  COMBO_FAST(thumbcombos_2_hyper, &spacecombo HYPER_25 HYPER_01_KEY(KP_N3), 70 71, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO_FAST(thumbcombos_3_hyper, &spacecombo HYPER_24 LG(LS(V))/* HYPER_01_KEY(KP_N5) */, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO_FAST(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO_FAST(thumbcombos_2_hyper, &spacecombo HYPER_25 HYPER_01_KEY(KP_N3), 70 71, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_3_hyper, &spacecombo HYPER_24 LG(LS(V))/* HYPER_01_KEY(KP_N5) */, 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   // combo for clipboard
   // COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
-  COMBO_FAST(thumbcombos_1, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW) //appswitch
-  // COMBO_FAST(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO_FAST(thumbcombos_1, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) //appswitch
+  // COMBO_FAST(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   // HYPER_RIGHT_RED_106_O(key)  RA(RG(RS(LA(LSHFT))))
-  COMBO_FAST(thumbcombos_2, &spacecombo HYPER_30 LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
-  COMBO_FAST(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO_FAST(thumbcombos_2, &spacecombo HYPER_30 LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_3, &kp HYPER_01_KEY(F10), 55 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_4, &spacecombo HYPER_26 HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_5, &spacecombo HYPER_31 HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
