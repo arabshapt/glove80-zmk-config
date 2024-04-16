@@ -490,6 +490,7 @@
   // COMBO_FAST(shift_combo_left_1, &homey_left LS(LALT) LA(BSPC), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
   COMBO_FAST(shift_combo_left_2, &homey_left_combo LS(LGUI) LSHFT, 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
   COMBO_FAST(shift_combo_right_1, &homey_left_combo RS(RGUI) RSHFT /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
+  COMBO_FAST(hyper_go_in, &homey_left_combo RS(RGUI) HYPER_01_KEY(B)/* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //go in 
   COMBO(shift_combo_right_2, &homey_right RS(RALT) ENTER, 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -512,7 +513,7 @@
   COMBO_FAST(thumbcombos_4, &spacecombo HYPER_26 HYPER_29_KEY(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_5, &spacecombo HYPER_31 HYPER_01_KEY(KP_N1), 74 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(thumbcombos_6, &kp HYPER_01_KEY(F10), 73 72, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW) // dictionary raycast
-  COMBO_FAST(raycast37, &spacecombomo LAYER_Mouse ENTER, 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(raycast37, &spacecombomo LAYER_Mouse HYPER_01_KEY(T), 60 42, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   // COMBO(raycast38, &kp HYPER_01_KEY(F10), 60 76, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(raycast31, &spacecombomo LAYER_Number ESC, 37 49, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
 //------------------------------------------------
@@ -4373,7 +4374,7 @@ ZMK_MACRO(layer_function_macro,
      &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LA(LEFT)            &kp LA(RIGHT)      &none        &none
  &kp _C(K)       &sk LSHFT     &kp _REDO     &kp _UNDO        &kp BSPC    &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
  &kp _C(L) &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC     &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
- &kp _C(J)       &kp _FIND  &select_word  &select_line       &kp _C(A)  &kp _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
+ &kp _C(J)       &kp _FIND  &kp HYPER_27_KEY(H)  &kp HYPER_27_KEY(S)       &kp _C(A)  &kp _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &kp _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
  &kp _C(H)  &kp _FIND_PREV  &extend_word  &extend_line  &kp _FIND_NEXT               &none   &none  &tog LAYER_Cursor     &kp _C(A)  &select_line &plain_select_word LAYER_Symbol 0 /* &select_word */              &kp _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
             >;
         };
