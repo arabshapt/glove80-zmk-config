@@ -548,7 +548,7 @@
  // COMBO(raycast40, &kp LG(SPACE), 31 32, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   //COMBO(raycast70, &kp LG(SPACE), 57 56, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(warp70, &kp HYPER_02_KEY(HOME), 69 70, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(go_to_file, &homey_left_combo LS(LALT) HYPER_01_KEY(N1), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(go_to_file, &homey_left LS(LALT) HYPER_01_KEY(N1), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(search_file_everywhere, &kp HYPER_01_KEY(N2), 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(go_to, &kp HYPER_01_KEY(N3), 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast, &kp LG(SPACE), 41 57, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
