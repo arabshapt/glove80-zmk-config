@@ -551,6 +551,7 @@
   COMBO(go_to_file, &homey_left LS(LALT) HYPER_01_KEY(N1), 36 37, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(search_file_everywhere, &kp HYPER_01_KEY(N2), 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(go_to, &kp HYPER_01_KEY(N3), 30 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(change_project, &homey_left LA(LGUI) HYPER_01_KEY(N4), 36 38, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast, &kp LG(SPACE), 41 57, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(contexts, &kp HYPER_29_KEY(SPACE), 57 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(raycast2, &kp LG(SPACE), 70 41, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
