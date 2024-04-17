@@ -492,6 +492,7 @@
   COMBO_FAST(shift_combo_right_1, &homey_left_combo RS(RGUI) RSHFT /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(hyper_go_in, &homey_left_combo RS(RGUI) HYPER_01_KEY(B)/* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //go in 
   COMBO(shift_combo_right_2, &homey_right RS(RALT) ENTER, 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
+  COMBO(shift_combo_right_2_cursor_layer, &kp ENTER, 42 43, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
