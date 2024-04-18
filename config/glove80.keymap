@@ -520,7 +520,7 @@
 //------------------------------------------------
 
 
-  COMBO(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
+  COMBO(escape_on_symbols_layer, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
