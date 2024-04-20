@@ -67,7 +67,7 @@
 
 /* Custom Device-tree */
 
-#define AH(keycode) &as RS(RC(RA(RG(keycode)))) keycode      // AutoHyper Macro HYPER_85_KEY
+#define AH(keycode) &as RS(RC(RA(RG(keycode)))) keycode      // AutoHyper Macro HYPER_02_KEY
 
 #define QUICK_TAP_MS_ARAB 175 
 #define QUICK_TAP_MS_ARAB_PRIMAL 140 //140  ONLY FOR WARM TIMES
@@ -483,6 +483,7 @@
 
 // make these combos without require idle
    // make ctrl and option combo shift
+  COMBO_FAST(thumbcombos_1_left_leader, &thumbhSlayNextLeft HYPER_27 0, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 26 38, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 25 37, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -496,7 +497,6 @@
   COMBO_FAST(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO_FAST(lshift, &skqi LSHFT , 38 50, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(rshift, &skqi RSHFT, 41 59, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
-  COMBO_FAST(thumbcombos_1_left, &skqi LSHFT, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(forefinger_1_left, &kp BSPC, 26 38, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(forefinger_1_right, &kp LA(BSPC), 29 41, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(backspaceOnNumberL, &kp BSPC, 29 41, LAYER_Number, COMBO_TERM_ARAB_SLOW)
@@ -4321,7 +4321,7 @@ ZMK_MACRO(layer_function_macro,
             &kp CAPSLOCK /*EQUAL*/             AH(N1)       AH(N2)         AH(N3)      AH(N4)     AH(N5)                                                                                                                                                     AH(N6) AH(N7)  AH(N8)   AH(N9)           AH(N0)              &kp BSLH
             &space HYPER_29 GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &space HYPER_28 HYPER_01_KEY(KP_N0)/* &fastmacrotap HYPER_01_KEY(KP_N0) */
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP) 
-            &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &thumbhSlayNextLeft HYPER_27 0 /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT 
+            &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &skqi LSHFT/* &thumbhSlayNextLeft HYPER_27 0 */ /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT 
  &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotaphold LAYER_Mouse LBKT             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
