@@ -1709,9 +1709,9 @@ thumbhlay: thumb_homerow_lay {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    space_thumb: thumb_layer_access_spacebar_arab {
+    space_thumb: thumb_layer_access_spacebar_arab_thumb {
         compatible = "zmk,behavior-hold-tap";
-        label = "THUMB_LAYER_ACCESS_SPACEBAR-arab";
+        label = "THUMB_LAYER_ACCESS_SPACEBAR-arab_thumb";
         flavor = "balanced";
         tapping-term-ms = <210>;
         // require-prior-idle-ms = <200>;         // requires PR #1387
