@@ -48,10 +48,12 @@
 #define LAYER_SKQ_LEFT_SHIFT_SUPER 18
 #define LAYER_SKQ_HOLD_LEFT_RED 19
 #define LAYER_SKQ_HOLD_RIGHT_RED 20
-#define LAYER_SHIFT_LAYER 21
-#define LAYER_Function 22
-#define LAYER_FN 23
-#define LAYER_Emoji 24
+#define LAYER_SKQ_HOLD_LEFT_RED_SYMBOLS 21
+#define LAYER_SKQ_HOLD_RIGHT_RED_SYMBOLS 22
+#define LAYER_SHIFT_LAYER 23
+#define LAYER_Function 24
+#define LAYER_FN 25
+#define LAYER_Emoji 26
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
@@ -4585,6 +4587,33 @@ ZMK_MACRO(layer_function_macro,
         &kp  TAB       &kp SEMI          &kp COMMA  &kp DOT    &kp P      &kp Y                                                                                                                                                                                        &kp F    &kp G       &kp C       &kp R       &kp L      &kp BKSP
         &kp /*&thumbhlay LAYER_Symbol*/ TAB     &kp A             &kp O      &kp E      &kp U      &kp I                                                      &kp D    &kp H       &kp T       &kp  N      &kp S      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
         &kp LSHFT         &lt LAYER_FN APOS &kp Q      &kp J      &kp K      &kp X                                                &kp KP_N1 &kp KP_N2               &kp KP_N0                      &kp  KP_N5  &kp KP_N3  &kp KP_N4                                                                                                 &kp B    &kp M       &kp W       &kp V       &kp Z      &kp RSHFT
+        &mo LAYER_Symbol &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo LAYER_Symbol
+             >;
+       };
+/*
+these are left
+EQUAL, MINUS, SLASH, BSLH, RBKT, LBKT, GRAVE, 
+home, end, page down and up, up, down, left, right
+**/
+        layer_SKQ_HOLD_LEFT_RED_SYMBOLS {
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5                                                                                                                                                                                        &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
+        &kp  TAB       &kp F1          &kp F2  &kp F3    &kp F4      &kp F5                                                                                                                                                                                        &kp F6    &kp F7       &kp F8       &kp F9       &kp F10      &kp BKSP
+        &kp /*&thumbhlay LAYER_Symbol*/ TAB     &kp F11             &kp F12      &kp KP_N0      &kp KP_N1      &kp KP_N2                                                     &kp KP_N3    &kp KP_N4       &kp KP_N5       &kp  KP_N6      &kp KP_N7      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
+        &kp LSHFT         &lt LAYER_FN KP_N8 &kp KP_N9      &kp KP_ENTER      &kp KP_PLUS      &kp KP_MINUS                                               &kp KP_N1 &kp KP_N2               &kp KP_N0                      &kp  KP_N5     &kp KP_N3  &kp KP_N4                                                                                            &kp KP_ASTERISK &kp KP_SLASH               &kp KP_EQUAL                      &kp  KP_DOT       &kp K_APP      &kp RSHFT
+        &mo LAYER_Symbol &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo LAYER_Symbol
+       >;
+       };
+
+
+        layer_SKQ_HOLD_RIGHT_RED_SYMBOLS {
+            bindings = <
+             &trans  &trans  &trans  &trans  &trans                                                                                                                 &trans        &trans        &trans        &trans        &trans
+        &kp  GRAVE     &kp N1      &kp N2        &kp N3     &kp N4    &kp N5                                                                                                                                                                                        &kp N6 &kp N7  &kp N8   &kp N9           &kp N0               &modthumbhm HYPER_16 EQUAL
+        &kp  TAB       &kp F1          &kp F2  &kp F3    &kp F4      &kp F5                                                                                                                                                                                        &kp F6    &kp F7       &kp F8       &kp F9       &kp F10      &kp BKSP
+        &kp /*&thumbhlay LAYER_Symbol*/ TAB     &kp F11             &kp F12      &kp KP_N0      &kp KP_N1      &kp KP_N2                                                     &kp KP_N3    &kp KP_N4       &kp KP_N5       &kp  KP_N6      &kp KP_N7      &modthumbhm  HYPER_33/*&thumbhlay HYPER_44 LAYER_Symbol*/ BKSP
+        &kp LSHFT         &lt LAYER_FN KP_N8 &kp KP_N9      &kp KP_ENTER      &kp KP_PLUS      &kp KP_MINUS                                               &kp KP_N1 &kp KP_N2               &kp KP_N0                      &kp  KP_N5     &kp KP_N3  &kp KP_N4                                                                                            &kp KP_ASTERISK &kp KP_SLASH               &kp KP_EQUAL                      &kp  KP_DOT       &kp K_APP      &kp RSHFT
         &mo LAYER_Symbol &kp GRAVE           &kp FSLH    &kp LEFT   &kp RIGHT                         &thumbhm HYPER_58 BKSP    &thumbhlayEscape LAYER_Symbol ESC                  &kp   PG_UP                     &kp  PG_DN                        &kp   ENTER               &kp  SPACE                         &kp DOWN    &kp UP      &kp LEFT_BRACKET &kp RIGHT_BRACKET    &mo LAYER_Symbol
              >;
        };
