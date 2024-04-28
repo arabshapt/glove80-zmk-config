@@ -1778,7 +1778,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
-        bindings = <&fastmacrotapdanceLBKT LPAR 0>, <&fastmacrotapdanceLT LT 0>;
+        bindings = <&fastmacrotapdanceLBKT>, <&fastmacrotapdanceLT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
