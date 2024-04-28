@@ -1668,7 +1668,7 @@ thumbhlay: thumb_homerow_lay {
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
         #endif
         #binding-cells = <2>;
-        bindings = <&mo>, <&fastmacrotaphold LBKT LBKT>;
+        bindings = <&mo>, <&parang_left>;
     };
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
