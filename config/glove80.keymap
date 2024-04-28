@@ -489,7 +489,7 @@ create a list of all possible keys for hyper_01 and mark used ones
 
 // make these combos without require idle
    // make ctrl and option combo shift
-  COMBO_FAST(thumbcombos_1_left_leader, &thumbhSlayNextLeft LAYER_Number 0, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
+  COMBO_FAST(thumbcombos_1_left_leader, &thumbhSlayNextLeft LAYER_Number 0, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 26 38, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 25 37, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -597,6 +597,18 @@ create a list of all possible keys for hyper_01 and mark used ones
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
+        };
+        fastmacrotapdanceLBKT: fastmacrotapdanceLBKT {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&fastmacrotap LBKT>, <&kp LBKT>;
+        };
+fastmacrotapdanceLT: fastmacrotapdanceLT {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&fastmacrotap LT>, <&kp LT>;
         };
         fastmacrotapdanceCARET: fastmacrotapdanceCARET {
             compatible = "zmk,behavior-tap-dance";
@@ -1766,7 +1778,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
-        bindings = <&fastmacrotaphold LPAR LPAR>, <&fastmacrotaphold LT LT>;
+        bindings = <&fastmacrotapdanceLBKT LPAR 0>, <&fastmacrotapdanceLT LT 0>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
