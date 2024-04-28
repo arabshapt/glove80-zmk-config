@@ -598,11 +598,11 @@ create a list of all possible keys for hyper_01 and mark used ones
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
         };
-        fastmacrotapdanceLBKT: fastmacrotapdanceLBKT {
+        fastmacrotapdanceLPAR: fastmacrotapdanceLPAR {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&fastmacrotap LBKT>, <&kp LBKT>;
+            bindings = <&fastmacrotap LPAR>, <&kp LPAR>;
         };
 fastmacrotapdanceLT: fastmacrotapdanceLT {
             compatible = "zmk,behavior-tap-dance";
@@ -1778,7 +1778,7 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-mod-morph";
         label = "LEFT_PARENTHESIS_AND_LESS_THAN";
         #binding-cells = <0>;
-        bindings = <&fastmacrotapdanceLBKT>, <&fastmacrotapdanceLT>;
+        bindings = <&fastmacrotapdanceLPAR>, <&fastmacrotapdanceLT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
