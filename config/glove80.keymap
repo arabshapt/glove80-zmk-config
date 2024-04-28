@@ -1660,6 +1660,8 @@ thumbhlay: thumb_homerow_lay {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESSfastmacrotaphold";
         flavor = THUMB_HOLDING_TYPE;
+        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+        hold-trigger-on-release; // wait for other home row mods
         tapping-term-ms = <THUMB_HOLDING_TIME>;
         #ifdef ENABLE_KEY_REPEAT
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
