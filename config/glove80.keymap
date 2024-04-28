@@ -4400,7 +4400,7 @@ ZMK_MACRO(layer_function_macro,
      &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LA(LEFT)            &kp LA(RIGHT)      &none        &none
  &kp _C(K)       &sk LSHFT     &kp _REDO     &kp _UNDO        &kp BSPC      &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &sk LSHFT    &kp _C(K)
  &kp _C(L) &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC     &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
- &kp _C(J)       &kp _FIND  &kp HYPER_27_KEY(H)  &kp HYPER_27_KEY(S)       &kp _C(A)  &kp _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &fastmacrotaphold _PASTE _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
+ &kp _C(J)       &kp _FIND  &kp HYPER_27_KEY(H)  &kp HYPER_27_KEY(S)       &fastmacrotaphold _C(A) _C(A)  &kp _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &fastmacrotaphold _PASTE _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
  &kp _C(H)  &kp _FIND_PREV  &extend_word  &extend_line  &kp _FIND_NEXT               &none   &none  &tog LAYER_Cursor     &kp _C(A)  &select_line &plain_select_word LAYER_Symbol 0 /* &select_word */              &fastmacrotaphold _FIND _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
             >;
         };
