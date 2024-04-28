@@ -1668,7 +1668,7 @@ thumbhlay: thumb_homerow_lay {
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
         #endif
         #binding-cells = <2>;
-        bindings = <&mo>, <&kp LBKT>;
+        bindings = <&mo>, <&kp>;
     };
     thumb: thumb_layer_access {
         compatible = "zmk,behavior-hold-tap";
@@ -4348,7 +4348,7 @@ ZMK_MACRO(layer_function_macro,
             &space HYPER_29 GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &space HYPER_28 HYPER_01_KEY(KP_N0)/* &fastmacrotap HYPER_01_KEY(KP_N0) */
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP) 
             &skqi LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq RA(RG(RS(LA(LSHFT)))) K                  &kp X      &skqi LSHFT/* &thumbhSlayNextLeft HYPER_27 0 */ /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &thumbhlayEscape LAYER_Symbol   /* SKQ_LEFT_SHIFT */  TAB /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_34  0                 &kp B                             &homey_right_skq RA(RG(RS(LA(LSHFT)))) M                 &kp W                &kp V                &kp Z             &skqi RSHFT 
- &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc HYPER_27 ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotapholdLBKT LAYER_Mouse 0             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
+ &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc HYPER_27 ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &kp LG(SPACE)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotapholdLBKT LAYER_Mouse  LBKT             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
