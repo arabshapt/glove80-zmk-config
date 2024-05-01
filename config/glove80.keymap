@@ -506,7 +506,8 @@ create a list of all possible keys for hyper_01 and mark used ones
   COMBO_FAST(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper HYPER_32 0, 70 53, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   // combo for clipboard
   // COMBO(tap_macro_skq_left_shift_super, &thumbhlayShiftLayerLeadersuper LAYER_Cursor 0 , 69 70, LAYER_Dvorak, 100)
-  COMBO_FAST(thumbcombos_1, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW) //appswitch
+  COMBO_FAST(thumbcombos_1, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW) //appswitch&raycast
+  COMBO_FAST(thumbcombos_1_cursor, &spacecombo RA(RG(RS(LA(LSHFT)))) LG(SPACE), 57 74, LAYER_Cursor, COMBO_TERM_ARAB_VERY_SLOW) //appswitch&raycast
   // COMBO_FAST(thumbcombos_1, &spacecombo HYPER_30 LG(SPACE), 57 74, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
   // HYPER_RIGHT_RED_106_O(key)  RA(RG(RS(LA(LSHFT))))
   COMBO_FAST(thumbcombos_2, &spacecombo HYPER_30 LG(TAB), 56 73, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -4414,8 +4415,8 @@ ZMK_MACRO(layer_function_macro,
         layer_Cursor {
             bindings = <
      &none           &none         &none         &none           &none                                                                                                           &none           &kp LG(BSPC)           &kp LG(DEL)      &none        &none
-     &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LA(LEFT)            &kp LA(RIGHT)      &none        &none
- &kp _C(K)       &fastmacrotap LG(LS(V))    &kp _UNDO          &kp _REDO        &kp BSPC      &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp _UNDO       &kp _REDO  &fastmacrotap LG(LS(V))    &kp _C(K)
+     &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp LA(DEL)           &kp LG(LEFT)            &kp LG(RIGHT)      &none        &none
+ &kp _C(K)       &kp HYPER_29_KEY(SPACE)/*context app*/    &kp _UNDO          &kp _REDO        &kp BSPC      &kp _CUT                                                                                 &kp _CUT   &kp LA(BSPC)       &kp LA(LEFT)            &kp LA(RIGHT)  &fastmacrotap LG(LS(V))    &kp _C(K)
  &kp _C(L) &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC     &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp _C(L)
  &kp _C(J)       &kp _FIND  &kp HYPER_27_KEY(H)  &kp HYPER_27_KEY(S)       &fastmacrotaphold _C(A) _C(A)  &fastmacrotaphold _PASTE _PASTE   &none   &none              &none  &select_none  &extend_line  &extend_word  &fastmacrotaphold _PASTE _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
  &kp _C(H)  &kp _FIND_PREV  &extend_word  &extend_line  &kp _FIND_NEXT               &none   &none  &tog LAYER_Cursor     &fastmacrotaphold _C(A) _C(A)  &select_line &plain_select_word LAYER_Symbol 0 /* &select_word */              &fastmacrotaphold _FIND _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
