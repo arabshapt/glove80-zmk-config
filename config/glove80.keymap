@@ -1269,7 +1269,7 @@ behaviors {
         quick-tap-ms = <270>;                // repeat on tap-into-hold
         flavor = "balanced";
         require-prior-idle-ms = <170>;    // reduce this     // requires PR #1387
-        bindings = <&kp>, <&kp>;
+        bindings = <&mo>, <&kp>;
         // hold-trigger-key-positions = < KEYS_L THUMBS>;
         // hold-trigger-on-release;             // delay positional check until key-release
     };
