@@ -938,11 +938,11 @@ fastmacrotapdanceLT: fastmacrotapdanceLT {
 
 behaviors {
 
-ZMK_BEHAVIOR(skqi_mod, hold_tap, \
-    flavor = "balanced"; \
-    tapping-term-ms = <STICKY_TAP_MS>; \
-    bindings = <&kp>, <&smrt_shft_morph>; \ 
-    hold-while-undecided; \
+ZMK_BEHAVIOR(skqi_mod, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <STICKY_TAP_MS>;
+    bindings = <&kp>, <&smrt_shft_morph>; 
+    hold-while-undecided;
 );
 
     //////////////////////////////////////////////////////////////////////////
