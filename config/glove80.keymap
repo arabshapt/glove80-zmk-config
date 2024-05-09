@@ -1494,7 +1494,6 @@ thumbhlay: thumb_homerow_lay {
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
-        hold-while-undecided;
     };
 
     homey_right: home_row_mods_right_hand {
@@ -1510,7 +1509,6 @@ thumbhlay: thumb_homerow_lay {
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
-        hold-while-undecided;
     };
     homey_left_skq: home_row_mods_left_hand_skq {
         compatible = "zmk,behavior-hold-tap";
