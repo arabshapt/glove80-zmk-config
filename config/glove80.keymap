@@ -465,6 +465,12 @@ create a list of all possible keys for hyper_01 and mark used ones
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
+  ZMK_BEHAVIORZMK_BEHAVIOR(skqi_mod, hold_tap,
+    flavor = "balanced"; // balanced because we want to consider as tap when rolling
+        tapping-term-ms = <HOMEY_HOLDING_TIME>;
+    bindings = <&kp>, <&skqi>; 
+    hold-while-undecided; // requires pr
+);
     //
     // |------------------------|------------------------|
     // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
@@ -1495,12 +1501,6 @@ thumbhlay: thumb_homerow_lay {
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
     };
-ZMK_BEHAVIORZMK_BEHAVIOR(skqi_mod, hold_tap,
-    flavor = "balanced"; // balanced because we want to consider as tap when rolling
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-    bindings = <&kp>, <&skqi>; 
-    hold-while-undecided; // requires pr
-);
 // ZMK_BEHAVIORZMK_BEHAVIOR(sk_mod, hold_tap,
 //     flavor = "balanced"; // balanced because we want to consider as tap when rolling
 //         tapping-term-ms = <HOMEY_HOLDING_TIME>;
