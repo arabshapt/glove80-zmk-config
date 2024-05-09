@@ -465,12 +465,12 @@ create a list of all possible keys for hyper_01 and mark used ones
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
-  ZMK_BEHAVIORZMK_BEHAVIOR(skqi_mod, hold_tap,
-    flavor = "balanced"; // balanced because we want to consider as tap when rolling
-        tapping-term-ms = <HOMEY_HOLDING_TIME>;
-    bindings = <&kp>, <&skqi>; 
-    hold-while-undecided; // requires pr
-);
+ZMK_BEHAVIOR(skqi_mod, hold_tap,
+    flavor = "balanced"; 
+    tapping-term-ms = <STICKY_TAP_MS>; 
+    bindings = <&kp>, <&smrt_shft_morph>; 
+    hold-while-undecided;
+) 
     //
     // |------------------------|------------------------|
     // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
