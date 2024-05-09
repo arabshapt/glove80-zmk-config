@@ -1487,6 +1487,7 @@ thumbhlay: thumb_homerow_lay {
         flavor = HOMEY_HOLDING_TYPE;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
         hold-trigger-on-release; // wait for other home row mods
+        hold-while-undecided;
         tapping-term-ms = <HOMEY_HOLDING_TIME>;
         // #if ENABLE_KEY_REPEAT
         quick-tap-ms = <HOMEY_REPEAT_DECAY>;
