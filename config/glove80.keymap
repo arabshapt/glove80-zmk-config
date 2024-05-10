@@ -4308,8 +4308,8 @@ ZMK_MACRO(layer_function_macro,
 #endif
 
 /*HACK*/};
-#if __has_include(<zmk/events/mouse_tick.h>)
-// #ifdef ENABLE_MOUSE_KEYS
+// #if __has_include(<zmk/events/mouse_tick.h>)
+#ifdef ENABLE_MOUSE_KEYS
 
     // #include <behaviors/mouse_keys.dtsi>
     #include <dt-bindings/zmk/mouse.h>
