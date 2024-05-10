@@ -1359,6 +1359,19 @@ thumbhlay: thumb_homerow_lay {
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
+
+    space_shift: thumb_layer_access_spacebar_arab_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "THUMB_LAYER_ACCESS_SPACEBAR-arab-shift";
+        flavor = "balanced";
+        tapping-term-ms = <250>;
+        // require-prior-idle-ms = <200>;         // requires PR #1387
+        // quick-tap-ms = <270>; // enable repeat
+        #binding-cells = <2>;
+        bindings = <&kp>, <&skqi>;
+        hold-while-undecided;
+    };
+
         skqi: sticky_key_quick_release_no_mods {
           compatible = "zmk,behavior-sticky-key";
           #binding-cells = <1>;
