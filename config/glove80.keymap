@@ -1494,6 +1494,7 @@ thumbhlay: thumb_homerow_lay {
         require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&kp>, <&kp>;
+        hold-while-undecided;
     };
 // ZMK_BEHAVIORZMK_BEHAVIOR(sk_mod, hold_tap,
 //     flavor = "balanced"; // balanced because we want to consider as tap when rolling

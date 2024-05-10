@@ -11,10 +11,10 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v4
         with:
-          repository: moergo-sc/zmk
+          # repository: moergo-sc/zmk
           # repository: chrisandreae/zmk
           # repository: bryanforbes/zmk
-          # repository: arabshapt/zmk
+          repository: arabshapt/zmk
           # ref: gloveleader
           # ref: mouse-3.2-moergo
           # ref: mouse-3.2-moergo-v24.01
