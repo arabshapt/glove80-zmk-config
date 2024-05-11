@@ -1368,14 +1368,14 @@ thumbhlay: thumb_homerow_lay {
         // require-prior-idle-ms = <200>;         // requires PR #1387
         // quick-tap-ms = <270>; // enable repeat
         #binding-cells = <2>;
-        bindings = <&kp>, <&skqi_fastmacrotap>;
+        bindings = <&kp>, <&kp>;
         hold-while-undecided;
     };
 
         skqi_fastmacrotap: sticky_key_quick_release_no_mods_fastmacrotap {
           compatible = "zmk,behavior-sticky-key";
           #binding-cells = <1>;
-          bindings = <&fastmacrotap>;
+          bindings = <&kp>;
           release-after-ms = <1000>;
           quick-release;
           /delete-property/ ignore-modifiers;
