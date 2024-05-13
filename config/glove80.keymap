@@ -1363,7 +1363,7 @@ thumbhlay: thumb_homerow_lay {
     space_shift: thumb_layer_access_spacebar_arab_shift {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_LAYER_ACCESS_SPACEBAR-arab-shift";
-        flavor = "tap-preferred";
+        flavor = "hold-preferred";
         tapping-term-ms = <250>;
         // require-prior-idle-ms = <200>;         // requires PR #1387
         // quick-tap-ms = <270>; // enable repeat
