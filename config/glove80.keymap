@@ -1369,7 +1369,7 @@ thumbhlay: thumb_homerow_lay {
         // quick-tap-ms = <270>; // enable repeat
         #binding-cells = <2>;
         bindings = <&kp>, <&skqi>;
-        hold-while-undecided;
+        // hold-while-undecided;
     };
 
         skqi: sticky_key_quick_release_no_mods {
