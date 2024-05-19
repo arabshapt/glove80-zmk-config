@@ -4298,7 +4298,7 @@ ZMK_MACRO(layer_function_macro,
 // MOUSE_MOTION_MAXIMUM_SPEED defines how quickly the mouse pointer can move.
 //
 #ifndef MOUSE_MOTION_MAXIMUM_SPEED
-#define MOUSE_MOTION_MAXIMUM_SPEED 600
+#define MOUSE_MOTION_MAXIMUM_SPEED 900//600
 #endif
 
 //
