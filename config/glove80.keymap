@@ -1225,7 +1225,7 @@ behaviors {
         label = "THUMB_HOMEROW_LAYEscapefunc";
         #binding-cells = <2>;
         tapping-term-ms = <210>;
-        quick-tap-ms = <210>;                // repeat on tap-into-hold
+        // quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "hold-preferred";
         // require-prior-idle-ms = <50>;         // requires PR #1387
         // bindings = <&layer_function_macro>, <&kp>;
