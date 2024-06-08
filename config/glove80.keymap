@@ -490,7 +490,7 @@ create a list of all possible keys for hyper_01 and mark used ones
 
 // make these combos without require idle
    // make ctrl and option combo shift
-  COMBO_FAST(thumbcombos_1_left_leader, &thumbhSlayNextLeft LAYER_Number 0, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
+  COMBO_FAST(thumbcombos_1_left_leader, &thumbhSlayNextLeft HYPER_27 0, 69 52, LAYER_Dvorak, COMBO_TERM_ARAB_VERY_SLOW)
   COMBO_FAST(searchTextOnNavigationL, &kp HYPER_01_KEY(F), 28 40, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(searchFilesOnNavigationL, &kp HYPER_01_KEY(P), 26 38, LAYER_Cursor, COMBO_TERM_ARAB_SLOW)
   COMBO_FAST(middlefinger_1_left, &spacecombo HYPER_22 HYPER_01_KEY(KP_N5), 25 37, LAYER_Dvorak, COMBO_TERM_ARAB_SLOW)
@@ -1206,6 +1206,20 @@ behaviors {
     };
 
 // TRY CHANGING THIS TO BE SIMILAR TO SPACE MOD
+// &thumbhlayEscapefunc HYPER_27 ESC
+//     thumbhlayEscapefunc: thumb_homerow_layEscapefunc {
+//         compatible = "zmk,behavior-hold-tap";
+//         label = "THUMB_HOMEROW_LAYEscapefunc";
+//         #binding-cells = <2>;
+//         tapping-term-ms = <210>;
+//         quick-tap-ms = <210>;                // repeat on tap-into-hold
+//         flavor = "hold-preferred";
+//         // require-prior-idle-ms = <50>;         // requires PR #1387
+//         // bindings = <&layer_function_macro>, <&kp>;
+//         bindings = <&lm_left>, <&kp>;
+//         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
+//         //hold-trigger-on-release;             // delay positional check until key-release
+//     };
     thumbhlayEscapefunc: thumb_homerow_layEscapefunc {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAYEscapefunc";
@@ -1215,11 +1229,10 @@ behaviors {
         flavor = "hold-preferred";
         // require-prior-idle-ms = <50>;         // requires PR #1387
         // bindings = <&layer_function_macro>, <&kp>;
-        bindings = <&lm_left>, <&kp>;
+        bindings = <&mo>, <&kp>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
-
     thumbhlayEscapeSymbol: thumb_homerow_layEscapeSymbol {
         compatible = "zmk,behavior-hold-tap";
         label = "THUMB_HOMEROW_LAYEscapeSymbol";
@@ -1332,7 +1345,7 @@ thumbhlay: thumb_homerow_lay {
         // quick-tap-ms = <210>;                // repeat on tap-into-hold
         flavor = "balanced";
         // require-prior-idle-ms = <QUICK_TAP_MS_ARAB>;         // requires PR #1387
-        bindings = <&mo>, <&macrotap_left_red>;
+        bindings = <&lm_left>, <&macrotap_left_red>;
         //hold-trigger-key-positions = < KEYS_L THUMBS>;//what is this? thumb keys but only left side?
         //hold-trigger-on-release;             // delay positional check until key-release
     };
@@ -4396,7 +4409,7 @@ ZMK_MACRO(layer_function_macro,
             &space HYPER_29 GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &space HYPER_28 HYPER_01_KEY(KP_N0)/* &fastmacrotap HYPER_01_KEY(KP_N0) */
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP) 
             &modthumbhm HYPER_21 LSHFT            &plain LAYER_FN APOS                   &kp Q                &kp J                   &homey_left_skq HYPER_03 K                  &kp X      &space_shift LSHFT LSHFT/* &thumbhSlayNextLeft HYPER_27 0 */ /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*/&thumbfunctri 0 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &spacecombo  HYPER_34 LG(SPACE) /* &thumbhlayEscape */ /* LAYER_Symbol */   /* SKQ_LEFT_SHIFT */  /* HYPER_01_KEY(KP_N8) */ /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_106 /* HYPER_34 */  0                 &kp B                             &homey_right_skq HYPER_03 M                 &kp W                &kp V                &kp Z             &modthumbhm HYPER_21 RSHFT
-        &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc HYPER_27 ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &fastmacrotap HYPER_01_KEY(KP_N7)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotapholdlbkt LAYER_Mouse  LBKT             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
+        &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &fastmacrotap HYPER_01_KEY(KP_N7)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        &thumb_parang_left LAYER_World 0             &thumbfastmacrotapholdlbkt LAYER_Mouse  LBKT             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
