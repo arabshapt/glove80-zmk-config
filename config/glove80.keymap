@@ -631,6 +631,13 @@ fastmacrotapdanceLT: fastmacrotapdanceLT {
             tapping-term-ms = <200>;
             bindings = <&fastmacrotap COLON>, <&kp COLON>;
         };
+        toggleNormalOneHanded: toggleNormalOneHanded {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&to LAYER_Dvorak>, <&to LAYER_OneHand>;
+        };
+
     };
 };
 
@@ -1687,6 +1694,15 @@ thumbhlay: thumb_homerow_lay {
         require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
+    };
+        plain_toggle_dvor_one: plain_toggle_dvor_one {
+        compatible = "zmk,behavior-hold-tap";
+        label = "PLAIN_TOGGLE_DVOR_ONE";
+        flavor = PLAIN_HOLDING_TYPE;
+        tapping-term-ms = <PLAIN_HOLDING_TIME>;
+        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
+        #binding-cells = <2>;
+        bindings = <&mo>, <&toggleNormalOneHanded>;
     };
     plain_select_word: plain_select_word_typing_layer {
         compatible = "zmk,behavior-hold-tap";
@@ -4411,7 +4427,7 @@ ZMK_MACRO(layer_function_macro,
             &space HYPER_29 GRAVE             &kp SEMI               &kp COMMA              &kp DOT                   &kp P                  &kp Y                                                                                                                                                    &kp F                             &kp G                 &kp C   &kp R                &kp L             &space HYPER_28 HYPER_01_KEY(KP_N0)/* &fastmacrotap HYPER_01_KEY(KP_N0) */
          &modthumbhm  HYPER_29 BSPC  &homey_left LCTRL A      &homey_left LALT O  &homey_left  LSHFT E     &homey_left LGUI  U  &kp I                                                                                                                                    &kp D              &homey_right RGUI H  &homey_right RSHFT T  &homey_right RALT N  &homey_right RCTRL S             &modthumbhm  HYPER_28/*&thumbhlay HYPER_44 SYMBOLS_LAYER*/ LA(BKSP) 
             &modthumbhm HYPER_21 LSHFT            &plain LAYER_FN APOS                   &kp Q                &homey_left_skq HYPER_27 J                   &homey_left_skq HYPER_03 K                  &kp X      &space_shift LSHFT LSHFT/* &thumbhSlayNextLeft HYPER_27 0 */ /* &thumbhSlayNextLeftLayer LAYER_Cursor/*HYPER_29*/ /* LAYER_SKQ_LEFT_RED */  /*&stickymodthumbhm  HYPER_30 /*HYPER_31*//*RS(RG(LC(LGUI)))*//* &thumbfunctri */ &spacecombo HYPER_36 HYPER_01_KEY(KP_N2)  &stickymodthumbhm HYPER_35 /*HYPER_36*/ RS(LC(LA(LGUI)))                   &stickymodthumbhm  HYPER_37 /*HYPER_38*/ RC(RA(RG(LCTRL)))               &spacecombo  HYPER_34 LG(SPACE) /* &thumbhlayEscape */ /* LAYER_Symbol */   /* SKQ_LEFT_SHIFT */  /* HYPER_01_KEY(KP_N8) */ /*&stickymodthumbhm HYPER_32 /*HYPER_33*//*RS(LS(LC(LALT)))*/   &thumbhSlayNextRight HYPER_106 /* HYPER_34 */  0                 &kp B                             &homey_right_skq HYPER_03 M                 &homey_right_skq HYPER_27 W                &kp V                &kp Z             &modthumbhm HYPER_21 RSHFT
-        &plain LAYER_Magic BSPC           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &fastmacrotap HYPER_01_KEY(KP_N7)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        /* &thumb_parang_left LAYER_World 0 */&homey_right_skq HYPER_03 HYPER_01_KEY(KP_N1)             &homey_right_skq HYPER_03 LG(TAB)/* &thumbfastmacrotapholdlbkt LAYER_Mouse  LBKT */             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
+        &plain_toggle_dvor_one LAYER_Magic 0           &kp LEFT &kp DOWN               &kp UP            &kp RIGHT /*&kp PG_DN  &thumb LAYER_Emoji END*/                          &thumbhlayShiftLayerLeader LAYER_Cursor   /* SKQ_LEFT_SHIFT */  /* BSPC */ 0  &thumbhlayEscapefunc LAYER_Number ESC    &fastmacrotap HYPER_01_KEY(KP_N4) /* &thumbhlayShiftLayerLeadersuper LAYER_Cursor   0  */    &fastmacrotap HYPER_01_KEY(KP_N7)  &thumb LAYER_Mouse ENTER  &space_thumb LAYER_Symbol SPACE                        /* &thumb_parang_left LAYER_World 0 */&homey_right_skq HYPER_03 HYPER_01_KEY(KP_N1)             &homey_right_skq HYPER_03 LG(TAB)/* &thumbfastmacrotapholdlbkt LAYER_Mouse  LBKT */             &fastmacrotaphold RBKT RBKT &parang_right       &magic LAYER_Magic 0
             >;
         };
 
