@@ -4401,7 +4401,8 @@ ZMK_MACRO(layer_function_macro,
 / {
     keymap {
         compatible = "zmk,keymap";
-
+// sticky shift + caps word is enough : you can use hold for something else... For a layer... but be careful, because shift is a fast key
+// it is used in the middle of typing fast, so this hold shouldn't be for fast things
         layer_Dvorak {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
@@ -4459,14 +4460,14 @@ ZMK_MACRO(layer_function_macro,
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
             >;
         };
-
+// use your unused keys for something
         layer_Cursor {
             bindings = <
      &none           &none         &none         &none           &none                                                                                                           &none           &kp LG(BSPC)           &kp LG(DEL)      &none        &none
      &none           &none         &none         &none         &kp DEL     &kp INS                                                                                  &kp INS    &kp DEL           &kp LG(LEFT)            &kp LG(RIGHT)      &none        &none
  &kp _C(K)       &kp HYPER_29_KEY(SPACE)/*context app*/    &kp _UNDO          &kp _REDO        &kp BSPC      &kp _CUT                                                                                 &kp _CUT   &kp BSPC       &kp HYPER_01_KEY(F7)            &kp HYPER_01_KEY(F8)  &fastmacrotap LG(LS(V))    &kp _C(K)
  &kp _C(L) &homey_left LCTRL RET  &homey_left LALT SPACE &homey_left  LSHFT TAB &homey_left LGUI  ESC     &kp _COPY                                                                                &kp _COPY   &kp LEFT          &kp UP        &kp DOWN  &kp RIGHT    &kp LA(BSPC)
- &kp _C(J)       &fastmacrotap LG(TAB) &kp HYPER_28_KEY(H)  &kp HYPER_27_KEY(S)       &fastmacrotaphold _C(A) _C(A)  &fastmacrotaphold _PASTE _PASTE   &none   &none              &none  &kp HYPER_01_KEY(F4)  &kp HYPER_01_KEY(F5)  &kp HYPER_01_KEY(F6)  &fastmacrotaphold _PASTE _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
+ &kp _C(J)       &fastmacrotap LG(TAB) &kp HYPER_01_KEY(F9)  &kp HYPER_01_KEY(F11)       &fastmacrotaphold _C(A) _C(A)  &fastmacrotaphold _PASTE _PASTE   &none   &none              &none  &kp HYPER_01_KEY(F4)  &kp HYPER_01_KEY(F5)  &kp HYPER_01_KEY(F6)  &fastmacrotaphold _PASTE _PASTE   &kp HOME       &kp PG_UP       &kp PG_DN    &kp END    &kp _C(J)
  &kp _C(H)  &kp _FIND_PREV  &extend_word  &extend_line  &kp _FIND_NEXT               &none   &none  &tog LAYER_Cursor     &kp HYPER_01_KEY(F3)  &kp HYPER_01_KEY(F2) &plain LAYER_Symbol HYPER_01_KEY(F1) /* &select_word */              &fastmacrotaphold _FIND _FIND  &kp _FIND_PREV  &kp _FIND_NEXT  &kp _C(H)  &kp LG(DOT)
             >;
         };
@@ -4482,7 +4483,7 @@ ZMK_MACRO(layer_function_macro,
             >;
         };
 
-
+// use your symbols layer right hand keys for something
         layer_Symbol {
             bindings = <
                &kp F1              &kp F2                  &kp F3               &kp F4                  &kp F5                                                                                                                                                                                                            &kp F6                &kp F7               &kp F8               &kp F9               &kp F10
@@ -4567,6 +4568,7 @@ ZMK_MACRO(layer_function_macro,
  &trans  &trans  &trans  &trans  &trans             &kp BSPC  &kp DEL  &tog LAYER_Typing  &tog LAYER_Typing  &kp TAB  &kp SPACE           &trans  &trans  &trans  &trans  &trans
             >;
         };
+        // one hand mode layer that is activated to use with mouse
 
         layer_CrossLeft {
             bindings = <
