@@ -635,13 +635,13 @@ fastmacrotapdanceLT: fastmacrotapdanceLT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <650>;
-            bindings = <&to LAYER_Dvorak>, <&to LAYER_OneHand> <&rgb_ug RGB_STATUS>;
+            bindings = <&to LAYER_Dvorak>, <&to LAYER_OneHand>, <&rgb_ug RGB_STATUS>;
         };
 toggleOneHandedNormal: toggleOneHandedNormal {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <650>;
-            bindings =  <&to LAYER_OneHand>, <&to LAYER_Dvorak> <&rgb_ug RGB_STATUS>;
+            bindings =  <&to LAYER_OneHand>, <&to LAYER_Dvorak>, <&rgb_ug RGB_STATUS>;
         };
     };
 };
