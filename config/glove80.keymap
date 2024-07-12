@@ -765,8 +765,16 @@ toggleOneHandedNormal: toggleOneHandedNormal {
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_layer_1 {
             if-layers = <LAYER_Cursor LAYER_Symbol>;
+            then-layer = <LAYER_Function>;
+        };
+        tri_layer_2 {
+            if-layers = <LAYER_Number LAYER_Symbol>;
+            then-layer = <LAYER_Function>;
+        };
+        tri_layer_3 {
+            if-layers = <LAYER_Number LAYER_Mouse>;
             then-layer = <LAYER_Function>;
         };
     };
