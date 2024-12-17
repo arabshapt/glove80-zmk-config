@@ -75,6 +75,7 @@
 #define QUICK_TAP_MS_ARAB 175 
 #define QUICK_TAP_MS_ARAB_PRIMAL 140 //140  ONLY FOR WARM TIMES
 #define COMBO_TERM_ARAB_FAST 30//18
+#define COMBO_TERM_ARAB_FASTISH 22//18
 #define COMBO_TERM_ARAB_ULTRA_FAST 14//18
 #define COMBO_TERM_ARAB_NORMAL 30
 #define COMBO_TERM_ARAB_SLOW 50
@@ -525,7 +526,7 @@ create a list of all possible keys for hyper_01 and mark used ones
 
 
   COMBO(shift_combo_left_2, &homey_left LS(LGUI) HYPER_01_KEY(N5), 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
-  COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
+  COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(shift_combo_right_2_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(shift_combo_right_3_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   // COMBO(shift_combo_left_2, &homey_left_combo LS(LGUI) 0/* HYPER_01_KEY(N5) */, 37 38, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
