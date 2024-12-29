@@ -535,6 +535,7 @@ create a list of all possible keys for hyper_01 and mark used ones
   COMBO(shift_combo_right_2, &homey_right RS(RALT) HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(shift_combo_right_2_cursor_layer, &kp HYPER_01_KEY(N7)/* ENTER */, 42 43, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
+  COMBO(shift_combo_right_3, &homey_right RC(RGUI) HYPER_01_KEY(N8), 41 44, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) 
   COMBO(escape_on_symbols_layer, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
