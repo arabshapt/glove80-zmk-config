@@ -534,7 +534,7 @@ create a list of all possible keys for hyper_01 and mark used ones
   COMBO(cmd_combo_right_2_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(cmd_combo_right_3_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO(shift3keys_combo_right_1_bspc, &homey_right RA(RS(RGUI)) /* LA(BSPC) */  ENTER  /* LA(BSPC) */, 41 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
-  COMBO(shift3keys_combo_right_1_bspc, HYPER_01_KEY(F10), 59 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // change HYPER_01_KEY(F10) to something else that is unique
+  COMBO(3mwv_keys_combo_right_1_bspc, HYPER_01_KEY(F10), 59 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // change HYPER_01_KEY(F10) to something else that is unique
   COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(shift_combo_right_2_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(shift_combo_right_3_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  LG(ESC)  /* LA(BSPC) */, 41 42, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
