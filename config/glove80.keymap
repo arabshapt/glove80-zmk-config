@@ -534,6 +534,7 @@ create a list of all possible keys for hyper_01 and mark used ones
   COMBO(cmd_combo_right_2_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
   COMBO(cmd_combo_right_3_bspc, &spacecombo  HYPER_32 /* LA(BSPC) */  HYPER_01_KEY(N9)  /* LA(BSPC) */,40 41, LAYER_Cursor, COMBO_TERM_ARAB_NORMAL) //potentially remove fast at beginning
   COMBO(shift3keys_combo_right_1_bspc, &homey_right RA(RS(RGUI)) /* LA(BSPC) */  ENTER  /* LA(BSPC) */, 41 42 43, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
+  COMBO(shift4keys_combo_right_1_bspc, &homey_right RC(RA(RS(RGUI))) /* LA(BSPC) */  LG(ESC)  /* LA(BSPC) */, 41 42 43 44, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // seems to work, but still experimental
   COMBO(3mwv_keys_combo_right_1_bspc, &kp HYPER_01_KEY(F10), 59 60 61, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // change HYPER_01_KEY(F10) to something else that is unique
   COMBO(shift_combo_right_1_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(shift_combo_right_2_bspc, &homey_right RS(RGUI) /* LA(BSPC) */  HYPER_01_KEY(N6)  /* LA(BSPC) */, 41 42, LAYER_Number, COMBO_TERM_ARAB_FAST) //potentially remove fast at beginning
@@ -562,7 +563,7 @@ create a list of all possible keys for hyper_01 and mark used ones
   // COMBO(deleteWordLayerMod8, &kp LG(SPACE), 69 42 43, LAYER_Dvorak, 100)
   // COMBO(deleteWordLayerMod9, &comboCmdTabHT LAYER_Symbol_mirrored LG(TAB), 69 37 38, LAYER_Dvorak, 70)
   COMBO(raycast20, &kp LG(SPACE), 29 31, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
-  COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
+  COMBO(raycast29, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 23 24, LAYER_Dvorak, COMBO_TERM_ARAB_SLOWER) // ;,. are good for combos
   COMBO(raycast30, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 25 26, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
   COMBO(raycast32, &kp LA(BSPC), 29 30, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
 //   COMBO(raycast33, &thumbhSlayNextRight HYPER_34 LAYER_SKQ_RIGHT_RED, 24 25, LAYER_Dvorak, COMBO_TERM_ARAB_FAST)
