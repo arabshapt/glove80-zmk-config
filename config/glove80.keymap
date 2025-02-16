@@ -550,7 +550,7 @@ create a list of all possible keys for hyper_01 and mark used ones
   COMBO(shift_combo_right_3, &homey_right RA(RGUI) ESC, 41 43, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
   COMBO(shift_combo_right_4, &homey_right RC(RGUI) HYPER_01_KEY(N8), 41 44, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH) 
   COMBO(escape_on_symbols_layer, &homey_right RA(RGUI) ESC, 41 43, LAYER_Symbol, COMBO_TERM_ARAB_FASTISH) //potentially remove fast at beginning
-  COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_NORMAL)
+  COMBO(capsword, &cappy CAPSLOCK 0, 18 19, LAYER_Dvorak, COMBO_TERM_ARAB_FASTISH)
 //   COMBO(deleteword, &kp LA(BKSP), 43 65, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(leftword, &kp LA(LEFT), 63 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
 //   COMBO(rightword, &kp LA(RIGHT), 64 43, PRIME_LAYER, COMBO_TERM_ARAB_FAST)
@@ -4616,7 +4616,7 @@ ZMK_MACRO(layer_function_macro,
  &kp MINUS  &kp GRAVE   &kp B   &kp N   &kp M  &kp SQT                                                                             &kp B   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
      &kp T    &kp TAB   &kp Q   &kp W   &kp E    &kp R                                                                             &kp T   &kp Y   &kp U      &kp I    &kp O     &kp P
      &kp G  &kp LSHFT   &kp A   &kp S   &kp D    &kp F    &kp RET   &kp LALT  &kp PAUSE_BREAK           &kp BSPC  &kp DEL  &trans   &kp G   &kp H   &kp J      &kp K    &kp L  &kp SEMI
-     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &thumbhlayEscape LAYER_Gaming_2 ESC         &kp LGUI  &tog LAYER_Gaming   &trans  &trans          &trans  &trans     &trans   &trans    &magic LAYER_Magic 0
+     &kp V  &kp LCTRL   &kp Z   &kp X   &kp C           &kp SPACE  &thumbhlayEscape LAYER_Gaming_2 ESC         &kp LGUI  &tog LAYER_Gaming   &trans  &trans          &kp LEFT    &kp UP    &kp DOWN  &kp RIGHT    &magic LAYER_Magic 0
             >;
         };
                 layer_Gaming_2 {
